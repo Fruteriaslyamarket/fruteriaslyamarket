@@ -1,0 +1,138 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Lya Market — Design System
+ * Verde fresco principal + acentos cálidos de fruta (naranja, rojo, amarillo)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-orange: var(--orange);
+  --color-orange-foreground: var(--orange-foreground);
+  --color-citrus: var(--citrus);
+  --color-citrus-foreground: var(--citrus-foreground);
+  --color-tomato: var(--tomato);
+  --color-tomato-foreground: var(--tomato-foreground);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans:
+    "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Crema cálida del logo, texto verde bosque profundo */
+  --background: oklch(0.965 0.018 90);
+  --foreground: oklch(0.26 0.06 150);
+
+  --card: oklch(0.99 0.01 90);
+  --card-foreground: oklch(0.26 0.06 150);
+  --popover: oklch(0.99 0.01 90);
+  --popover-foreground: oklch(0.26 0.06 150);
+
+  /* Verde bosque del logo — protagonista */
+  --primary: oklch(0.5 0.13 148);
+  --primary-foreground: oklch(0.98 0.015 90);
+
+  --secondary: oklch(0.93 0.035 95);
+  --secondary-foreground: oklch(0.3 0.07 150);
+
+  --muted: oklch(0.95 0.022 90);
+  --muted-foreground: oklch(0.5 0.04 145);
+
+  --accent: oklch(0.9 0.07 110);
+  --accent-foreground: oklch(0.28 0.08 150);
+
+  --destructive: oklch(0.62 0.2 40);
+  --destructive-foreground: oklch(0.99 0.01 0);
+
+  --border: oklch(0.88 0.025 95);
+  --input: oklch(0.91 0.025 95);
+  --ring: oklch(0.5 0.13 148);
+
+  /* Acentos fruta — naranja vivo del logo */
+  --orange: oklch(0.7 0.18 50);
+  --orange-foreground: oklch(0.99 0.01 0);
+  --citrus: oklch(0.83 0.15 85);
+  --citrus-foreground: oklch(0.28 0.08 90);
+  --tomato: oklch(0.66 0.2 40);
+  --tomato-foreground: oklch(0.99 0.01 0);
+}
+
+.dark {
+  --background: oklch(0.18 0.03 150);
+  --foreground: oklch(0.97 0.01 120);
+  --card: oklch(0.22 0.03 150);
+  --card-foreground: oklch(0.97 0.01 120);
+  --popover: oklch(0.22 0.03 150);
+  --popover-foreground: oklch(0.97 0.01 120);
+  --primary: oklch(0.7 0.17 145);
+  --primary-foreground: oklch(0.15 0.04 150);
+  --secondary: oklch(0.28 0.04 150);
+  --secondary-foreground: oklch(0.97 0.01 120);
+  --muted: oklch(0.26 0.03 150);
+  --muted-foreground: oklch(0.7 0.03 130);
+  --accent: oklch(0.32 0.06 145);
+  --accent-foreground: oklch(0.97 0.01 120);
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.99 0.01 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.7 0.17 145);
+  --orange: oklch(0.75 0.18 55);
+  --orange-foreground: oklch(0.15 0.04 50);
+  --citrus: oklch(0.85 0.17 95);
+  --citrus-foreground: oklch(0.2 0.07 90);
+  --tomato: oklch(0.68 0.22 27);
+  --tomato-foreground: oklch(0.99 0.01 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
