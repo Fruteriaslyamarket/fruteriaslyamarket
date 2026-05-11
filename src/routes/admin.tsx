@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { ALL_PRODUCTS, CATEGORIES, loadProducts, savePublishedProducts } from "@/data/products";
 import type { Product, ProductCategory } from "@/data/products";
-import { getFileSha, updateFile } from "@/lib/github";
+import { getFileSha, updateFile, uploadImage } from "@/lib/github";
 
 const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD as string;
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN as string;
@@ -507,6 +507,25 @@ function ProductModal({
   onClose: () => void;
 }) {
   const [form, setForm] = React.useState<Product>({ ...product });
+  const [uploading, setUploading] = React.useState(false);
+  const [uploadError, setUploadError] = React.useState("");
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploading(true);
+    setUploadError("");
+    try {
+      const url = await uploadImage(GITHUB_TOKEN, GITHUB_REPO, file, GITHUB_BRANCH);
+      set("image", url);
+    } catch (err) {
+      setUploadError(err instanceof Error ? err.message : "Error al subir la foto");
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
   const [errors, setErrors] = React.useState<Partial<Record<keyof Product, string>>>({});
 
   const set = <K extends keyof Product>(key: K, value: Product[K]) =>
@@ -600,8 +619,41 @@ function ProductModal({
             </Field>
           </div>
 
-          {/* Image URL */}
-          <Field label="URL de imagen">
+          {/* Image URL + Upload */}
+          <Field label="Foto del producto">
+            <input
+              type="hidden"
+              ref={fileInputRef as React.RefObject<HTMLInputElement>}
+            />
+            <input
+              type="file"
+              accept="image/*"
+              className="hidden"
+              ref={fileInputRef}
+              onChange={handleFileUpload}
+            />
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={uploading}
+              className="mb-2 flex h-10 w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 text-sm font-medium text-gray-600 hover:border-green-500 hover:bg-green-50 hover:text-green-700 disabled:opacity-50"
+            >
+              {uploading ? (
+                <><Loader2 className="h-4 w-4 animate-spin" />Subiendo foto…</>
+              ) : (
+                <><Plus className="h-4 w-4" />Subir foto desde galería o cámara</>
+              )}
+            </button>
+            {uploadError && (
+              <p className="mb-2 flex items-center gap-1 text-xs text-red-600">
+                <AlertCircle className="h-3.5 w-3.5 shrink-0" />{uploadError}
+              </p>
+            )}
+            <div className="flex items-center gap-2 text-xs text-gray-400 mb-2">
+              <div className="h-px flex-1 bg-gray-200" />
+              <span>o pega un link</span>
+              <div className="h-px flex-1 bg-gray-200" />
+            </div>
             <input
               type="text"
               inputMode="url"
@@ -612,7 +664,7 @@ function ProductModal({
               onChange={(e) => set("image", e.target.value)}
               onBlur={(e) => set("image", e.target.value.trim())}
               className={input(false)}
-              placeholder="https://images.unsplash.com/…"
+              placeholder="https://…"
             />
             {form.image && (
               <ImagePreview url={form.image} />
