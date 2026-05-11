@@ -282,8 +282,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           </p>
         )}
 
-        {/* Tabla — solo escritorio */}
-        <div className="hidden md:block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100 bg-gray-50 text-xs font-medium uppercase tracking-wide text-gray-500">
@@ -382,83 +381,6 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           </table>
         </div>
 
-        {/* Tarjetas — solo móvil */}
-        <div className="md:hidden space-y-3">
-          {filtered.map((p) => (
-            <div
-              key={p.id}
-              className={`rounded-xl border border-gray-200 bg-white p-4 shadow-sm ${p.hidden ? "opacity-40" : ""}`}
-            >
-              <div className="flex items-start gap-3">
-                <img src={p.image} alt={p.name} className="h-14 w-14 shrink-0 rounded-lg object-cover" />
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-gray-900 leading-tight">{p.name}</p>
-                  <p className="mt-0.5 line-clamp-1 text-xs text-gray-400">{p.description}</p>
-                  <div className="mt-1.5 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
-                      {CATEGORY_OPTIONS.find((c) => c.value === p.category)?.label ?? p.category}
-                    </span>
-                    <span className="text-sm font-semibold text-gray-900">
-                      {p.price.toFixed(2).replace(".", ",")} €
-                      <span className="text-xs font-normal text-gray-400"> / {p.unit}</span>
-                    </span>
-                    {p.offer && p.oldPrice && (
-                      <span className="text-xs text-gray-400 line-through">
-                        {p.oldPrice.toFixed(2).replace(".", ",")} €
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className="mt-3 flex items-center justify-between border-t border-gray-100 pt-3">
-                <div className="flex gap-1">
-                  <button
-                    onClick={() => toggle(p.id, "featured")}
-                    title={p.featured ? "Quitar de destacados" : "Marcar como destacado"}
-                    className={`rounded p-1.5 ${p.featured ? "text-yellow-500" : "text-gray-300"}`}
-                  >
-                    <Star className="h-4 w-4" fill={p.featured ? "currentColor" : "none"} />
-                  </button>
-                  <button
-                    onClick={() => toggle(p.id, "offer")}
-                    title={p.offer ? "Quitar oferta" : "Poner en oferta"}
-                    className={`rounded p-1.5 ${p.offer ? "text-orange-500" : "text-gray-300"}`}
-                  >
-                    <Tag className="h-4 w-4" />
-                  </button>
-                  <button
-                    onClick={() => toggle(p.id, "hidden")}
-                    title={p.hidden ? "Mostrar en tienda" : "Ocultar de tienda"}
-                    className={`rounded p-1.5 ${p.hidden ? "text-gray-500" : "text-gray-300"}`}
-                  >
-                    {p.hidden ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                  </button>
-                </div>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => { setEditing({ ...p }); setIsNew(false); }}
-                    className="flex items-center gap-1.5 rounded-lg bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 active:bg-gray-200"
-                  >
-                    <Pencil className="h-4 w-4" />
-                    Editar
-                  </button>
-                  <button
-                    onClick={() => setDeleteId(p.id)}
-                    className="flex items-center gap-1.5 rounded-lg bg-red-50 px-3 py-2 text-sm font-medium text-red-600 active:bg-red-100"
-                  >
-                    <Trash2 className="h-4 w-4" />
-                    Eliminar
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-          {filtered.length === 0 && (
-            <div className="rounded-xl border border-gray-200 bg-white py-12 text-center text-sm text-gray-400">
-              No hay productos que coincidan con la búsqueda.
-            </div>
-          )}
-        </div>
       </div>
 
       {/* Edit / Add modal */}
