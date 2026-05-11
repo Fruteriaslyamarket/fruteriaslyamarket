@@ -282,7 +282,8 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           </p>
         )}
 
-        <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+        {/* Tabla — escritorio */}
+        <div className="hidden md:block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100 bg-gray-50 text-xs font-medium uppercase tracking-wide text-gray-500">
@@ -379,6 +380,60 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
               )}
             </tbody>
           </table>
+        </div>
+
+        {/* Tarjetas — móvil */}
+        <div className="md:hidden space-y-3">
+          {filtered.map((p) => (
+            <div key={p.id} className={`rounded-xl border border-gray-200 bg-white shadow-sm ${p.hidden ? "opacity-40" : ""}`}>
+              <div className="flex items-center gap-3 p-4">
+                <img src={p.image} alt={p.name} className="h-14 w-14 shrink-0 rounded-lg object-cover" />
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-gray-900">{p.name}</p>
+                  <p className="mt-0.5 text-sm font-medium text-gray-700">
+                    {p.price.toFixed(2).replace(".", ",")} € <span className="text-xs font-normal text-gray-400">/ {p.unit}</span>
+                  </p>
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">
+                      {CATEGORY_OPTIONS.find((c) => c.value === p.category)?.label ?? p.category}
+                    </span>
+                    <div className="flex gap-1">
+                      <button onClick={() => toggle(p.id, "featured")} className={`rounded p-1 ${p.featured ? "text-yellow-500" : "text-gray-300"}`}>
+                        <Star className="h-3.5 w-3.5" fill={p.featured ? "currentColor" : "none"} />
+                      </button>
+                      <button onClick={() => toggle(p.id, "offer")} className={`rounded p-1 ${p.offer ? "text-orange-500" : "text-gray-300"}`}>
+                        <Tag className="h-3.5 w-3.5" />
+                      </button>
+                      <button onClick={() => toggle(p.id, "hidden")} className={`rounded p-1 ${p.hidden ? "text-gray-500" : "text-gray-300"}`}>
+                        {p.hidden ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2 border-t border-gray-100 p-3">
+                <button
+                  onClick={() => { setEditing({ ...p }); setIsNew(false); }}
+                  className="flex items-center justify-center gap-2 rounded-xl bg-gray-900 py-3 text-sm font-semibold text-white"
+                >
+                  <Pencil className="h-4 w-4" />
+                  Editar
+                </button>
+                <button
+                  onClick={() => setDeleteId(p.id)}
+                  className="flex items-center justify-center gap-2 rounded-xl bg-red-600 py-3 text-sm font-semibold text-white"
+                >
+                  <Trash2 className="h-4 w-4" />
+                  Eliminar
+                </button>
+              </div>
+            </div>
+          ))}
+          {filtered.length === 0 && (
+            <div className="rounded-xl border border-gray-200 bg-white py-12 text-center text-sm text-gray-400">
+              No hay productos que coincidan con la búsqueda.
+            </div>
+          )}
         </div>
 
       </div>
