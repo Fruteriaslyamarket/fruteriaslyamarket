@@ -258,34 +258,59 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
 
       {/* Toolbar */}
       <div className="mx-auto max-w-6xl px-4 py-4">
-        <div className="flex flex-wrap items-center gap-3">
+        {/* Móvil: 3 filas limpias */}
+        <div className="flex flex-col gap-2 md:hidden">
           <input
             type="search"
             placeholder="Buscar producto…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="h-9 w-full md:w-56 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+            className="h-10 w-full rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
           />
-          <div className="flex w-full md:w-auto items-center gap-3">
-            <select
-              value={catFilter}
-              onChange={(e) => setCatFilter(e.target.value as ProductCategory | "todas")}
-              className="h-9 flex-1 md:flex-none rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500"
-            >
-              {CATEGORIES.map((c) => (
-                <option key={c.value} value={c.value}>{c.label}</option>
-              ))}
-            </select>
-            <span className="text-sm text-gray-500 whitespace-nowrap">{filtered.length} productos</span>
-            <button
-              onClick={() => { setEditing({ id: "", name: "", description: "", category: "verduras", price: 0, unit: "kg", image: "" }); setIsNew(true); }}
-              className="flex h-9 items-center gap-2 rounded-lg bg-gray-900 px-4 text-sm font-semibold text-white hover:bg-gray-700"
-            >
-              <Plus className="h-4 w-4" />
-              <span className="hidden sm:inline">Añadir producto</span>
-              <span className="sm:hidden">Añadir</span>
-            </button>
-          </div>
+          <select
+            value={catFilter}
+            onChange={(e) => setCatFilter(e.target.value as ProductCategory | "todas")}
+            className="h-10 w-full rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500"
+          >
+            {CATEGORIES.map((c) => (
+              <option key={c.value} value={c.value}>{c.label}</option>
+            ))}
+          </select>
+          <button
+            onClick={() => { setEditing({ id: "", name: "", description: "", category: "verduras", price: 0, unit: "kg", image: "" }); setIsNew(true); }}
+            className="flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-gray-900 text-sm font-semibold text-white"
+          >
+            <Plus className="h-4 w-4" />
+            Añadir producto
+          </button>
+        </div>
+
+        {/* Escritorio: una fila */}
+        <div className="hidden md:flex items-center gap-3">
+          <input
+            type="search"
+            placeholder="Buscar producto…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="h-9 w-56 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+          />
+          <select
+            value={catFilter}
+            onChange={(e) => setCatFilter(e.target.value as ProductCategory | "todas")}
+            className="h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500"
+          >
+            {CATEGORIES.map((c) => (
+              <option key={c.value} value={c.value}>{c.label}</option>
+            ))}
+          </select>
+          <span className="ml-auto text-sm text-gray-500">{filtered.length} productos</span>
+          <button
+            onClick={() => { setEditing({ id: "", name: "", description: "", category: "verduras", price: 0, unit: "kg", image: "" }); setIsNew(true); }}
+            className="flex h-9 items-center gap-2 rounded-lg bg-gray-900 px-4 text-sm font-semibold text-white hover:bg-gray-700"
+          >
+            <Plus className="h-4 w-4" />
+            Añadir producto
+          </button>
         </div>
 
         {/* Legend */}
