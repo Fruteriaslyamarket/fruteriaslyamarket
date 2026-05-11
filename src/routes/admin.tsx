@@ -4,7 +4,7 @@ import {
   Pencil, Trash2, Plus, LogOut, Send, Eye, EyeOff,
   Star, Tag, Loader2, CheckCircle2, AlertCircle, X,
 } from "lucide-react";
-import { ALL_PRODUCTS, CATEGORIES, loadProducts } from "@/data/products";
+import { ALL_PRODUCTS, CATEGORIES, loadProducts, savePublishedProducts } from "@/data/products";
 import type { Product, ProductCategory } from "@/data/products";
 import { getFileSha, updateFile } from "@/lib/github";
 
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/admin")({
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type SaveState = "idle" | "saving" | "saved" | "error";
+type SaveState = "idle" | "saving" | "deploying" | "saved" | "error";
 
 // ─── Main page ────────────────────────────────────────────────────────────────
 
@@ -167,8 +167,10 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
       const sha = await getFileSha(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, GITHUB_BRANCH);
       const content = JSON.stringify(products, null, 2);
       await updateFile(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, content, sha, "admin: actualizar productos", GITHUB_BRANCH);
-      fetch("/api/redeploy", { method: "POST" }).catch(() => {});
+      savePublishedProducts(products);
       setBaseline(JSON.parse(JSON.stringify(products)));
+      setSaveState("deploying");
+      await fetch("/api/redeploy", { method: "POST" }).catch(() => {});
       setSaveState("saved");
       setTimeout(() => setSaveState("idle"), 5000);
     } catch (e) {
@@ -222,11 +224,12 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
               )}
               <button
                 onClick={publish}
-                disabled={saveState === "saving" || !dirty}
+                disabled={saveState === "saving" || saveState === "deploying" || !dirty}
                 className="flex h-9 items-center gap-2 rounded-lg bg-green-600 px-4 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
               >
-                {saveState === "saving" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-                {saveState === "saving" ? "Publicando…" : "Publicar cambios"}
+                <Loader2 className={`h-4 w-4 ${saveState === "saving" || saveState === "deploying" ? "animate-spin" : "hidden"}`} />
+                <Send className={`h-4 w-4 ${saveState === "saving" || saveState === "deploying" ? "hidden" : ""}`} />
+                {saveState === "saving" ? "Guardando…" : saveState === "deploying" ? "Desplegando…" : "Publicar cambios"}
               </button>
               <button
                 onClick={onLogout}
@@ -260,11 +263,12 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
             )}
             <button
               onClick={publish}
-              disabled={saveState === "saving" || !dirty}
+              disabled={saveState === "saving" || saveState === "deploying" || !dirty}
               className="flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-green-600 text-sm font-semibold text-white disabled:opacity-50"
             >
-              {saveState === "saving" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-              {saveState === "saving" ? "Desplegando…" : "Desplegar cambios"}
+              <Loader2 className={`h-4 w-4 ${saveState === "saving" || saveState === "deploying" ? "animate-spin" : "hidden"}`} />
+              <Send className={`h-4 w-4 ${saveState === "saving" || saveState === "deploying" ? "hidden" : ""}`} />
+              {saveState === "saving" ? "Guardando…" : saveState === "deploying" ? "Desplegando…" : "Desplegar cambios"}
             </button>
           </div>
         </div>

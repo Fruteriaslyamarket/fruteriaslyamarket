@@ -60,7 +60,29 @@ const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH as string | undefined)
 let _cache: Product[] | null = null;
 let _promise: Promise<Product[]> | null = null;
 
+const SESSION_KEY = "lya-products-published";
+const SESSION_TTL = 5 * 60 * 1000; // 5 min
+
+export function savePublishedProducts(data: Product[]) {
+  try {
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify({ data, ts: Date.now() }));
+  } catch {}
+}
+
 export function loadProducts(bust = false): Promise<Product[]> {
+  // Si acaba de publicarse, devolver datos frescos del sessionStorage
+  try {
+    const raw = sessionStorage.getItem(SESSION_KEY);
+    if (raw) {
+      const { data, ts } = JSON.parse(raw) as { data: Product[]; ts: number };
+      if (Date.now() - ts < SESSION_TTL) {
+        _cache = data;
+        return Promise.resolve(data);
+      }
+      sessionStorage.removeItem(SESSION_KEY);
+    }
+  } catch {}
+
   if (!bust && _cache) return Promise.resolve(_cache);
   if (!GITHUB_REPO) return Promise.resolve(ALL_PRODUCTS);
   _cache = null;
