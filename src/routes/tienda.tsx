@@ -7,17 +7,21 @@ import { CATEGORIES, PRODUCTS, type ProductCategory } from "@/data/products";
 export const Route = createFileRoute("/tienda")({
   head: () => ({
     meta: [
-      { title: "Tienda online — Lya Market | Fruta y verdura a domicilio" },
+      { title: "Comprar Fruta y Verdura Online | Frutería Lya Market - Getafe y Móstoles" },
       {
         name: "description",
         content:
-          "Compra online frutas y verduras frescas. Reparto en Getafe y Móstoles. Pago al recibir.",
+          "Compra fruta fresca y verdura variada online con envío a domicilio en Getafe y Móstoles. Fruta de temporada, cesta de la compra semanal y más. Pago al recibir.",
       },
-      { property: "og:title", content: "Tienda — Lya Market" },
+      { property: "og:title", content: "Comprar Fruta y Verdura Online | Lya Market" },
       {
         property: "og:description",
-        content: "Catálogo de fruta y verdura fresca con reparto local.",
+        content: "Catálogo completo de fruta fresca y verdura variada con reparto a domicilio en Getafe y Móstoles.",
       },
+      { property: "og:url", content: "https://fruteriaslyamarket.com/tienda" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://fruteriaslyamarket.com/tienda" },
     ],
   }),
   component: TiendaPage,
@@ -48,11 +52,10 @@ function TiendaPage() {
           Catálogo online
         </p>
         <h1 className="mt-2 font-display text-4xl font-semibold sm:text-5xl">
-          Tienda
+          Comprar Fruta y Verdura Fresca Online
         </h1>
         <p className="mt-3 text-muted-foreground">
-          Elige tus frutas y verduras favoritas. Confirmaremos por teléfono el peso final de cada
-          producto antes del reparto.
+          Elige tus frutas y verduras favoritas con envío a domicilio en Getafe y Móstoles. Fruta de temporada, verdura variada y cesta de la compra semanal. Confirmaremos por teléfono el peso final antes del reparto.
         </p>
       </header>
 

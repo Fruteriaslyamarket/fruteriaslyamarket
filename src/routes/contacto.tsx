@@ -1,18 +1,97 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, Instagram, Clock, MapPin } from "lucide-react";
 
+const contactSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "name": "Lya Market Getafe",
+    "description": "Frutería en Getafe con reparto a domicilio. Fruta fresca, verdura variada y fruta de temporada. Envío a domicilio en Getafe y alrededores.",
+    "url": "https://fruteriaslyamarket.com/contacto",
+    "telephone": "+34674559853",
+    "email": "fruteriaslyamarket@gmail.com",
+    "image": "https://fruteriaslyamarket.com/favicon.png",
+    "priceRange": "€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Cataluña 1",
+      "addressLocality": "Getafe",
+      "addressRegion": "Madrid",
+      "postalCode": "28903",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.3050",
+      "longitude": "-3.7310"
+    },
+    "hasMap": "https://www.google.com/maps?q=Calle+Catalu%C3%B1a+1,+Getafe",
+    "sameAs": ["https://www.instagram.com/fruteriaslyamarket"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "name": "Lya Market Móstoles",
+    "description": "Frutería en Móstoles con reparto a domicilio. Fruta fresca, verdura variada y fruta de temporada. Envío a domicilio en Móstoles y alrededores.",
+    "url": "https://fruteriaslyamarket.com/contacto",
+    "telephone": "+34674559853",
+    "email": "fruteriaslyamarket@gmail.com",
+    "image": "https://fruteriaslyamarket.com/favicon.png",
+    "priceRange": "€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Joaquín Blume 23",
+      "addressLocality": "Móstoles",
+      "addressRegion": "Madrid",
+      "postalCode": "28933",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.3222",
+      "longitude": "-3.8645"
+    },
+    "hasMap": "https://www.google.com/maps?q=Calle+Joaqu%C3%ADn+Blume+23,+M%C3%B3stoles",
+    "sameAs": ["https://www.instagram.com/fruteriaslyamarket"]
+  }
+];
+
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — Lya Market | Getafe y Móstoles" },
+      { title: "Frutería en Getafe y Móstoles | Contacto Lya Market" },
       {
         name: "description",
         content:
-          "Contacta con Lya Market. Tiendas en Getafe (Calle Cataluña 1) y Móstoles (Calle Joaquín Blume 23). Teléfono 674 559 853.",
+          "Frutería online en Getafe (Calle Cataluña 1) y Móstoles (Calle Joaquín Blume 23). Reparto a domicilio todos los días de 9:00 a 21:00. Llámanos: 674 559 853.",
       },
-      { property: "og:title", content: "Contacto — Lya Market" },
-      { property: "og:description", content: "Teléfono, email y direcciones de nuestras tiendas." },
+      { property: "og:title", content: "Frutería en Getafe y Móstoles | Lya Market" },
+      { property: "og:description", content: "Tiendas en Getafe y Móstoles con reparto a domicilio. Abierto todos los días de 9:00 a 21:00." },
+      { property: "og:url", content: "https://fruteriaslyamarket.com/contacto" },
     ],
+    links: [
+      { rel: "canonical", href: "https://fruteriaslyamarket.com/contacto" },
+    ],
+    scripts: contactSchemas.map((schema) => ({
+      type: "application/ld+json",
+      children: JSON.stringify(schema),
+    })),
   }),
   component: ContactoPage,
 });
@@ -37,10 +116,9 @@ function ContactoPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
           Estamos cerca
         </p>
-        <h1 className="mt-2 font-display text-4xl font-semibold sm:text-5xl">Contacto</h1>
+        <h1 className="mt-2 font-display text-4xl font-semibold sm:text-5xl">Frutería en Getafe y Móstoles</h1>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          Llámanos, escríbenos o pásate por una de nuestras tiendas. Estamos abiertos todos los días
-          de 9:00 a 21:00.
+          Llámanos, escríbenos o pásate por una de nuestras tiendas. Fruta fresca y verdura variada con reparto a domicilio en Getafe y Móstoles. Abiertos todos los días de 9:00 a 21:00.
         </p>
       </header>
 

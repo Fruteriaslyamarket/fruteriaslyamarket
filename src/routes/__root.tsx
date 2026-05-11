@@ -33,15 +33,23 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lya Market — Fruta y verdura fresca en Getafe y Móstoles" },
+      { title: "Lya Market | Frutería Online con Reparto en Getafe y Móstoles" },
       {
         name: "description",
         content:
-          "Frutería con reparto a domicilio en Getafe y Móstoles. Fruta y verdura fresca de mercado, pedido online sin pago — pagas al recibir.",
+          "Frutería online con reparto a domicilio en Getafe y Móstoles. Fruta y verdura fresca de mercado, pedido online y paga al recibir. Envío a domicilio en Madrid.",
       },
-      { name: "author", content: "Fruterías Lya SL" },
+      { name: "author", content: "Lya Market" },
+      { name: "robots", content: "index, follow" },
+      { name: "google-site-verification", content: "UXvRjEiuFQq_9_SO6v2QL71_ue0kwUSYVcbgEAusCB4" },
+      { name: "geo.region", content: "ES-MD" },
+      { name: "geo.placename", content: "Getafe, Móstoles, Madrid" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Lya Market" },
+      { property: "og:locale", content: "es_ES" },
+      { property: "og:image", content: "https://fruteriaslyamarket.com/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@fruteriaslyamarket" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
@@ -62,7 +70,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>

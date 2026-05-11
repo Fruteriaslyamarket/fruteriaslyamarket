@@ -190,37 +190,40 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
             <h1 className="font-display text-lg font-semibold text-gray-900">Panel de administración</h1>
             <p className="text-xs text-gray-500">Lya Market — {products.length} productos</p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             {saveState === "saved" && (
-              <span className="flex items-center gap-1 text-xs text-green-600">
+              <span className="hidden md:flex items-center gap-1 text-xs text-green-600">
                 <CheckCircle2 className="h-4 w-4" />
                 Publicado — la web se actualiza en ~1 min
               </span>
             )}
+            {saveState === "saved" && (
+              <CheckCircle2 className="md:hidden h-4 w-4 text-green-600" />
+            )}
             {saveState === "error" && (
               <span className="flex items-center gap-1 text-xs text-red-600">
                 <AlertCircle className="h-4 w-4" />
-                {saveError}
+                <span className="hidden md:inline">{saveError}</span>
               </span>
             )}
             <button
               onClick={publish}
               disabled={saveState === "saving" || !dirty}
-              className="flex h-9 items-center gap-2 rounded-lg bg-green-600 px-4 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
+              className="flex h-9 items-center gap-2 rounded-lg bg-green-600 px-3 md:px-4 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
             >
               {saveState === "saving" ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Send className="h-4 w-4" />
               )}
-              {saveState === "saving" ? "Publicando…" : "Publicar cambios"}
+              <span className="hidden md:inline">{saveState === "saving" ? "Publicando…" : "Publicar cambios"}</span>
             </button>
             <button
               onClick={onLogout}
               className="flex h-9 items-center gap-2 rounded-lg border border-gray-200 px-3 text-sm text-gray-600 hover:bg-gray-100"
             >
               <LogOut className="h-4 w-4" />
-              Salir
+              <span className="hidden md:inline">Salir</span>
             </button>
           </div>
         </div>
@@ -234,25 +237,28 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
             placeholder="Buscar producto…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="h-9 w-56 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+            className="h-9 w-full md:w-56 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
           />
-          <select
-            value={catFilter}
-            onChange={(e) => setCatFilter(e.target.value as ProductCategory | "todas")}
-            className="h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500"
-          >
-            {CATEGORIES.map((c) => (
-              <option key={c.value} value={c.value}>{c.label}</option>
-            ))}
-          </select>
-          <span className="ml-auto text-sm text-gray-500">{filtered.length} productos</span>
-          <button
-            onClick={() => { setEditing({ id: "", name: "", description: "", category: "verduras", price: 0, unit: "kg", image: "" }); setIsNew(true); }}
-            className="flex h-9 items-center gap-2 rounded-lg bg-gray-900 px-4 text-sm font-semibold text-white hover:bg-gray-700"
-          >
-            <Plus className="h-4 w-4" />
-            Añadir producto
-          </button>
+          <div className="flex w-full md:w-auto items-center gap-3">
+            <select
+              value={catFilter}
+              onChange={(e) => setCatFilter(e.target.value as ProductCategory | "todas")}
+              className="h-9 flex-1 md:flex-none rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500"
+            >
+              {CATEGORIES.map((c) => (
+                <option key={c.value} value={c.value}>{c.label}</option>
+              ))}
+            </select>
+            <span className="text-sm text-gray-500 whitespace-nowrap">{filtered.length} productos</span>
+            <button
+              onClick={() => { setEditing({ id: "", name: "", description: "", category: "verduras", price: 0, unit: "kg", image: "" }); setIsNew(true); }}
+              className="flex h-9 items-center gap-2 rounded-lg bg-gray-900 px-4 text-sm font-semibold text-white hover:bg-gray-700"
+            >
+              <Plus className="h-4 w-4" />
+              <span className="hidden sm:inline">Añadir producto</span>
+              <span className="sm:hidden">Añadir</span>
+            </button>
+          </div>
         </div>
 
         {/* Legend */}
@@ -276,7 +282,8 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           </p>
         )}
 
-        <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        {/* Tabla — solo escritorio */}
+        <div className="hidden md:block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100 bg-gray-50 text-xs font-medium uppercase tracking-wide text-gray-500">
@@ -373,6 +380,84 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
               )}
             </tbody>
           </table>
+        </div>
+
+        {/* Tarjetas — solo móvil */}
+        <div className="md:hidden space-y-3">
+          {filtered.map((p) => (
+            <div
+              key={p.id}
+              className={`rounded-xl border border-gray-200 bg-white p-4 shadow-sm ${p.hidden ? "opacity-40" : ""}`}
+            >
+              <div className="flex items-start gap-3">
+                <img src={p.image} alt={p.name} className="h-14 w-14 shrink-0 rounded-lg object-cover" />
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-gray-900 leading-tight">{p.name}</p>
+                  <p className="mt-0.5 line-clamp-1 text-xs text-gray-400">{p.description}</p>
+                  <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                    <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
+                      {CATEGORY_OPTIONS.find((c) => c.value === p.category)?.label ?? p.category}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">
+                      {p.price.toFixed(2).replace(".", ",")} €
+                      <span className="text-xs font-normal text-gray-400"> / {p.unit}</span>
+                    </span>
+                    {p.offer && p.oldPrice && (
+                      <span className="text-xs text-gray-400 line-through">
+                        {p.oldPrice.toFixed(2).replace(".", ",")} €
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3 flex items-center justify-between border-t border-gray-100 pt-3">
+                <div className="flex gap-1">
+                  <button
+                    onClick={() => toggle(p.id, "featured")}
+                    title={p.featured ? "Quitar de destacados" : "Marcar como destacado"}
+                    className={`rounded p-1.5 ${p.featured ? "text-yellow-500" : "text-gray-300"}`}
+                  >
+                    <Star className="h-4 w-4" fill={p.featured ? "currentColor" : "none"} />
+                  </button>
+                  <button
+                    onClick={() => toggle(p.id, "offer")}
+                    title={p.offer ? "Quitar oferta" : "Poner en oferta"}
+                    className={`rounded p-1.5 ${p.offer ? "text-orange-500" : "text-gray-300"}`}
+                  >
+                    <Tag className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={() => toggle(p.id, "hidden")}
+                    title={p.hidden ? "Mostrar en tienda" : "Ocultar de tienda"}
+                    className={`rounded p-1.5 ${p.hidden ? "text-gray-500" : "text-gray-300"}`}
+                  >
+                    {p.hidden ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  </button>
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => { setEditing({ ...p }); setIsNew(false); }}
+                    className="rounded-lg border border-gray-200 p-2 text-gray-600 hover:bg-gray-50"
+                    title="Editar"
+                  >
+                    <Pencil className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={() => setDeleteId(p.id)}
+                    className="rounded-lg border border-red-100 p-2 text-red-400 hover:bg-red-50"
+                    title="Eliminar"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+          {filtered.length === 0 && (
+            <div className="rounded-xl border border-gray-200 bg-white py-12 text-center text-sm text-gray-400">
+              No hay productos que coincidan con la búsqueda.
+            </div>
+          )}
         </div>
       </div>
 

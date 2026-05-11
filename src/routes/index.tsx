@@ -7,19 +7,105 @@ import { whatsappLink } from "@/lib/cart";
 import heroImage from "@/assets/hero.png";
 import vanVideo from "@/assets/van.mp4";
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Lya Market",
+  "description": "Frutería online con reparto a domicilio en Getafe y Móstoles. Fruta y verdura fresca de mercado, fruta de temporada, verdura variada y cesta de la compra semanal.",
+  "url": "https://fruteriaslyamarket.com",
+  "telephone": "+34674559853",
+  "email": "fruteriaslyamarket@gmail.com",
+  "image": "https://fruteriaslyamarket.com/favicon.png",
+  "priceRange": "€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
+  "openingHours": "Mo-Su 09:00-21:00",
+  "servesCuisine": "Frutas y verduras frescas",
+  "hasMap": "https://www.google.com/maps?q=Calle+Catalu%C3%B1a+1,+Getafe",
+  "areaServed": [
+    { "@type": "City", "name": "Getafe" },
+    { "@type": "City", "name": "Móstoles" },
+    { "@type": "City", "name": "Madrid" }
+  ],
+  "location": [
+    {
+      "@type": "GroceryStore",
+      "name": "Lya Market Getafe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Cataluña 1",
+        "addressLocality": "Getafe",
+        "addressRegion": "Madrid",
+        "postalCode": "28903",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34674559853",
+      "openingHours": "Mo-Su 09:00-21:00",
+      "geo": { "@type": "GeoCoordinates", "latitude": "40.3050", "longitude": "-3.7310" }
+    },
+    {
+      "@type": "GroceryStore",
+      "name": "Lya Market Móstoles",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Joaquín Blume 23",
+        "addressLocality": "Móstoles",
+        "addressRegion": "Madrid",
+        "postalCode": "28933",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34674559853",
+      "openingHours": "Mo-Su 09:00-21:00",
+      "geo": { "@type": "GeoCoordinates", "latitude": "40.3222", "longitude": "-3.8645" }
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/fruteriaslyamarket"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Lya Market",
+  "url": "https://fruteriaslyamarket.com",
+  "description": "Frutería online con reparto a domicilio en Getafe y Móstoles",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://fruteriaslyamarket.com/tienda?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lya Market — Frutería con reparto en Getafe y Móstoles" },
+      { title: "Lya Market | Frutería Online con Reparto a Domicilio en Getafe y Móstoles" },
       {
         name: "description",
         content:
-          "Compra fruta y verdura fresca online. Reparto a domicilio en Getafe y Móstoles. Pago al recibir, sin complicaciones.",
+          "Frutería online con reparto a domicilio en Getafe y Móstoles. Fruta fresca, verdura variada, fruta de temporada y cesta semanal. Paga al recibir. Envío a domicilio en Madrid.",
       },
-      { property: "og:title", content: "Lya Market — Fruta y verdura fresca a domicilio" },
+      { property: "og:title", content: "Lya Market | Frutería Online - Fruta Fresca a Domicilio en Getafe y Móstoles" },
       {
         property: "og:description",
-        content: "Tu frutería de barrio en Getafe y Móstoles, ahora también online.",
+        content: "Fruta y verdura fresca con reparto a domicilio en Getafe y Móstoles. Pedido online, paga al recibir.",
+      },
+      { property: "og:url", content: "https://fruteriaslyamarket.com/" },
+      { name: "twitter:title", content: "Lya Market | Frutería Online - Fruta Fresca a Domicilio" },
+      { name: "twitter:description", content: "Fruta y verdura fresca con reparto a domicilio en Getafe y Móstoles." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://fruteriaslyamarket.com/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(websiteSchema),
       },
     ],
   }),
@@ -38,7 +124,8 @@ const wa = whatsappLink("¡Hola Lya Market! Quería preguntaros por un pedido.")
         {/* Imagen — fondo completo */}
         <img
           src={heroImage}
-          alt="Fruta y verdura fresca Lya Market"
+          alt="Fruta y verdura fresca Lya Market - frutería online en Getafe y Móstoles"
+          fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover [object-position:80%_50%] md:object-center"
         />
 

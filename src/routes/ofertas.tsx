@@ -7,14 +7,18 @@ import { buildWhatsAppMessage, whatsappLink } from "@/lib/cart";
 export const Route = createFileRoute("/ofertas")({
   head: () => ({
     meta: [
-      { title: "Ofertas y cesta semanal — Lya Market" },
+      { title: "Ofertas de Fruta y Verdura | Cesta Semanal a Domicilio - Lya Market" },
       {
         name: "description",
         content:
-          "Las mejores ofertas de fruta y verdura de la semana. Cesta semanal con reparto en Getafe y Móstoles.",
+          "Las mejores ofertas de fruta fresca y verdura variada de la semana. Cesta de la compra semanal con envío a domicilio en Getafe y Móstoles. Fruta de temporada al mejor precio.",
       },
-      { property: "og:title", content: "Ofertas — Lya Market" },
-      { property: "og:description", content: "Cesta semanal y promociones de temporada." },
+      { property: "og:title", content: "Ofertas de Fruta y Verdura | Cesta Semanal - Lya Market" },
+      { property: "og:description", content: "Cesta semanal de fruta fresca y verdura variada con reparto a domicilio en Getafe y Móstoles." },
+      { property: "og:url", content: "https://fruteriaslyamarket.com/ofertas" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://fruteriaslyamarket.com/ofertas" },
     ],
   }),
   component: OfertasPage,
@@ -36,10 +40,10 @@ function OfertasPage() {
           <Sparkles className="h-3.5 w-3.5" /> Esta semana
         </span>
         <h1 className="mt-3 font-display text-4xl font-semibold sm:text-5xl">
-          Ofertas frescas
+          Ofertas de Fruta y Verdura Fresca
         </h1>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          Aprovecha los mejores precios de la semana en producto de temporada.
+          Aprovecha los mejores precios de la semana en fruta de temporada y verdura variada. Cesta de la compra con envío a domicilio en Getafe y Móstoles.
         </p>
       </header>
 
