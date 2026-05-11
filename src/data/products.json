@@ -4,7 +4,7 @@
     "name": "Coles de Bruselas",
     "description": "Tiernas y sabrosas, perfectas al horno o salteadas.",
     "category": "verduras",
-    "price": 3,
+    "price": 35,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1576749872435-ff88a71c1ae2?auto=format&fit=crop&w=900&q=70",
     "offer": false
