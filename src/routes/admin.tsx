@@ -437,17 +437,17 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                 <div className="flex gap-2">
                   <button
                     onClick={() => { setEditing({ ...p }); setIsNew(false); }}
-                    className="rounded-lg border border-gray-200 p-2 text-gray-600 hover:bg-gray-50"
-                    title="Editar"
+                    className="flex items-center gap-1.5 rounded-lg bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 active:bg-gray-200"
                   >
                     <Pencil className="h-4 w-4" />
+                    Editar
                   </button>
                   <button
                     onClick={() => setDeleteId(p.id)}
-                    className="rounded-lg border border-red-100 p-2 text-red-400 hover:bg-red-50"
-                    title="Eliminar"
+                    className="flex items-center gap-1.5 rounded-lg bg-red-50 px-3 py-2 text-sm font-medium text-red-600 active:bg-red-100"
                   >
                     <Trash2 className="h-4 w-4" />
+                    Eliminar
                   </button>
                 </div>
               </div>
