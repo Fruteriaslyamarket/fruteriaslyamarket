@@ -593,6 +593,7 @@ function ProductModal({
             />
             {form.image && (
               <img
+                key={form.image}
                 src={form.image}
                 alt=""
                 className="mt-2 h-24 w-full rounded-lg object-cover"
