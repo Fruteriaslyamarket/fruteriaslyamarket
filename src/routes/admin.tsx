@@ -615,13 +615,7 @@ function ProductModal({
               placeholder="https://images.unsplash.com/…"
             />
             {form.image && (
-              <img
-                key={form.image}
-                src={form.image}
-                alt=""
-                className="mt-2 h-24 w-full rounded-lg object-cover"
-                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-              />
+              <ImagePreview url={form.image} />
             )}
           </Field>
 
@@ -681,6 +675,29 @@ function ProductModal({
 }
 
 // ─── Small helpers ─────────────────────────────────────────────────────────────
+
+function ImagePreview({ url }: { url: string }) {
+  const [state, setState] = React.useState<"loading" | "ok" | "error">("loading");
+  React.useEffect(() => { setState("loading"); }, [url]);
+  return (
+    <div className="mt-2">
+      <img
+        key={url}
+        src={url}
+        alt=""
+        className={`h-24 w-full rounded-lg object-cover ${state === "ok" ? "" : "hidden"}`}
+        onLoad={() => setState("ok")}
+        onError={() => setState("error")}
+      />
+      {state === "error" && (
+        <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs text-red-600">
+          <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+          <span>No se puede cargar esta imagen. Asegúrate de que el link empieza por <strong>https://</strong> y viene de un sitio que permite enlazar imágenes directamente (Unsplash, Pexels, Imgur…). Los links de Google Imágenes o Instagram no funcionan.</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function input(hasError: boolean) {
   return `h-10 w-full rounded-xl border bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-green-500/20 ${
