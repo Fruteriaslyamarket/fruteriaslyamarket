@@ -155,6 +155,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
       const sha = await getFileSha(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, GITHUB_BRANCH);
       const content = JSON.stringify(products, null, 2);
       await updateFile(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, content, sha, "admin: actualizar productos", GITHUB_BRANCH);
+      fetch("/api/redeploy", { method: "POST" }).catch(() => {});
       setSaveState("saved");
       setTimeout(() => setSaveState("idle"), 5000);
     } catch (e) {

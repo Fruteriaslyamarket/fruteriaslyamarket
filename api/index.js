@@ -18,6 +18,37 @@ const STATIC_FILES = {
 
 export default async function handler(req, res) {
   const path = req.url?.split('?')[0]
+
+  if (path === '/api/redeploy' && req.method === 'POST') {
+    const token = process.env.VERCEL_TOKEN
+    const projectId = 'prj_Dx5spDJuRE3RPK15U7pQxuaWuJe4'
+    const teamId = 'team_JI6HIEdbLnS8IuGNROlhcMhz'
+    if (!token) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: 'VERCEL_TOKEN no configurado' }))
+      return
+    }
+    const deploymentsRes = await fetch(
+      `https://api.vercel.com/v6/deployments?projectId=${projectId}&teamId=${teamId}&target=production&limit=1`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    )
+    const { deployments } = await deploymentsRes.json()
+    if (!deployments?.length) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: 'No se encontró despliegue previo' }))
+      return
+    }
+    const redeployRes = await fetch(
+      `https://api.vercel.com/v13/deployments/${deployments[0].uid}/redeploy?teamId=${teamId}`,
+      { method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: '{}' }
+    )
+    const result = await redeployRes.json()
+    res.statusCode = redeployRes.ok ? 200 : 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ ok: redeployRes.ok, url: result.url }))
+    return
+  }
+
   if (STATIC_FILES[path]) {
     const file = STATIC_FILES[path]
     res.statusCode = 200
