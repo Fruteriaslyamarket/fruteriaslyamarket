@@ -1,119 +1,1076 @@
 [
-  { "id": "coles-bruselas", "name": "Coles de Bruselas", "description": "Tiernas y sabrosas, perfectas al horno o salteadas.", "category": "verduras", "price": 3.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1576749872435-ff88a71c1ae2?auto=format&fit=crop&w=900&q=70" },
-  { "id": "romanesco", "name": "Romanesco", "description": "La col de fractales, suave y delicada.", "category": "verduras", "price": 2.9, "unit": "ud", "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lombarda", "name": "Lombarda", "description": "Col morada ideal para guarniciones de invierno.", "category": "verduras", "price": 1.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1651172915092-4389b362b25d?auto=format&fit=crop&w=900&q=70" },
-  { "id": "repollo", "name": "Repollo", "description": "Crujiente y versátil, base de muchos platos.", "category": "verduras", "price": 1.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=900&q=70" },
-  { "id": "puerros", "name": "Puerros", "description": "Aromáticos, ideales para cremas y caldos.", "category": "verduras", "price": 2.2, "unit": "manojo", "image": "https://images.unsplash.com/photo-1549913468-0ddc24a4a1bf?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pepino", "name": "Pepino", "description": "Refrescante, perfecto en ensaladas.", "category": "verduras", "price": 1.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pimiento-italiano-verde", "name": "Pimiento Italiano Verde", "description": "Fino y aromático, ideal para freír.", "category": "verduras", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pimiento-italiano-rojo", "name": "Pimiento Italiano Rojo", "description": "Dulce y carnoso, ideal asado.", "category": "verduras", "price": 2.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pimiento-lamuyo-verde", "name": "Pimiento Lamuyo Verde", "description": "Carnoso y jugoso, perfecto para rellenar.", "category": "verduras", "price": 2.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pimiento-lamuyo-rojo", "name": "Pimiento Lamuyo Rojo", "description": "Dulce, grueso y sabroso.", "category": "verduras", "price": 2.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70", "featured": true, "offer": true, "oldPrice": 3.5 },
-  { "id": "judias-verdes", "name": "Judías Verdes", "description": "Tiernas, frescas del día.", "category": "verduras", "price": 3.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1574963835594-61eede2070dc?auto=format&fit=crop&w=900&q=70" },
-  { "id": "mazorcas", "name": "Mazorcas de maíz", "description": "Dulces y jugosas, perfectas a la plancha.", "category": "verduras", "price": 1.2, "unit": "ud", "image": "https://images.unsplash.com/photo-1531171000775-75f0213ca8a0?auto=format&fit=crop&w=900&q=70" },
-  { "id": "zanahoria", "name": "Zanahoria", "description": "Dulces y frescas, recién lavadas.", "category": "verduras", "price": 1.1, "unit": "kg", "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=900&q=70" },
-  { "id": "nabos", "name": "Nabos", "description": "Sabor suave, perfectos para cocidos.", "category": "verduras", "price": 1.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1648291913029-2f365923d823?auto=format&fit=crop&w=900&q=70" },
-  { "id": "rabanos", "name": "Rábanos", "description": "Picantes y crujientes para tus ensaladas.", "category": "verduras", "price": 1.3, "unit": "manojo", "image": "https://images.unsplash.com/photo-1585369496178-144fd937f249?auto=format&fit=crop&w=900&q=70" },
-  { "id": "remolacha-cruda", "name": "Remolacha Cruda", "description": "Dulce y terrosa, ideal asada.", "category": "verduras", "price": 1.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70" },
-  { "id": "remolacha-cocida", "name": "Remolacha Cocida", "description": "Lista para usar en ensaladas.", "category": "verduras", "price": 2.4, "unit": "ud", "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70" },
-  { "id": "acelgas", "name": "Acelgas", "description": "Hojas verdes tiernas, recién cortadas.", "category": "verduras", "price": 1.8, "unit": "manojo", "image": "https://images.unsplash.com/photo-1679595044391-3c42b0f351b5?auto=format&fit=crop&w=900&q=70" },
-  { "id": "apio", "name": "Apio", "description": "Crujiente y aromático.", "category": "verduras", "price": 1.7, "unit": "ud", "image": "https://images.unsplash.com/photo-1582372288206-a88db541f0e8?auto=format&fit=crop&w=900&q=70" },
-  { "id": "alcachofa", "name": "Alcachofa", "description": "Tiernas, perfectas a la plancha.", "category": "verduras", "price": 3.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1518735869015-566a18eae4be?auto=format&fit=crop&w=900&q=70" },
-  { "id": "ajo", "name": "Ajo", "description": "Imprescindible en la cocina.", "category": "verduras", "price": 0.9, "unit": "malla 250 g", "image": "https://images.unsplash.com/photo-1615477550927-6ec8445fcfdc?auto=format&fit=crop&w=900&q=70" },
-  { "id": "berenjenas", "name": "Berenjenas", "description": "Brillantes y firmes, ideales asadas.", "category": "verduras", "price": 1.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1615484477201-9f4953340fab?auto=format&fit=crop&w=900&q=70" },
-  { "id": "brocoli", "name": "Brócoli", "description": "Verde y compacto, fresco del día.", "category": "verduras", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=900&q=70", "featured": true },
-  { "id": "calabacin", "name": "Calabacín", "description": "Tierno y versátil para cocinar.", "category": "verduras", "price": 1.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1691480291894-75229c2bfd44?auto=format&fit=crop&w=900&q=70" },
-  { "id": "calabaza", "name": "Calabaza", "description": "Dulce, ideal para cremas y horno.", "category": "verduras", "price": 1.3, "unit": "kg", "image": "https://images.unsplash.com/photo-1692680919402-95fc56f99225?auto=format&fit=crop&w=900&q=70" },
-  { "id": "coliflor", "name": "Coliflor", "description": "Blanca y compacta, fresca del día.", "category": "verduras", "price": 1.95, "unit": "ud", "image": "https://images.unsplash.com/photo-1566842600175-97dca489844f?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lechuga-batavia", "name": "Lechuga Batavia", "description": "Hojas crujientes y suaves.", "category": "ensaladas", "price": 1.2, "unit": "ud", "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lechuga-iceberg", "name": "Lechuga Iceberg", "description": "Muy crujiente, ideal para ensaladas frescas.", "category": "ensaladas", "price": 1.4, "unit": "ud", "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lechuga-roble", "name": "Lechuga Hoja de Roble", "description": "Sabor delicado, hojas rizadas.", "category": "ensaladas", "price": 1.5, "unit": "ud", "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cogollos", "name": "Cogollos", "description": "Pequeños y tiernos, perfectos a la plancha.", "category": "ensaladas", "price": 2.2, "unit": "pack 3 ud", "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "endivias", "name": "Endivias", "description": "Ligero amargor, ideales rellenas.", "category": "ensaladas", "price": 2.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1615368651029-5cd78668899b?auto=format&fit=crop&w=900&q=70" },
-  { "id": "escarola-bolsa", "name": "Escarola (Bolsa)", "description": "Lavada y lista para servir.", "category": "ensaladas", "price": 1.8, "unit": "bolsa", "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "espinaca-bolsa", "name": "Espinaca (Bolsa)", "description": "Hojas tiernas listas para usar.", "category": "ensaladas", "price": 1.95, "unit": "bolsa", "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "esparragos-enteros", "name": "Espárragos Enteros", "description": "Verdes y tiernos.", "category": "ensaladas", "price": 4.5, "unit": "manojo", "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70" },
-  { "id": "esparragos-puntas", "name": "Espárragos Puntas", "description": "Las puntas más tiernas, ideales salteadas.", "category": "ensaladas", "price": 5.2, "unit": "manojo", "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70" },
-  { "id": "champinon", "name": "Champiñón", "description": "Frescos y firmes.", "category": "ensaladas", "price": 3.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&w=900&q=70" },
-  { "id": "setas", "name": "Setas variadas", "description": "Selección de temporada.", "category": "ensaladas", "price": 5.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1602664719969-5cb83870efb3?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cilantro", "name": "Cilantro", "description": "Aromático, recién cortado.", "category": "ensaladas", "price": 1.2, "unit": "manojo", "image": "https://images.unsplash.com/photo-1535189487909-a262ad10c165?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-daniela", "name": "Tomate Daniela", "description": "Firme y sabroso, ideal para ensalada.", "category": "tomates", "price": 2.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-ensalada", "name": "Tomate Ensalada", "description": "Jugoso, perfecto en crudo.", "category": "tomates", "price": 1.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-pera", "name": "Tomate Pera", "description": "Carnoso, ideal para salsas.", "category": "tomates", "price": 1.85, "unit": "kg", "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-raf-verde", "name": "Tomate Raf Verde", "description": "Sabor intenso y dulce.", "category": "tomates", "price": 5.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70", "featured": true },
-  { "id": "tomate-cherry", "name": "Tomate Cherry", "description": "Pequeños y dulces, en su punto.", "category": "tomates", "price": 3.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1615486171815-2611a6e3cd02?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-rama", "name": "Tomate en Rama", "description": "Madurado en planta, sabor intenso.", "category": "tomates", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1630223697313-a6f764e12109?auto=format&fit=crop&w=900&q=70", "featured": true },
-  { "id": "tomate-kumato", "name": "Tomate Kumato", "description": "Color oscuro y sabor único.", "category": "tomates", "price": 3.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-rosado", "name": "Tomate Rosado", "description": "Suave, dulce y muy carnoso.", "category": "tomates", "price": 4.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70" },
-  { "id": "tomate-corazon-buey", "name": "Tomate Corazón de Buey", "description": "Grande, jugoso y muy aromático.", "category": "tomates", "price": 3.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cebolla-normal", "name": "Cebolla", "description": "Para todos los usos en la cocina.", "category": "tuberculos", "price": 1.1, "unit": "kg", "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cebolla-roja", "name": "Cebolla Roja", "description": "Suave y dulce, ideal en ensaladas.", "category": "tuberculos", "price": 1.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cebolla-dulce", "name": "Cebolla Dulce", "description": "Muy suave, perfecta cruda.", "category": "tuberculos", "price": 1.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cebolletas", "name": "Cebolletas", "description": "Tiernas, ideales para ensalada.", "category": "tuberculos", "price": 1.4, "unit": "manojo", "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70" },
-  { "id": "batata", "name": "Batata (boniato)", "description": "Dulce y cremosa al horno.", "category": "tuberculos", "price": 1.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=900&q=70" },
-  { "id": "patata-lavada", "name": "Patata Lavada", "description": "Lista para cocinar, multiusos.", "category": "tuberculos", "price": 1.1, "unit": "kg", "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=70" },
-  { "id": "yuca", "name": "Yuca", "description": "Tubérculo tropical, ideal frito o cocido.", "category": "tuberculos", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1655912108021-5a81aa63cc3d?auto=format&fit=crop&w=900&q=70" },
-  { "id": "alubia-pinta", "name": "Alubia Pinta", "description": "Cremosa y sabrosa, ideal para guisos.", "category": "legumbres", "price": 3.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1564894809611-1742fc40ed80?auto=format&fit=crop&w=900&q=70" },
-  { "id": "alubia-blanca", "name": "Alubia Blanca", "description": "Suave, perfecta para fabadas y potajes.", "category": "legumbres", "price": 3.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1564894809611-1742fc40ed80?auto=format&fit=crop&w=900&q=70" },
-  { "id": "alubia-carilla", "name": "Alubia Carilla", "description": "Tierna, cocción rápida.", "category": "legumbres", "price": 3.0, "unit": "kg", "image": "https://images.unsplash.com/photo-1564894809611-1742fc40ed80?auto=format&fit=crop&w=900&q=70" },
-  { "id": "garbanzo-extra", "name": "Garbanzo Extra", "description": "Calibre grande, mantecoso.", "category": "legumbres", "price": 3.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "garbanzo-pedrosillano", "name": "Garbanzo Pedrosillano", "description": "Pequeño y muy sabroso.", "category": "legumbres", "price": 3.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lenteja-castellana", "name": "Lenteja Castellana", "description": "Tradicional, fina y sabrosa.", "category": "legumbres", "price": 2.8, "unit": "kg", "image": "https://images.unsplash.com/photo-1552585960-0e1069ce7405?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lenteja-eston", "name": "Lenteja Eston", "description": "Pequeña y de sabor intenso.", "category": "legumbres", "price": 2.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1552585960-0e1069ce7405?auto=format&fit=crop&w=900&q=70" },
-  { "id": "melocoton", "name": "Melocotón", "description": "Jugoso y dulce, fruta de verano.", "category": "temporada", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1602813812581-0713dae489da?auto=format&fit=crop&w=900&q=70" },
-  { "id": "fresquilla", "name": "Fresquilla", "description": "Pulpa firme y aromática.", "category": "temporada", "price": 2.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1602813812581-0713dae489da?auto=format&fit=crop&w=900&q=70" },
-  { "id": "nectarinas", "name": "Nectarinas", "description": "Piel lisa, sabor intenso.", "category": "temporada", "price": 2.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1628364251782-52941ea94dfd?auto=format&fit=crop&w=900&q=70" },
-  { "id": "paraguaya", "name": "Paraguaya", "description": "Plana y muy dulce.", "category": "temporada", "price": 2.8, "unit": "kg", "image": "https://images.unsplash.com/photo-1629828874514-c1e5103f2150?auto=format&fit=crop&w=900&q=70" },
-  { "id": "nispero", "name": "Níspero", "description": "Refrescante, de temporada corta.", "category": "temporada", "price": 3.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1739712184487-69778ba04b0f?auto=format&fit=crop&w=900&q=70" },
-  { "id": "albaricoque-clement", "name": "Albaricoque Clement", "description": "Aromático y dulce.", "category": "temporada", "price": 3.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1592681814168-6df0fa93161b?auto=format&fit=crop&w=900&q=70" },
-  { "id": "freson", "name": "Fresón", "description": "Grandes, rojos y dulces.", "category": "temporada", "price": 3.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1518635017498-87f514b751ba?auto=format&fit=crop&w=900&q=70", "featured": true },
-  { "id": "granadas", "name": "Granadas", "description": "Frescas, llenas de sabor.", "category": "temporada", "price": 2.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&w=900&q=70" },
-  { "id": "cerezas", "name": "Cerezas", "description": "Dulces y crujientes.", "category": "temporada", "price": 5.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=900&q=70" },
-  { "id": "picotas", "name": "Picotas", "description": "Cerezas del Jerte, sin rabo.", "category": "temporada", "price": 6.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=900&q=70" },
-  { "id": "ciruela-amarilla", "name": "Ciruela Amarilla", "description": "Jugosa y refrescante.", "category": "temporada", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1566327726734-42bb3a886389?auto=format&fit=crop&w=900&q=70" },
-  { "id": "ciruela-roja", "name": "Ciruela Roja", "description": "Dulce y aromática.", "category": "temporada", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70" },
-  { "id": "ciruela-pasa", "name": "Ciruela Pasa", "description": "Ciruelas oscuras y dulces.", "category": "temporada", "price": 2.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70" },
-  { "id": "uva-roja", "name": "Uva Roja", "description": "Dulce, perfecta para postre.", "category": "temporada", "price": 2.8, "unit": "kg", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?auto=format&fit=crop&w=900&q=70" },
-  { "id": "uva-villanueva", "name": "Uva Villanueva", "description": "Variedad blanca muy aromática.", "category": "temporada", "price": 2.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70" },
-  { "id": "uva-moscatel", "name": "Uva Moscatel", "description": "Aromática e intensa.", "category": "temporada", "price": 3.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70" },
-  { "id": "arandanos", "name": "Arándanos", "description": "Antioxidantes, en tarrina.", "category": "temporada", "price": 2.95, "unit": "tarrina 125 g", "image": "https://images.unsplash.com/photo-1594002348772-bc0cb57ade8b?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-golden-perlim", "name": "Manzana Golden Perlim", "description": "Dulce, crujiente y aromática.", "category": "manzanas-peras", "price": 2.1, "unit": "kg", "image": "https://images.unsplash.com/photo-1608569569104-208fbb5ee52e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-golden-altide", "name": "Manzana Golden Altide", "description": "Variedad de altitud, muy sabrosa.", "category": "manzanas-peras", "price": 2.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1608569569104-208fbb5ee52e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-granny-smith", "name": "Manzana Granny Smith", "description": "Verde, ácida y muy crujiente.", "category": "manzanas-peras", "price": 2.3, "unit": "kg", "image": "https://images.unsplash.com/photo-1672062518635-e0568b3c6e1b?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-reineta", "name": "Manzana Reineta", "description": "Ideal para asar y repostería.", "category": "manzanas-peras", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-royal-gala", "name": "Manzana Royal Gala", "description": "Crujiente y dulce.", "category": "manzanas-peras", "price": 1.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70", "featured": true },
-  { "id": "manzana-virgen-doncella", "name": "Manzana Virgen Doncella", "description": "Variedad tradicional, suave.", "category": "manzanas-peras", "price": 2.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-pink-lady", "name": "Manzana Pink Lady", "description": "Dulce y ácida a la vez, muy crujiente.", "category": "manzanas-peras", "price": 2.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70" },
-  { "id": "manzana-fuji", "name": "Manzana Fuji", "description": "Muy dulce y jugosa.", "category": "manzanas-peras", "price": 2.3, "unit": "kg", "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pera-agua", "name": "Pera de Agua", "description": "Refrescante y muy jugosa.", "category": "manzanas-peras", "price": 1.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pera-conferencia-extra", "name": "Pera Conferencia Extra", "description": "Dulce y aromática.", "category": "manzanas-peras", "price": 2.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pera-conferencia-belga", "name": "Pera Conferencia Belga", "description": "Calibre selecto, sabor intenso.", "category": "manzanas-peras", "price": 2.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pera-ercolina", "name": "Pera Ercolina", "description": "Pequeña, dulce y crujiente.", "category": "manzanas-peras", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pera-limonera", "name": "Pera Limonera", "description": "Suave y refrescante.", "category": "manzanas-peras", "price": 2.3, "unit": "kg", "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70" },
-  { "id": "granadilla", "name": "Granadilla", "description": "Dulce, parecida a la maracuyá.", "category": "exoticas", "price": 1.5, "unit": "ud", "image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=70" },
-  { "id": "aguacate", "name": "Aguacate", "description": "Cremoso, listo para disfrutar.", "category": "exoticas", "price": 1.2, "unit": "ud", "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=900&q=70", "featured": true },
-  { "id": "kakis", "name": "Kakis", "description": "Dulces y melosos.", "category": "exoticas", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1697434467948-50f3d674dee1?auto=format&fit=crop&w=900&q=70" },
-  { "id": "chirimoyas", "name": "Chirimoyas", "description": "Cremosa y aromática.", "category": "exoticas", "price": 3.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1627521742129-bf9cda19b21f?auto=format&fit=crop&w=900&q=70" },
-  { "id": "papayon", "name": "Papayón", "description": "Tropical, dulce y refrescante.", "category": "exoticas", "price": 3.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=70" },
-  { "id": "mango", "name": "Mango", "description": "Jugoso y aromático.", "category": "exoticas", "price": 2.5, "unit": "ud", "image": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pina-normal", "name": "Piña", "description": "Dulce, en su punto de madurez.", "category": "exoticas", "price": 2.5, "unit": "ud", "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=70" },
-  { "id": "pina-monte", "name": "Piña Monte", "description": "Variedad muy dulce.", "category": "exoticas", "price": 3.2, "unit": "ud", "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=70" },
-  { "id": "banana-normal", "name": "Banana", "description": "Suave y dulce.", "category": "exoticas", "price": 1.8, "unit": "kg", "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "banana-monte", "name": "Banana Monte", "description": "Sabor intenso, calibre grande.", "category": "exoticas", "price": 2.1, "unit": "kg", "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "platano-canario", "name": "Plátano de Canarias", "description": "Elige el punto de maduración: maduro listo para comer o verde para madurar en casa.", "category": "exoticas", "price": 2.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70", "featured": true, "options": { "label": "Punto", "values": ["Maduro", "Verde"] } },
-  { "id": "pomelos", "name": "Pomelos", "description": "Refrescantes, ligeramente amargos.", "category": "exoticas", "price": 1.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "kiwi-nacional", "name": "Kiwi Nacional", "description": "Cultivado en España, muy aromático.", "category": "exoticas", "price": 2.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70" },
-  { "id": "kiwi-zespri", "name": "Kiwi Zespri", "description": "Dulce y jugoso, calidad premium.", "category": "exoticas", "price": 3.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70" },
-  { "id": "limon", "name": "Limón", "description": "Frescos y aromáticos.", "category": "citricos", "price": 1.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1582287014914-1db836913e7b?auto=format&fit=crop&w=900&q=70" },
-  { "id": "lima", "name": "Lima", "description": "Aromática, ideal para cócteles.", "category": "citricos", "price": 2.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1582287104445-6754664dbdb2?auto=format&fit=crop&w=900&q=70" },
-  { "id": "naranja-zumo", "name": "Naranja de Zumo", "description": "Jugosísima, perfecta para exprimir.", "category": "citricos", "price": 1.45, "unit": "kg", "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70", "featured": true, "offer": true, "oldPrice": 1.95 },
-  { "id": "naranja-bolsa-2kg", "name": "Naranja Bolsa 2 kg", "description": "Bolsa lista para llevar.", "category": "citricos", "price": 2.5, "unit": "bolsa 2 kg", "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "naranja-granel", "name": "Naranja Granel", "description": "Selecciona las que quieras.", "category": "citricos", "price": 1.6, "unit": "kg", "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "naranja-rama", "name": "Naranja de Rama", "description": "Recién cortadas, sabor intenso.", "category": "citricos", "price": 1.9, "unit": "kg", "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70" },
-  { "id": "sandia-negra", "name": "Sandía Negra", "description": "Dulce y refrescante.", "category": "melones", "price": 0.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70" },
-  { "id": "sandia-rayada", "name": "Sandía Rayada", "description": "Clásica, dulce y jugosa.", "category": "melones", "price": 0.95, "unit": "kg", "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70" },
-  { "id": "sandia-fashion", "name": "Sandía Fashion", "description": "Sin pepitas, muy dulce.", "category": "melones", "price": 1.2, "unit": "kg", "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70" },
-  { "id": "melon-piel-sapo", "name": "Melón Piel de Sapo", "description": "Carne blanca y dulce.", "category": "melones", "price": 1.3, "unit": "kg", "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70" },
-  { "id": "melon-bollo", "name": "Melón Bollo", "description": "Dulce y aromático.", "category": "melones", "price": 1.4, "unit": "kg", "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70" },
-  { "id": "melon-galia", "name": "Melón Galia", "description": "Refrescante, pulpa verdosa.", "category": "melones", "price": 1.5, "unit": "kg", "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70" }
+  {
+    "id": "coles-bruselas",
+    "name": "Coles de Bruselas",
+    "description": "Tiernas y sabrosas, perfectas al horno o salteadas.",
+    "category": "verduras",
+    "price": 3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1576749872435-ff88a71c1ae2?auto=format&fit=crop&w=900&q=70",
+    "offer": false
+  },
+  {
+    "id": "romanesco",
+    "name": "Romanesco",
+    "description": "La col de fractales, suave y delicada.",
+    "category": "verduras",
+    "price": 2.9,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lombarda",
+    "name": "Lombarda",
+    "description": "Col morada ideal para guarniciones de invierno.",
+    "category": "verduras",
+    "price": 1.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1651172915092-4389b362b25d?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "repollo",
+    "name": "Repollo",
+    "description": "Crujiente y versátil, base de muchos platos.",
+    "category": "verduras",
+    "price": 1.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "puerros",
+    "name": "Puerros",
+    "description": "Aromáticos, ideales para cremas y caldos.",
+    "category": "verduras",
+    "price": 2.2,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1549913468-0ddc24a4a1bf?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pepino",
+    "name": "Pepino",
+    "description": "Refrescante, perfecto en ensaladas.",
+    "category": "verduras",
+    "price": 1.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pimiento-italiano-verde",
+    "name": "Pimiento Italiano Verde",
+    "description": "Fino y aromático, ideal para freír.",
+    "category": "verduras",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pimiento-italiano-rojo",
+    "name": "Pimiento Italiano Rojo",
+    "description": "Dulce y carnoso, ideal asado.",
+    "category": "verduras",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pimiento-lamuyo-verde",
+    "name": "Pimiento Lamuyo Verde",
+    "description": "Carnoso y jugoso, perfecto para rellenar.",
+    "category": "verduras",
+    "price": 2.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pimiento-lamuyo-rojo",
+    "name": "Pimiento Lamuyo Rojo",
+    "description": "Dulce, grueso y sabroso.",
+    "category": "verduras",
+    "price": 2.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70",
+    "featured": true,
+    "offer": true,
+    "oldPrice": 3.5
+  },
+  {
+    "id": "judias-verdes",
+    "name": "Judías Verdes",
+    "description": "Tiernas, frescas del día.",
+    "category": "verduras",
+    "price": 3.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1574963835594-61eede2070dc?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "mazorcas",
+    "name": "Mazorcas de maíz",
+    "description": "Dulces y jugosas, perfectas a la plancha.",
+    "category": "verduras",
+    "price": 1.2,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1531171000775-75f0213ca8a0?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "zanahoria",
+    "name": "Zanahoria",
+    "description": "Dulces y frescas, recién lavadas.",
+    "category": "verduras",
+    "price": 1.1,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "nabos",
+    "name": "Nabos",
+    "description": "Sabor suave, perfectos para cocidos.",
+    "category": "verduras",
+    "price": 1.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1648291913029-2f365923d823?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "rabanos",
+    "name": "Rábanos",
+    "description": "Picantes y crujientes para tus ensaladas.",
+    "category": "verduras",
+    "price": 1.3,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1585369496178-144fd937f249?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "remolacha-cruda",
+    "name": "Remolacha Cruda",
+    "description": "Dulce y terrosa, ideal asada.",
+    "category": "verduras",
+    "price": 1.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "remolacha-cocida",
+    "name": "Remolacha Cocida",
+    "description": "Lista para usar en ensaladas.",
+    "category": "verduras",
+    "price": 2.4,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "acelgas",
+    "name": "Acelgas",
+    "description": "Hojas verdes tiernas, recién cortadas.",
+    "category": "verduras",
+    "price": 1.8,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1679595044391-3c42b0f351b5?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "apio",
+    "name": "Apio",
+    "description": "Crujiente y aromático.",
+    "category": "verduras",
+    "price": 1.7,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1582372288206-a88db541f0e8?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "alcachofa",
+    "name": "Alcachofa",
+    "description": "Tiernas, perfectas a la plancha.",
+    "category": "verduras",
+    "price": 3.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1518735869015-566a18eae4be?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "ajo",
+    "name": "Ajo",
+    "description": "Imprescindible en la cocina.",
+    "category": "verduras",
+    "price": 0.9,
+    "unit": "malla 250 g",
+    "image": "https://images.unsplash.com/photo-1615477550927-6ec8445fcfdc?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "berenjenas",
+    "name": "Berenjenas",
+    "description": "Brillantes y firmes, ideales asadas.",
+    "category": "verduras",
+    "price": 1.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615484477201-9f4953340fab?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "brocoli",
+    "name": "Brócoli",
+    "description": "Verde y compacto, fresco del día.",
+    "category": "verduras",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=900&q=70",
+    "featured": true
+  },
+  {
+    "id": "calabacin",
+    "name": "Calabacín",
+    "description": "Tierno y versátil para cocinar.",
+    "category": "verduras",
+    "price": 1.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1691480291894-75229c2bfd44?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "calabaza",
+    "name": "Calabaza",
+    "description": "Dulce, ideal para cremas y horno.",
+    "category": "verduras",
+    "price": 1.3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1692680919402-95fc56f99225?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "coliflor",
+    "name": "Coliflor",
+    "description": "Blanca y compacta, fresca del día.",
+    "category": "verduras",
+    "price": 1.95,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1566842600175-97dca489844f?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lechuga-batavia",
+    "name": "Lechuga Batavia",
+    "description": "Hojas crujientes y suaves.",
+    "category": "ensaladas",
+    "price": 1.2,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lechuga-iceberg",
+    "name": "Lechuga Iceberg",
+    "description": "Muy crujiente, ideal para ensaladas frescas.",
+    "category": "ensaladas",
+    "price": 1.4,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lechuga-roble",
+    "name": "Lechuga Hoja de Roble",
+    "description": "Sabor delicado, hojas rizadas.",
+    "category": "ensaladas",
+    "price": 1.5,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cogollos",
+    "name": "Cogollos",
+    "description": "Pequeños y tiernos, perfectos a la plancha.",
+    "category": "ensaladas",
+    "price": 2.2,
+    "unit": "pack 3 ud",
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "endivias",
+    "name": "Endivias",
+    "description": "Ligero amargor, ideales rellenas.",
+    "category": "ensaladas",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615368651029-5cd78668899b?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "escarola-bolsa",
+    "name": "Escarola (Bolsa)",
+    "description": "Lavada y lista para servir.",
+    "category": "ensaladas",
+    "price": 1.8,
+    "unit": "bolsa",
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "espinaca-bolsa",
+    "name": "Espinaca (Bolsa)",
+    "description": "Hojas tiernas listas para usar.",
+    "category": "ensaladas",
+    "price": 1.95,
+    "unit": "bolsa",
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "esparragos-enteros",
+    "name": "Espárragos Enteros",
+    "description": "Verdes y tiernos.",
+    "category": "ensaladas",
+    "price": 4.5,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "esparragos-puntas",
+    "name": "Espárragos Puntas",
+    "description": "Las puntas más tiernas, ideales salteadas.",
+    "category": "ensaladas",
+    "price": 5.2,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "champinon",
+    "name": "Champiñón",
+    "description": "Frescos y firmes.",
+    "category": "ensaladas",
+    "price": 3.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "setas",
+    "name": "Setas variadas",
+    "description": "Selección de temporada.",
+    "category": "ensaladas",
+    "price": 5.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1602664719969-5cb83870efb3?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cilantro",
+    "name": "Cilantro",
+    "description": "Aromático, recién cortado.",
+    "category": "ensaladas",
+    "price": 1.2,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1535189487909-a262ad10c165?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-daniela",
+    "name": "Tomate Daniela",
+    "description": "Firme y sabroso, ideal para ensalada.",
+    "category": "tomates",
+    "price": 2.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-ensalada",
+    "name": "Tomate Ensalada",
+    "description": "Jugoso, perfecto en crudo.",
+    "category": "tomates",
+    "price": 1.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-pera",
+    "name": "Tomate Pera",
+    "description": "Carnoso, ideal para salsas.",
+    "category": "tomates",
+    "price": 1.85,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-raf-verde",
+    "name": "Tomate Raf Verde",
+    "description": "Sabor intenso y dulce.",
+    "category": "tomates",
+    "price": 5.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70",
+    "featured": true
+  },
+  {
+    "id": "tomate-cherry",
+    "name": "Tomate Cherry",
+    "description": "Pequeños y dulces, en su punto.",
+    "category": "tomates",
+    "price": 3.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615486171815-2611a6e3cd02?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-rama",
+    "name": "Tomate en Rama",
+    "description": "Madurado en planta, sabor intenso.",
+    "category": "tomates",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1630223697313-a6f764e12109?auto=format&fit=crop&w=900&q=70",
+    "featured": true
+  },
+  {
+    "id": "tomate-kumato",
+    "name": "Tomate Kumato",
+    "description": "Color oscuro y sabor único.",
+    "category": "tomates",
+    "price": 3.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-rosado",
+    "name": "Tomate Rosado",
+    "description": "Suave, dulce y muy carnoso.",
+    "category": "tomates",
+    "price": 4.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "tomate-corazon-buey",
+    "name": "Tomate Corazón de Buey",
+    "description": "Grande, jugoso y muy aromático.",
+    "category": "tomates",
+    "price": 3.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cebolla-normal",
+    "name": "Cebolla",
+    "description": "Para todos los usos en la cocina.",
+    "category": "tuberculos",
+    "price": 1.1,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cebolla-roja",
+    "name": "Cebolla Roja",
+    "description": "Suave y dulce, ideal en ensaladas.",
+    "category": "tuberculos",
+    "price": 1.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cebolla-dulce",
+    "name": "Cebolla Dulce",
+    "description": "Muy suave, perfecta cruda.",
+    "category": "tuberculos",
+    "price": 1.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cebolletas",
+    "name": "Cebolletas",
+    "description": "Tiernas, ideales para ensalada.",
+    "category": "tuberculos",
+    "price": 1.4,
+    "unit": "manojo",
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "batata",
+    "name": "Batata (boniato)",
+    "description": "Dulce y cremosa al horno.",
+    "category": "tuberculos",
+    "price": 1.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "patata-lavada",
+    "name": "Patata Lavada",
+    "description": "Lista para cocinar, multiusos.",
+    "category": "tuberculos",
+    "price": 1.1,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "yuca",
+    "name": "Yuca",
+    "description": "Tubérculo tropical, ideal frito o cocido.",
+    "category": "tuberculos",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1655912108021-5a81aa63cc3d?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "alubia-pinta",
+    "name": "Alubia Pinta",
+    "description": "Cremosa y sabrosa, ideal para guisos.",
+    "category": "legumbres",
+    "price": 3.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1564894809611-1742fc40ed80?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "alubia-blanca",
+    "name": "Alubia Blanca",
+    "description": "Suave, perfecta para fabadas y potajes.",
+    "category": "legumbres",
+    "price": 3.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1564894809611-1742fc40ed80?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "alubia-carilla",
+    "name": "Alubia Carilla",
+    "description": "Tierna, cocción rápida.",
+    "category": "legumbres",
+    "price": 3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1564894809611-1742fc40ed80?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "garbanzo-extra",
+    "name": "Garbanzo Extra",
+    "description": "Calibre grande, mantecoso.",
+    "category": "legumbres",
+    "price": 3.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "garbanzo-pedrosillano",
+    "name": "Garbanzo Pedrosillano",
+    "description": "Pequeño y muy sabroso.",
+    "category": "legumbres",
+    "price": 3.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lenteja-castellana",
+    "name": "Lenteja Castellana",
+    "description": "Tradicional, fina y sabrosa.",
+    "category": "legumbres",
+    "price": 2.8,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1552585960-0e1069ce7405?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lenteja-eston",
+    "name": "Lenteja Eston",
+    "description": "Pequeña y de sabor intenso.",
+    "category": "legumbres",
+    "price": 2.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1552585960-0e1069ce7405?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "melocoton",
+    "name": "Melocotón",
+    "description": "Jugoso y dulce, fruta de verano.",
+    "category": "temporada",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1602813812581-0713dae489da?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "fresquilla",
+    "name": "Fresquilla",
+    "description": "Pulpa firme y aromática.",
+    "category": "temporada",
+    "price": 2.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1602813812581-0713dae489da?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "nectarinas",
+    "name": "Nectarinas",
+    "description": "Piel lisa, sabor intenso.",
+    "category": "temporada",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1628364251782-52941ea94dfd?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "paraguaya",
+    "name": "Paraguaya",
+    "description": "Plana y muy dulce.",
+    "category": "temporada",
+    "price": 2.8,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1629828874514-c1e5103f2150?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "nispero",
+    "name": "Níspero",
+    "description": "Refrescante, de temporada corta.",
+    "category": "temporada",
+    "price": 3.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1739712184487-69778ba04b0f?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "albaricoque-clement",
+    "name": "Albaricoque Clement",
+    "description": "Aromático y dulce.",
+    "category": "temporada",
+    "price": 3.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1592681814168-6df0fa93161b?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "freson",
+    "name": "Fresón",
+    "description": "Grandes, rojos y dulces.",
+    "category": "temporada",
+    "price": 3.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1518635017498-87f514b751ba?auto=format&fit=crop&w=900&q=70",
+    "featured": true
+  },
+  {
+    "id": "granadas",
+    "name": "Granadas",
+    "description": "Frescas, llenas de sabor.",
+    "category": "temporada",
+    "price": 2.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "cerezas",
+    "name": "Cerezas",
+    "description": "Dulces y crujientes.",
+    "category": "temporada",
+    "price": 5.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "picotas",
+    "name": "Picotas",
+    "description": "Cerezas del Jerte, sin rabo.",
+    "category": "temporada",
+    "price": 6.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "ciruela-amarilla",
+    "name": "Ciruela Amarilla",
+    "description": "Jugosa y refrescante.",
+    "category": "temporada",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1566327726734-42bb3a886389?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "ciruela-roja",
+    "name": "Ciruela Roja",
+    "description": "Dulce y aromática.",
+    "category": "temporada",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "ciruela-pasa",
+    "name": "Ciruela Pasa",
+    "description": "Ciruelas oscuras y dulces.",
+    "category": "temporada",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "uva-roja",
+    "name": "Uva Roja",
+    "description": "Dulce, perfecta para postre.",
+    "category": "temporada",
+    "price": 2.8,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "uva-villanueva",
+    "name": "Uva Villanueva",
+    "description": "Variedad blanca muy aromática.",
+    "category": "temporada",
+    "price": 2.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "uva-moscatel",
+    "name": "Uva Moscatel",
+    "description": "Aromática e intensa.",
+    "category": "temporada",
+    "price": 3.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "arandanos",
+    "name": "Arándanos",
+    "description": "Antioxidantes, en tarrina.",
+    "category": "temporada",
+    "price": 2.95,
+    "unit": "tarrina 125 g",
+    "image": "https://images.unsplash.com/photo-1594002348772-bc0cb57ade8b?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-golden-perlim",
+    "name": "Manzana Golden Perlim",
+    "description": "Dulce, crujiente y aromática.",
+    "category": "manzanas-peras",
+    "price": 2.1,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1608569569104-208fbb5ee52e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-golden-altide",
+    "name": "Manzana Golden Altide",
+    "description": "Variedad de altitud, muy sabrosa.",
+    "category": "manzanas-peras",
+    "price": 2.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1608569569104-208fbb5ee52e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-granny-smith",
+    "name": "Manzana Granny Smith",
+    "description": "Verde, ácida y muy crujiente.",
+    "category": "manzanas-peras",
+    "price": 2.3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1672062518635-e0568b3c6e1b?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-reineta",
+    "name": "Manzana Reineta",
+    "description": "Ideal para asar y repostería.",
+    "category": "manzanas-peras",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-royal-gala",
+    "name": "Manzana Royal Gala",
+    "description": "Crujiente y dulce.",
+    "category": "manzanas-peras",
+    "price": 1.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70",
+    "featured": true
+  },
+  {
+    "id": "manzana-virgen-doncella",
+    "name": "Manzana Virgen Doncella",
+    "description": "Variedad tradicional, suave.",
+    "category": "manzanas-peras",
+    "price": 2.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-pink-lady",
+    "name": "Manzana Pink Lady",
+    "description": "Dulce y ácida a la vez, muy crujiente.",
+    "category": "manzanas-peras",
+    "price": 2.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "manzana-fuji",
+    "name": "Manzana Fuji",
+    "description": "Muy dulce y jugosa.",
+    "category": "manzanas-peras",
+    "price": 2.3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pera-agua",
+    "name": "Pera de Agua",
+    "description": "Refrescante y muy jugosa.",
+    "category": "manzanas-peras",
+    "price": 1.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pera-conferencia-extra",
+    "name": "Pera Conferencia Extra",
+    "description": "Dulce y aromática.",
+    "category": "manzanas-peras",
+    "price": 2.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pera-conferencia-belga",
+    "name": "Pera Conferencia Belga",
+    "description": "Calibre selecto, sabor intenso.",
+    "category": "manzanas-peras",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pera-ercolina",
+    "name": "Pera Ercolina",
+    "description": "Pequeña, dulce y crujiente.",
+    "category": "manzanas-peras",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pera-limonera",
+    "name": "Pera Limonera",
+    "description": "Suave y refrescante.",
+    "category": "manzanas-peras",
+    "price": 2.3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "granadilla",
+    "name": "Granadilla",
+    "description": "Dulce, parecida a la maracuyá.",
+    "category": "exoticas",
+    "price": 1.5,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "aguacate",
+    "name": "Aguacate",
+    "description": "Cremoso, listo para disfrutar.",
+    "category": "exoticas",
+    "price": 1.2,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=900&q=70",
+    "featured": true
+  },
+  {
+    "id": "kakis",
+    "name": "Kakis",
+    "description": "Dulces y melosos.",
+    "category": "exoticas",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1697434467948-50f3d674dee1?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "chirimoyas",
+    "name": "Chirimoyas",
+    "description": "Cremosa y aromática.",
+    "category": "exoticas",
+    "price": 3.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1627521742129-bf9cda19b21f?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "papayon",
+    "name": "Papayón",
+    "description": "Tropical, dulce y refrescante.",
+    "category": "exoticas",
+    "price": 3.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "mango",
+    "name": "Mango",
+    "description": "Jugoso y aromático.",
+    "category": "exoticas",
+    "price": 2.5,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pina-normal",
+    "name": "Piña",
+    "description": "Dulce, en su punto de madurez.",
+    "category": "exoticas",
+    "price": 2.5,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "pina-monte",
+    "name": "Piña Monte",
+    "description": "Variedad muy dulce.",
+    "category": "exoticas",
+    "price": 3.2,
+    "unit": "ud",
+    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "banana-normal",
+    "name": "Banana",
+    "description": "Suave y dulce.",
+    "category": "exoticas",
+    "price": 1.8,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "banana-monte",
+    "name": "Banana Monte",
+    "description": "Sabor intenso, calibre grande.",
+    "category": "exoticas",
+    "price": 2.1,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "platano-canario",
+    "name": "Plátano de Canarias",
+    "description": "Elige el punto de maduración: maduro listo para comer o verde para madurar en casa.",
+    "category": "exoticas",
+    "price": 2.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70",
+    "featured": true,
+    "options": {
+      "label": "Punto",
+      "values": [
+        "Maduro",
+        "Verde"
+      ]
+    }
+  },
+  {
+    "id": "pomelos",
+    "name": "Pomelos",
+    "description": "Refrescantes, ligeramente amargos.",
+    "category": "exoticas",
+    "price": 1.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "kiwi-nacional",
+    "name": "Kiwi Nacional",
+    "description": "Cultivado en España, muy aromático.",
+    "category": "exoticas",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "kiwi-zespri",
+    "name": "Kiwi Zespri",
+    "description": "Dulce y jugoso, calidad premium.",
+    "category": "exoticas",
+    "price": 3.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "limon",
+    "name": "Limón",
+    "description": "Frescos y aromáticos.",
+    "category": "citricos",
+    "price": 1.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1582287014914-1db836913e7b?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "lima",
+    "name": "Lima",
+    "description": "Aromática, ideal para cócteles.",
+    "category": "citricos",
+    "price": 2.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1582287104445-6754664dbdb2?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "naranja-zumo",
+    "name": "Naranja de Zumo",
+    "description": "Jugosísima, perfecta para exprimir.",
+    "category": "citricos",
+    "price": 1.45,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70",
+    "featured": true,
+    "offer": true,
+    "oldPrice": 1.95
+  },
+  {
+    "id": "naranja-bolsa-2kg",
+    "name": "Naranja Bolsa 2 kg",
+    "description": "Bolsa lista para llevar.",
+    "category": "citricos",
+    "price": 2.5,
+    "unit": "bolsa 2 kg",
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "naranja-granel",
+    "name": "Naranja Granel",
+    "description": "Selecciona las que quieras.",
+    "category": "citricos",
+    "price": 1.6,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "naranja-rama",
+    "name": "Naranja de Rama",
+    "description": "Recién cortadas, sabor intenso.",
+    "category": "citricos",
+    "price": 1.9,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "sandia-negra",
+    "name": "Sandía Negra",
+    "description": "Dulce y refrescante.",
+    "category": "melones",
+    "price": 0.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "sandia-rayada",
+    "name": "Sandía Rayada",
+    "description": "Clásica, dulce y jugosa.",
+    "category": "melones",
+    "price": 0.95,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "sandia-fashion",
+    "name": "Sandía Fashion",
+    "description": "Sin pepitas, muy dulce.",
+    "category": "melones",
+    "price": 1.2,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "melon-piel-sapo",
+    "name": "Melón Piel de Sapo",
+    "description": "Carne blanca y dulce.",
+    "category": "melones",
+    "price": 1.3,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "melon-bollo",
+    "name": "Melón Bollo",
+    "description": "Dulce y aromático.",
+    "category": "melones",
+    "price": 1.4,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "melon-galia",
+    "name": "Melón Galia",
+    "description": "Refrescante, pulpa verdosa.",
+    "category": "melones",
+    "price": 1.5,
+    "unit": "kg",
+    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  }
 ]
