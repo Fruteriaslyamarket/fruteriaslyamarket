@@ -26,7 +26,8 @@
     "category": "verduras",
     "price": 1.4,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1651172915092-4389b362b25d?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photou-1651172915092-4389b362b25d?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "repollo",
