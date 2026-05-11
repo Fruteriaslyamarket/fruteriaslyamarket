@@ -60,7 +60,7 @@ const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH as string | undefined)
 let _cache: Product[] | null = null;
 let _promise: Promise<Product[]> | null = null;
 
-function loadProducts(): Promise<Product[]> {
+export function loadProducts(): Promise<Product[]> {
   if (_cache) return Promise.resolve(_cache);
   if (!_promise) {
     if (!GITHUB_REPO) return Promise.resolve(ALL_PRODUCTS);

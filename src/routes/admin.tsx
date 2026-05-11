@@ -4,7 +4,7 @@ import {
   Pencil, Trash2, Plus, LogOut, Send, Eye, EyeOff,
   Star, Tag, Loader2, CheckCircle2, AlertCircle, X,
 } from "lucide-react";
-import { ALL_PRODUCTS, CATEGORIES } from "@/data/products";
+import { ALL_PRODUCTS, CATEGORIES, loadProducts } from "@/data/products";
 import type { Product, ProductCategory } from "@/data/products";
 import { getFileSha, updateFile } from "@/lib/github";
 
@@ -129,6 +129,9 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
   const [products, setProducts] = React.useState<Product[]>(() =>
     JSON.parse(JSON.stringify(ALL_PRODUCTS)),
   );
+  const [baseline, setBaseline] = React.useState<Product[]>(() =>
+    JSON.parse(JSON.stringify(ALL_PRODUCTS)),
+  );
   const [saveState, setSaveState] = React.useState<SaveState>("idle");
   const [saveError, setSaveError] = React.useState("");
   const [editing, setEditing] = React.useState<Product | null>(null);
@@ -137,7 +140,16 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
   const [search, setSearch] = React.useState("");
   const [catFilter, setCatFilter] = React.useState<ProductCategory | "todas">("todas");
 
-  const dirty = JSON.stringify(products) !== JSON.stringify(ALL_PRODUCTS);
+  // Cargar datos actuales desde GitHub al abrir el panel
+  React.useEffect(() => {
+    loadProducts().then((data) => {
+      const fresh = JSON.parse(JSON.stringify(data));
+      setProducts(fresh);
+      setBaseline(fresh);
+    }).catch(() => {});
+  }, []);
+
+  const dirty = JSON.stringify(products) !== JSON.stringify(baseline);
 
   const filtered = products.filter((p) => {
     const matchesCat = catFilter === "todas" || p.category === catFilter;
@@ -156,6 +168,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
       const content = JSON.stringify(products, null, 2);
       await updateFile(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, content, sha, "admin: actualizar productos", GITHUB_BRANCH);
       fetch("/api/redeploy", { method: "POST" }).catch(() => {});
+      setBaseline(JSON.parse(JSON.stringify(products)));
       setSaveState("saved");
       setTimeout(() => setSaveState("idle"), 5000);
     } catch (e) {
