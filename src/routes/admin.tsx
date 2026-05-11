@@ -603,9 +603,18 @@ function ProductModal({
           {/* Image URL */}
           <Field label="URL de imagen">
             <input
-              type="url"
+              type="text"
+              inputMode="url"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
               value={form.image}
-              onChange={(e) => set("image", e.target.value)}
+              onChange={(e) => set("image", e.target.value.trim())}
+              onPaste={(e) => {
+                e.preventDefault();
+                const text = e.clipboardData.getData("text").trim();
+                set("image", text);
+              }}
               className={input(false)}
               placeholder="https://images.unsplash.com/…"
             />
