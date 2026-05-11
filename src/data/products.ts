@@ -60,16 +60,15 @@ const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH as string | undefined)
 let _cache: Product[] | null = null;
 let _promise: Promise<Product[]> | null = null;
 
-export function loadProducts(): Promise<Product[]> {
-  if (_cache) return Promise.resolve(_cache);
-  if (!_promise) {
-    if (!GITHUB_REPO) return Promise.resolve(ALL_PRODUCTS);
-    const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/src/data/products.json`;
-    _promise = fetch(url)
-      .then((r) => r.json())
-      .then((data) => { _cache = data as Product[]; return _cache; })
-      .catch(() => ALL_PRODUCTS);
-  }
+export function loadProducts(bust = false): Promise<Product[]> {
+  if (!bust && _cache) return Promise.resolve(_cache);
+  if (!GITHUB_REPO) return Promise.resolve(ALL_PRODUCTS);
+  _cache = null;
+  const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/src/data/products.json?t=${Date.now()}`;
+  _promise = fetch(url, { cache: "no-store" })
+    .then((r) => r.json())
+    .then((data) => { _cache = data as Product[]; return _cache!; })
+    .catch(() => ALL_PRODUCTS);
   return _promise;
 }
 

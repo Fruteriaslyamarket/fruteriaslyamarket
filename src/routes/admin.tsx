@@ -140,9 +140,9 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
   const [search, setSearch] = React.useState("");
   const [catFilter, setCatFilter] = React.useState<ProductCategory | "todas">("todas");
 
-  // Cargar datos actuales desde GitHub al abrir el panel
+  // Cargar datos actuales desde GitHub al abrir el panel (sin caché)
   React.useEffect(() => {
-    loadProducts().then((data) => {
+    loadProducts(true).then((data) => {
       const fresh = JSON.parse(JSON.stringify(data));
       setProducts(fresh);
       setBaseline(fresh);
