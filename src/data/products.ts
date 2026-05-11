@@ -1,3 +1,4 @@
+import * as React from "react";
 import productsData from "./products.json";
 
 export type ProductCategory =
@@ -50,3 +51,39 @@ export const CATEGORIES: { value: ProductCategory | "todas"; label: string }[] =
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
 export const featuredProducts = () => PRODUCTS.filter((p) => p.featured).slice(0, 6);
 export const offerProducts = () => PRODUCTS.filter((p) => p.offer);
+
+// ─── Runtime fetch (siempre actualizado desde GitHub) ─────────────────────────
+
+const GITHUB_REPO = import.meta.env.VITE_GITHUB_REPO as string | undefined;
+const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH as string | undefined) ?? "main";
+
+let _cache: Product[] | null = null;
+let _promise: Promise<Product[]> | null = null;
+
+function loadProducts(): Promise<Product[]> {
+  if (_cache) return Promise.resolve(_cache);
+  if (!_promise) {
+    if (!GITHUB_REPO) return Promise.resolve(ALL_PRODUCTS);
+    const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/src/data/products.json`;
+    _promise = fetch(url)
+      .then((r) => r.json())
+      .then((data) => { _cache = data as Product[]; return _cache; })
+      .catch(() => ALL_PRODUCTS);
+  }
+  return _promise;
+}
+
+export function useProducts() {
+  const [products, setProducts] = React.useState<Product[]>(ALL_PRODUCTS);
+  React.useEffect(() => {
+    loadProducts().then(setProducts).catch(() => {});
+  }, []);
+  const visible = products.filter((p) => !p.hidden);
+  return {
+    all: products,
+    products: visible,
+    featured: visible.filter((p) => p.featured).slice(0, 6),
+    offers: visible.filter((p) => p.offer),
+    getProduct: (id: string) => visible.find((p) => p.id === id),
+  };
+}

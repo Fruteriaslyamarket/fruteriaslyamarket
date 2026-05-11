@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useEffect } from "react";
 import { Leaf, MapPin, Truck, Clock, ArrowRight, ChevronDown } from "lucide-react";
 import { ProductCard } from "@/components/site/ProductCard";
-import { featuredProducts } from "@/data/products";
+import { useProducts } from "@/data/products";
 import { whatsappLink } from "@/lib/cart";
 import heroImage from "@/assets/hero.png";
 import vanVideo from "@/assets/van.mp4";
@@ -113,7 +113,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const featured = featuredProducts();
+  const { featured } = useProducts();
 const wa = whatsappLink("¡Hola Lya Market! Quería preguntaros por un pedido.");
 
   return (

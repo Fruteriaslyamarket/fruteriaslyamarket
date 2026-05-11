@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { ProductCard } from "@/components/site/ProductCard";
-import { offerProducts } from "@/data/products";
+import { useProducts } from "@/data/products";
 import { buildWhatsAppMessage, whatsappLink } from "@/lib/cart";
 
 export const Route = createFileRoute("/ofertas")({
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/ofertas")({
 });
 
 function OfertasPage() {
-  const offers = offerProducts();
+  const { offers } = useProducts();
   const wa = whatsappLink(
     buildWhatsAppMessage(
       [],

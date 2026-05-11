@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import * as React from "react";
 import { ProductCard } from "@/components/site/ProductCard";
-import { CATEGORIES, PRODUCTS, type ProductCategory } from "@/data/products";
+import { CATEGORIES, useProducts, type ProductCategory } from "@/data/products";
 
 export const Route = createFileRoute("/tienda")({
   head: () => ({
@@ -30,8 +30,9 @@ export const Route = createFileRoute("/tienda")({
 function TiendaPage() {
   const [cat, setCat] = React.useState<ProductCategory | "todas">("todas");
   const [q, setQ] = React.useState("");
+  const { products } = useProducts();
 
-  const filtered = PRODUCTS.filter((p) => {
+  const filtered = products.filter((p) => {
     if (cat === "ofertas") {
       if (!p.offer) return false;
     } else if (cat !== "todas") {
