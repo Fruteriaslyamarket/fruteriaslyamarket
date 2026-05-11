@@ -185,45 +185,72 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="sticky top-0 z-20 border-b border-gray-200 bg-white px-4 py-3 shadow-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-          <div>
-            <h1 className="font-display text-lg font-semibold text-gray-900">Panel de administración</h1>
-            <p className="text-xs text-gray-500">Lya Market — {products.length} productos</p>
+        <div className="mx-auto max-w-6xl">
+          {/* Una fila en escritorio, dos filas en móvil */}
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <h1 className="font-display text-base font-semibold text-gray-900 md:text-lg">Panel de administración</h1>
+              <p className="text-xs text-gray-500">Lya Market — {products.length} productos</p>
+            </div>
+            {/* Botones escritorio */}
+            <div className="hidden md:flex items-center gap-2 shrink-0">
+              {saveState === "saved" && (
+                <span className="flex items-center gap-1 text-xs text-green-600">
+                  <CheckCircle2 className="h-4 w-4" />
+                  Publicado — la web se actualiza en ~1 min
+                </span>
+              )}
+              {saveState === "error" && (
+                <span className="flex items-center gap-1 text-xs text-red-600">
+                  <AlertCircle className="h-4 w-4" />
+                  {saveError}
+                </span>
+              )}
+              <button
+                onClick={publish}
+                disabled={saveState === "saving" || !dirty}
+                className="flex h-9 items-center gap-2 rounded-lg bg-green-600 px-4 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
+              >
+                {saveState === "saving" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+                {saveState === "saving" ? "Publicando…" : "Publicar cambios"}
+              </button>
+              <button
+                onClick={onLogout}
+                className="flex h-9 items-center gap-2 rounded-lg border border-gray-200 px-3 text-sm text-gray-600 hover:bg-gray-100"
+              >
+                <LogOut className="h-4 w-4" />
+                Salir
+              </button>
+            </div>
+            {/* Botón salir móvil */}
+            <button
+              onClick={onLogout}
+              className="md:hidden flex h-9 items-center gap-1 rounded-lg border border-gray-200 px-3 text-sm text-gray-600 shrink-0"
+            >
+              <LogOut className="h-4 w-4" />
+            </button>
           </div>
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Botón desplegar — solo móvil */}
+          <div className="mt-2 md:hidden">
             {saveState === "saved" && (
-              <span className="hidden md:flex items-center gap-1 text-xs text-green-600">
-                <CheckCircle2 className="h-4 w-4" />
+              <p className="mb-1.5 flex items-center gap-1 text-xs text-green-600">
+                <CheckCircle2 className="h-3.5 w-3.5" />
                 Publicado — la web se actualiza en ~1 min
-              </span>
-            )}
-            {saveState === "saved" && (
-              <CheckCircle2 className="md:hidden h-4 w-4 text-green-600" />
+              </p>
             )}
             {saveState === "error" && (
-              <span className="flex items-center gap-1 text-xs text-red-600">
-                <AlertCircle className="h-4 w-4" />
-                <span className="hidden md:inline">{saveError}</span>
-              </span>
+              <p className="mb-1.5 flex items-center gap-1 text-xs text-red-600">
+                <AlertCircle className="h-3.5 w-3.5" />
+                {saveError}
+              </p>
             )}
             <button
               onClick={publish}
               disabled={saveState === "saving" || !dirty}
-              className="flex h-9 items-center gap-2 rounded-lg bg-green-600 px-3 md:px-4 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
+              className="flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-green-600 text-sm font-semibold text-white disabled:opacity-50"
             >
-              {saveState === "saving" ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <Send className="h-4 w-4" />
-              )}
-              <span className="hidden md:inline">{saveState === "saving" ? "Publicando…" : "Publicar cambios"}</span>
-            </button>
-            <button
-              onClick={onLogout}
-              className="flex h-9 items-center gap-2 rounded-lg border border-gray-200 px-3 text-sm text-gray-600 hover:bg-gray-100"
-            >
-              <LogOut className="h-4 w-4" />
-              <span className="hidden md:inline">Salir</span>
+              {saveState === "saving" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+              {saveState === "saving" ? "Desplegando…" : "Desplegar cambios"}
             </button>
           </div>
         </div>
