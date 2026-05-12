@@ -113,9 +113,10 @@
     "name": "Mazorcas de maíz",
     "description": "Dulces y jugosas, perfectas a la plancha.",
     "category": "verduras",
-    "price": 1.2,
+    "price": 1.89,
     "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1531171000775-75f0213ca8a0?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1531171000775-75f0213ca8a0?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "zanahoria",
