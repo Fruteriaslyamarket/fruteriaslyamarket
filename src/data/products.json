@@ -204,7 +204,7 @@
     "description": "Imprescindible en la cocina.",
     "category": "verduras",
     "price": 2.2,
-    "unit": "malla 250 g",
+    "unit": "malla 500gm",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602169836-hpfet.jpeg",
     "featured": true,
     "offer": false
@@ -244,9 +244,11 @@
     "name": "Calabaza",
     "description": "Dulce, ideal para cremas y horno.",
     "category": "verduras",
-    "price": 1.3,
+    "price": 1.49,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1692680919402-95fc56f99225?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602275897-7xnep.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "coliflor",
@@ -282,7 +284,9 @@
     "category": "ensaladas",
     "price": 1.5,
     "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70",
+    "hidden": true,
+    "offer": false
   },
   {
     "id": "cogollos",
@@ -301,16 +305,19 @@
     "category": "ensaladas",
     "price": 2.6,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615368651029-5cd78668899b?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1615368651029-5cd78668899b?auto=format&fit=crop&w=900&q=70",
+    "hidden": true,
+    "offer": false
   },
   {
     "id": "escarola-bolsa",
     "name": "Escarola (Bolsa)",
     "description": "Lavada y lista para servir.",
     "category": "ensaladas",
-    "price": 1.8,
+    "price": 1.99,
     "unit": "bolsa",
-    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "espinaca-bolsa",
@@ -344,18 +351,22 @@
     "name": "Champiñón",
     "description": "Frescos y firmes.",
     "category": "ensaladas",
-    "price": 3.4,
+    "price": 3.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602838145-3za2g.jpeg",
+    "offer": false,
+    "featured": true
   },
   {
     "id": "setas",
-    "name": "Setas variadas",
+    "name": "Setas ",
     "description": "Selección de temporada.",
     "category": "ensaladas",
-    "price": 5.9,
+    "price": 5.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1602664719969-5cb83870efb3?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603116054-8ypjh.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "cilantro",
@@ -371,27 +382,32 @@
     "name": "Tomate Daniela",
     "description": "Firme y sabroso, ideal para ensalada.",
     "category": "tomates",
-    "price": 2.2,
+    "price": 2.59,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "tomate-ensalada",
     "name": "Tomate Ensalada",
     "description": "Jugoso, perfecto en crudo.",
     "category": "tomates",
-    "price": 1.95,
+    "price": 2.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602915365-ufq8w.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "tomate-pera",
     "name": "Tomate Pera",
     "description": "Carnoso, ideal para salsas.",
     "category": "tomates",
-    "price": 1.85,
+    "price": 1.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602995409-fs1ug.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "tomate-raf-verde",
@@ -400,8 +416,9 @@
     "category": "tomates",
     "price": 5.5,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70",
-    "featured": true
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603051282-993vj.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "tomate-cherry",
@@ -427,9 +444,11 @@
     "name": "Tomate Kumato",
     "description": "Color oscuro y sabor único.",
     "category": "tomates",
-    "price": 3.5,
+    "price": 3.59,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603173767-b4jx5.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "tomate-rosado",
