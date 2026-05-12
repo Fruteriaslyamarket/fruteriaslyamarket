@@ -539,9 +539,11 @@
     "name": "Yuca",
     "description": "Tubérculo tropical, ideal frito o cocido.",
     "category": "tuberculos",
-    "price": 2.4,
+    "price": 3.29,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1655912108021-5a81aa63cc3d?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603634542-nkrja.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "alubia-pinta",
