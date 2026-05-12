@@ -172,19 +172,22 @@
     "name": "Acelgas",
     "description": "Hojas verdes tiernas, recién cortadas.",
     "category": "verduras",
-    "price": 1.8,
-    "unit": "manojo",
+    "price": 1.99,
+    "unit": "Kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601969733-jp87w.jpeg",
-    "offer": false
+    "offer": false,
+    "featured": true
   },
   {
     "id": "apio",
     "name": "Apio",
     "description": "Crujiente y aromático.",
     "category": "verduras",
-    "price": 1.7,
-    "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1582372288206-a88db541f0e8?auto=format&fit=crop&w=900&q=70"
+    "price": 2.25,
+    "unit": "Kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602076064-u8dol.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "alcachofa",
@@ -200,9 +203,11 @@
     "name": "Ajo",
     "description": "Imprescindible en la cocina.",
     "category": "verduras",
-    "price": 0.9,
+    "price": 2.2,
     "unit": "malla 250 g",
-    "image": "https://images.unsplash.com/photo-1615477550927-6ec8445fcfdc?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602169836-hpfet.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "berenjenas",
