@@ -164,7 +164,8 @@
     "category": "verduras",
     "price": 2.4,
     "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601907250-jo2n1.jpeg",
+    "offer": false
   },
   {
     "id": "acelgas",
@@ -173,7 +174,8 @@
     "category": "verduras",
     "price": 1.8,
     "unit": "manojo",
-    "image": "https://images.unsplash.com/photo-1679595044391-3c42b0f351b5?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601969733-jp87w.jpeg",
+    "offer": false
   },
   {
     "id": "apio",
