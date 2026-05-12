@@ -7,7 +7,8 @@
     "price": 35,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778513466075-yh1ve.jpeg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "romanesco",
@@ -17,7 +18,8 @@
     "price": 2.9,
     "unit": "ud",
     "image": "https://frutascharito.es/31-large_default/romanesco.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "lombarda",
@@ -73,7 +75,8 @@
     "category": "verduras",
     "price": 2.6,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778588191196-kf8gp.jpeg",
+    "offer": false
   },
   {
     "id": "pimiento-lamuyo-verde",
