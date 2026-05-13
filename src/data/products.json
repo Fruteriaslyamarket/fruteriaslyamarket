@@ -1125,5 +1125,16 @@
     "price": 1.5,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+  },
+  {
+    "id": "melon-villaconejos",
+    "name": "Melón villaconejos ",
+    "description": "Delicioso, jugoso y refrescante ",
+    "category": "verduras",
+    "price": 3.99,
+    "unit": "kg",
+    "image": "",
+    "featured": true,
+    "offer": false
   }
 ]
