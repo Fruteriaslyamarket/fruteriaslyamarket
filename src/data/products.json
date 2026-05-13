@@ -223,8 +223,8 @@
     "name": "Brócoli",
     "description": "Verde y compacto, fresco del día.",
     "category": "verduras",
-    "price": 2.25,
-    "unit": "Ud",
+    "price": 2.99,
+    "unit": "Kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778599551542-boq29.webp",
     "featured": true,
     "offer": false
@@ -539,7 +539,7 @@
     "name": "Yuca",
     "description": "Tubérculo tropical, ideal frito o cocido.",
     "category": "tuberculos",
-    "price": 3.29,
+    "price": 3.69,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603634542-nkrja.jpeg",
     "featured": true,
@@ -613,27 +613,33 @@
     "name": "Melocotón",
     "description": "Jugoso y dulce, fruta de verano.",
     "category": "temporada",
-    "price": 2.4,
+    "price": 4.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1602813812581-0713dae489da?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778697742115-upnzf.jpg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "fresquilla",
     "name": "Fresquilla",
     "description": "Pulpa firme y aromática.",
     "category": "temporada",
-    "price": 2.5,
+    "price": 6.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1602813812581-0713dae489da?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778697694815-ds1zs.jpg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "nectarinas",
     "name": "Nectarinas",
     "description": "Piel lisa, sabor intenso.",
     "category": "temporada",
-    "price": 2.6,
+    "price": 5.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1628364251782-52941ea94dfd?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1628364251782-52941ea94dfd?auto=format&fit=crop&w=900&q=70",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "paraguaya",
@@ -677,9 +683,11 @@
     "name": "Granadas",
     "description": "Frescas, llenas de sabor.",
     "category": "temporada",
-    "price": 2.9,
+    "price": 4.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&w=900&q=70",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "cerezas",
@@ -688,7 +696,9 @@
     "category": "temporada",
     "price": 5.9,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778697943294-c7xlo.jpg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "picotas",
@@ -706,16 +716,19 @@
     "category": "temporada",
     "price": 2.4,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1566327726734-42bb3a886389?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1566327726734-42bb3a886389?auto=format&fit=crop&w=900&q=70",
+    "hidden": true
   },
   {
     "id": "ciruela-roja",
     "name": "Ciruela Roja",
     "description": "Dulce y aromática.",
     "category": "temporada",
-    "price": 2.4,
+    "price": 3.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "ciruela-pasa",
