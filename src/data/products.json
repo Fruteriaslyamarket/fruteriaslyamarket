@@ -726,7 +726,7 @@
     "category": "temporada",
     "price": 3.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778698707301-q63pa.jpg",
     "featured": true,
     "offer": false
   },
@@ -735,18 +735,22 @@
     "name": "Ciruela Pasa",
     "description": "Ciruelas oscuras y dulces.",
     "category": "temporada",
-    "price": 2.6,
+    "price": 7.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778698771623-17kkg.jpg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "uva-roja",
     "name": "Uva Roja",
     "description": "Dulce, perfecta para postre.",
     "category": "temporada",
-    "price": 2.8,
+    "price": 3.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778698903056-fwyjn.jpg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "uva-villanueva",
@@ -755,7 +759,8 @@
     "category": "temporada",
     "price": 2.9,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70",
+    "hidden": true
   },
   {
     "id": "uva-moscatel",
