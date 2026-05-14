@@ -1401,5 +1401,55 @@
     "unit": "Litro",
     "image": "",
     "offer": false
+  },
+  {
+    "id": "caballa-en-salsa-de-tomate",
+    "name": "Caballa en salsa de tomate ",
+    "description": "Ideal ",
+    "category": "ofertas",
+    "price": 3,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "aceite-de-girasol-koipe-sol",
+    "name": "Aceite de girasol koipe sol ",
+    "description": "",
+    "category": "ofertas",
+    "price": 3.5,
+    "unit": "Litro",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "latas-conservas-alubias",
+    "name": "Latas conservas alubias",
+    "description": "",
+    "category": "verduras",
+    "price": 1.5,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "lata-conserva-lentejas",
+    "name": "Lata conserva lentejas ",
+    "description": "",
+    "category": "verduras",
+    "price": 1.5,
+    "unit": "kg",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "lata-conserva-garbanzos",
+    "name": "Lata conserva garbanzos ",
+    "description": "",
+    "category": "verduras",
+    "price": 1.5,
+    "unit": "kg",
+    "image": "",
+    "offer": false
   }
 ]
