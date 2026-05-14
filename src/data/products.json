@@ -1261,5 +1261,35 @@
     "unit": "kg",
     "image": "",
     "offer": false
+  },
+  {
+    "id": "berenjenas-aceitunas",
+    "name": "Berenjenas aceitunas ",
+    "description": "Berenjenas enteras en salsa ",
+    "category": "verduras",
+    "price": 9.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "aceitunas-extremenas",
+    "name": "Aceitunas extremeñas ",
+    "description": "Aliñado diferente ",
+    "category": "verduras",
+    "price": 5.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "aceitunas-obregon",
+    "name": "Aceitunas Obregón ",
+    "description": "Grandes y sabrosas ",
+    "category": "verduras",
+    "price": 6.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
   }
 ]
