@@ -1309,7 +1309,7 @@
     "category": "tomates",
     "price": 2.99,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774484290-d500z.jpg",
     "offer": false
   },
   {
@@ -1319,7 +1319,7 @@
     "category": "verduras",
     "price": 8.25,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774534708-s3oco.jpg",
     "offer": false
   },
   {
@@ -1329,17 +1329,17 @@
     "category": "verduras",
     "price": 3.99,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774557945-f7n08.jpg",
     "offer": false
   },
   {
     "id": "almidon-de-yuca",
     "name": "Almidón de yuca ",
     "description": "",
-    "category": "verduras",
+    "category": "ofertas",
     "price": 2.5,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774609524-wnlax.jpg",
     "offer": false
   },
   {
@@ -1349,27 +1349,27 @@
     "category": "verduras",
     "price": 4.25,
     "unit": "Packs",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774687145-cdceq.jpg",
     "offer": false
   },
   {
     "id": "maicena",
     "name": "Maicena ",
     "description": "Harina de maíz fino ",
-    "category": "verduras",
+    "category": "ofertas",
     "price": 3.25,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774749102-rg911.jpg",
     "offer": false
   },
   {
     "id": "natilla-con-panela-america",
     "name": "Natilla con panela América ",
     "description": "",
-    "category": "verduras",
+    "category": "ofertas",
     "price": 3.5,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774822482-ayptb.jpg",
     "offer": false
   },
   {
@@ -1379,7 +1379,7 @@
     "category": "ofertas",
     "price": 8,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774912924-x5u3d.jpg",
     "offer": false
   },
   {
@@ -1389,7 +1389,7 @@
     "category": "verduras",
     "price": 5,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774939880-vg798.jpg",
     "offer": false
   },
   {
@@ -1399,7 +1399,7 @@
     "category": "ofertas",
     "price": 5.5,
     "unit": "Litro",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775026475-a1mwh.jpg",
     "offer": false
   },
   {
@@ -1409,7 +1409,7 @@
     "category": "ofertas",
     "price": 3,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775074590-0bswp.jpg",
     "offer": false
   },
   {
@@ -1419,7 +1419,7 @@
     "category": "ofertas",
     "price": 3.5,
     "unit": "Litro",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775119123-c9rvy.jpg",
     "offer": false
   },
   {
@@ -1429,7 +1429,7 @@
     "category": "verduras",
     "price": 1.5,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775145341-d6hps.jpg",
     "offer": false
   },
   {
@@ -1439,7 +1439,7 @@
     "category": "verduras",
     "price": 1.5,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775270452-8gv2s.jpg",
     "offer": false
   },
   {
@@ -1449,7 +1449,7 @@
     "category": "verduras",
     "price": 1.5,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775300552-s8pcc.jpg",
     "offer": false
   },
   {
@@ -1459,7 +1459,7 @@
     "category": "temporada",
     "price": 4.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775340215-7puzi.jpg",
     "offer": false
   },
   {
@@ -1480,6 +1480,36 @@
     "price": 2.95,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773676511-ezczg.jpg",
+    "offer": false
+  },
+  {
+    "id": "salsa-chamoy",
+    "name": "Salsa chamoy ",
+    "description": "",
+    "category": "ofertas",
+    "price": 3.8,
+    "unit": "kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773893159-jjb1j.jpg",
+    "offer": false
+  },
+  {
+    "id": "arroz-la-rueda",
+    "name": "Arroz la rueda ",
+    "description": "",
+    "category": "ofertas",
+    "price": 2.6,
+    "unit": "kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773962615-vraxj.jpg",
+    "offer": false
+  },
+  {
+    "id": "panela",
+    "name": "Panela ",
+    "description": "Dulzona ",
+    "category": "exoticas",
+    "price": 2.5,
+    "unit": "Ud ",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774011660-suudx.jpg",
     "offer": false
   }
 ]
