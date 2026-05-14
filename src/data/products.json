@@ -1301,5 +1301,75 @@
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778772199958-owv5s.jpg",
     "offer": false
+  },
+  {
+    "id": "tarro-tomate-helios-frito",
+    "name": "Tarro tomate helios frito ",
+    "description": "",
+    "category": "tomates",
+    "price": 2.99,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "huevos-l-30",
+    "name": "Huevos L 30 ",
+    "description": "Grandes ",
+    "category": "verduras",
+    "price": 8.25,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "huevos-l-12",
+    "name": "Huevos L 12 ",
+    "description": "Grandes ",
+    "category": "verduras",
+    "price": 3.99,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "almidon-de-yuca",
+    "name": "Almidón de yuca ",
+    "description": "",
+    "category": "verduras",
+    "price": 2.5,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "frutos-secos-variados",
+    "name": "Frutos secos variados ",
+    "description": "Almendras, nueces, cacahuete,higos ",
+    "category": "verduras",
+    "price": 4.25,
+    "unit": "Packs",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "maicena",
+    "name": "Maicena ",
+    "description": "Harina de maíz fino ",
+    "category": "verduras",
+    "price": 3.25,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "natilla-con-panela-america",
+    "name": "Natilla con panela América ",
+    "description": "",
+    "category": "verduras",
+    "price": 3.5,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
   }
 ]
