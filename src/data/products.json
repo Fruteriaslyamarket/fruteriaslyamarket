@@ -1371,5 +1371,35 @@
     "unit": "Ud",
     "image": "",
     "offer": false
+  },
+  {
+    "id": "yerba-mate-playadito",
+    "name": "Yerba mate  playadito",
+    "description": "Sabor argentino ",
+    "category": "ofertas",
+    "price": 8,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "yerba-mate-taragui",
+    "name": "Yerba mate taragui ",
+    "description": "Sabor argentino ",
+    "category": "verduras",
+    "price": 5,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "leche-de-coco-1-litro",
+    "name": "Leche de coco 1 litro ",
+    "description": "",
+    "category": "ofertas",
+    "price": 5.5,
+    "unit": "Litro",
+    "image": "",
+    "offer": false
   }
 ]
