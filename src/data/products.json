@@ -1221,5 +1221,15 @@
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778769206074-hf8ye.png",
     "offer": false
+  },
+  {
+    "id": "datiles",
+    "name": "Dátiles ",
+    "description": "Dulce y natural ",
+    "category": "exoticas",
+    "price": 2,
+    "unit": "Ud",
+    "image": "",
+    "offer": false
   }
 ]
