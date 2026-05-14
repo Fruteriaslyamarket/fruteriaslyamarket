@@ -1291,5 +1291,15 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778772080966-45kz9.jpg",
     "offer": false
+  },
+  {
+    "id": "miel-de-montana",
+    "name": "Miel de montaña ",
+    "description": "",
+    "category": "verduras",
+    "price": 11,
+    "unit": "Ud",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778772199958-owv5s.jpg",
+    "offer": false
   }
 ]
