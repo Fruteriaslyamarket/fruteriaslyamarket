@@ -318,7 +318,7 @@
     "category": "ensaladas",
     "price": 1.99,
     "unit": "bolsa",
-    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766456781-7puow.jpeg",
     "offer": false
   },
   {
@@ -328,25 +328,28 @@
     "category": "ensaladas",
     "price": 1.95,
     "unit": "bolsa",
-    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766507971-atceh.webp",
+    "offer": false
   },
   {
     "id": "esparragos-enteros",
-    "name": "Espárragos Enteros",
+    "name": "Espárragos manojo 300gr",
     "description": "Verdes y tiernos.",
     "category": "ensaladas",
-    "price": 4.5,
+    "price": 2.95,
     "unit": "manojo",
-    "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "esparragos-puntas",
     "name": "Espárragos Puntas",
     "description": "Las puntas más tiernas, ideales salteadas.",
     "category": "ensaladas",
-    "price": 5.2,
-    "unit": "manojo",
-    "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70"
+    "price": 6.99,
+    "unit": "Kg",
+    "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "champinon",
@@ -384,9 +387,9 @@
     "name": "Tomate Daniela",
     "description": "Firme y sabroso, ideal para ensalada.",
     "category": "tomates",
-    "price": 2.59,
+    "price": 2.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=70",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766794775-dyksf.jpeg",
     "offer": false
   },
   {
@@ -427,9 +430,10 @@
     "name": "Tomate Cherry",
     "description": "Pequeños y dulces, en su punto.",
     "category": "tomates",
-    "price": 3.2,
-    "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615486171815-2611a6e3cd02?auto=format&fit=crop&w=900&q=70"
+    "price": 2.95,
+    "unit": "500gr",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766860702-906rl.jpeg",
+    "offer": false
   },
   {
     "id": "tomate-rama",
@@ -612,12 +616,12 @@
   },
   {
     "id": "melocoton",
-    "name": "Melocotón",
+    "name": "Melocotón amarillo",
     "description": "Jugoso y dulce, fruta de verano.",
     "category": "temporada",
-    "price": 4.99,
+    "price": 6.99,
     "unit": "kg",
-    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778697742115-upnzf.jpg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767054123-fub83.jpeg",
     "featured": true,
     "offer": false
   },
@@ -657,9 +661,10 @@
     "name": "Níspero",
     "description": "Refrescante, de temporada corta.",
     "category": "temporada",
-    "price": 3.4,
+    "price": 5.99,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1739712184487-69778ba04b0f?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767094549-qtdxw.png",
+    "offer": false
   },
   {
     "id": "albaricoque-clement",
@@ -737,9 +742,9 @@
     "name": "Ciruela Pasa",
     "description": "Ciruelas oscuras y dulces.",
     "category": "temporada",
-    "price": 7.99,
-    "unit": "kg",
-    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778698771623-17kkg.jpg",
+    "price": 6.99,
+    "unit": "500gr",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767159769-gy7w5.jpeg",
     "featured": true,
     "offer": false
   },
@@ -787,18 +792,20 @@
     "name": "Manzana Golden Perlim",
     "description": "Dulce, crujiente y aromática.",
     "category": "manzanas-peras",
-    "price": 2.1,
+    "price": 3.45,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1608569569104-208fbb5ee52e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767222309-vpq7p.jpeg",
+    "offer": false
   },
   {
     "id": "manzana-golden-altide",
     "name": "Manzana Golden Altide",
     "description": "Variedad de altitud, muy sabrosa.",
     "category": "manzanas-peras",
-    "price": 2.2,
+    "price": 2.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1608569569104-208fbb5ee52e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767276994-g6j9t.jpeg",
+    "offer": false
   },
   {
     "id": "manzana-granny-smith",
@@ -814,46 +821,51 @@
     "name": "Manzana Reineta",
     "description": "Ideal para asar y repostería.",
     "category": "manzanas-peras",
-    "price": 2.4,
+    "price": 3.25,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767318792-70pcp.jpeg",
+    "offer": false
   },
   {
     "id": "manzana-royal-gala",
     "name": "Manzana Royal Gala",
     "description": "Crujiente y dulce.",
     "category": "manzanas-peras",
-    "price": 1.95,
+    "price": 3.25,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70",
-    "featured": true
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767421283-9tu2p.jpeg",
+    "featured": true,
+    "offer": false
   },
   {
     "id": "manzana-virgen-doncella",
-    "name": "Manzana Virgen Doncella",
-    "description": "Variedad tradicional, suave.",
+    "name": "Manzana Verde Doncella",
+    "description": "Variedad tradicional, suave y dulce.\n",
     "category": "manzanas-peras",
-    "price": 2.5,
+    "price": 3.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767529669-o8q08.jpeg",
+    "offer": false
   },
   {
     "id": "manzana-pink-lady",
     "name": "Manzana Pink Lady",
     "description": "Dulce y ácida a la vez, muy crujiente.",
     "category": "manzanas-peras",
-    "price": 2.95,
+    "price": 3.75,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767476501-g8saz.jpeg",
+    "offer": false
   },
   {
     "id": "manzana-fuji",
     "name": "Manzana Fuji",
     "description": "Muy dulce y jugosa.",
     "category": "manzanas-peras",
-    "price": 2.3,
+    "price": 3.55,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1630563451961-ac2ff27616ab?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767604633-c0tyd.jpeg",
+    "offer": false
   },
   {
     "id": "pera-agua",
@@ -862,16 +874,18 @@
     "category": "manzanas-peras",
     "price": 1.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767687884-dra50.jpeg",
+    "offer": false
   },
   {
     "id": "pera-conferencia-extra",
     "name": "Pera Conferencia Extra",
     "description": "Dulce y aromática.",
     "category": "manzanas-peras",
-    "price": 2.2,
+    "price": 4.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767732452-c89vu.webp",
+    "offer": false
   },
   {
     "id": "pera-conferencia-belga",
@@ -880,44 +894,50 @@
     "category": "manzanas-peras",
     "price": 2.6,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767779467-5hqll.jpeg",
+    "offer": false
   },
   {
     "id": "pera-ercolina",
     "name": "Pera Ercolina",
     "description": "Pequeña, dulce y crujiente.",
     "category": "manzanas-peras",
-    "price": 2.4,
+    "price": 4.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767828890-gp9we.jpeg",
+    "offer": false
   },
   {
     "id": "pera-limonera",
     "name": "Pera Limonera",
     "description": "Suave y refrescante.",
     "category": "manzanas-peras",
-    "price": 2.3,
+    "price": 4.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767913568-hcgv9.jpeg",
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "granadilla",
     "name": "Granadilla",
     "description": "Dulce, parecida a la maracuyá.",
     "category": "exoticas",
-    "price": 1.5,
+    "price": 2.95,
     "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767988515-l66uo.jpeg",
+    "offer": false
   },
   {
     "id": "aguacate",
     "name": "Aguacate",
     "description": "Cremoso, listo para disfrutar.",
     "category": "exoticas",
-    "price": 1.2,
-    "unit": "ud",
+    "price": 4.95,
+    "unit": "500gr",
     "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=900&q=70",
-    "featured": true
+    "featured": true,
+    "offer": false
   },
   {
     "id": "kakis",
@@ -933,9 +953,10 @@
     "name": "Chirimoyas",
     "description": "Cremosa y aromática.",
     "category": "exoticas",
-    "price": 3.5,
+    "price": 6.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1627521742129-bf9cda19b21f?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768053637-do1cm.jpeg",
+    "offer": false
   },
   {
     "id": "papayon",
@@ -969,9 +990,10 @@
     "name": "Piña Monte",
     "description": "Variedad muy dulce.",
     "category": "exoticas",
-    "price": 3.2,
-    "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=70"
+    "price": 6.95,
+    "unit": "Ud",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768122140-0ftcn.png",
+    "offer": false
   },
   {
     "id": "banana-normal",
@@ -989,16 +1011,17 @@
     "category": "exoticas",
     "price": 2.1,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70",
+    "hidden": true
   },
   {
     "id": "platano-canario",
     "name": "Plátano de Canarias",
     "description": "Elige el punto de maduración: maduro listo para comer o verde para madurar en casa.",
     "category": "exoticas",
-    "price": 2.2,
+    "price": 3.55,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768233529-mdbll.jpeg",
     "featured": true,
     "options": {
       "label": "Punto",
@@ -1006,7 +1029,8 @@
         "Maduro",
         "Verde"
       ]
-    }
+    },
+    "offer": false
   },
   {
     "id": "pomelos",
@@ -1031,27 +1055,30 @@
     "name": "Kiwi Zespri",
     "description": "Dulce y jugoso, calidad premium.",
     "category": "exoticas",
-    "price": 3.5,
+    "price": 5.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768328989-p4xg5.jpeg",
+    "offer": false
   },
   {
     "id": "limon",
     "name": "Limón",
     "description": "Frescos y aromáticos.",
     "category": "citricos",
-    "price": 1.6,
+    "price": 2.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1582287014914-1db836913e7b?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768390665-eg2qn.webp",
+    "offer": false
   },
   {
     "id": "lima",
     "name": "Lima",
     "description": "Aromática, ideal para cócteles.",
     "category": "citricos",
-    "price": 2.4,
-    "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1582287104445-6754664dbdb2?auto=format&fit=crop&w=900&q=70"
+    "price": 3.95,
+    "unit": "500gr",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768468084-vcx1q.jpeg",
+    "offer": false
   },
   {
     "id": "naranja-zumo",
@@ -1076,12 +1103,13 @@
   },
   {
     "id": "naranja-granel",
-    "name": "Naranja Granel",
+    "name": "Naranja Fontestad",
     "description": "Selecciona las que quieras.",
     "category": "citricos",
-    "price": 1.6,
+    "price": 3.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768569402-inatm.webp",
+    "offer": false
   },
   {
     "id": "naranja-rama",
@@ -1090,25 +1118,28 @@
     "category": "citricos",
     "price": 1.9,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70",
+    "hidden": true
   },
   {
     "id": "sandia-negra",
     "name": "Sandía Negra",
     "description": "Dulce y refrescante.",
     "category": "melones",
-    "price": 0.95,
+    "price": 2.25,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768620797-srpp6.jpeg",
+    "offer": false
   },
   {
     "id": "sandia-rayada",
     "name": "Sandía Rayada",
     "description": "Clásica, dulce y jugosa.",
     "category": "melones",
-    "price": 0.95,
+    "price": 2.25,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768674184-kpjxe.jpeg",
+    "offer": false
   },
   {
     "id": "sandia-fashion",
@@ -1117,7 +1148,8 @@
     "category": "melones",
     "price": 1.2,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768762591-uc4s6.jpeg",
+    "offer": false
   },
   {
     "id": "melon-piel-sapo",
@@ -1126,7 +1158,8 @@
     "category": "melones",
     "price": 1.3,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768835425-03idw.png",
+    "offer": false
   },
   {
     "id": "melon-bollo",
@@ -1135,7 +1168,8 @@
     "category": "melones",
     "price": 1.4,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768873329-ksf7b.jpeg",
+    "offer": false
   },
   {
     "id": "melon-galia",
@@ -1144,16 +1178,17 @@
     "category": "melones",
     "price": 1.5,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768909794-j0poo.jpeg",
+    "offer": false
   },
   {
     "id": "melon-villaconejos",
     "name": "Melón villaconejos ",
     "description": "Delicioso, jugoso y refrescante ",
-    "category": "verduras",
-    "price": 3.99,
-    "unit": "kg",
-    "image": "",
+    "category": "temporada",
+    "price": 14.5,
+    "unit": "Ud",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768939744-9sz4u.jpeg",
     "featured": true,
     "offer": false
   }
