@@ -1231,5 +1231,15 @@
     "unit": "Ud",
     "image": "",
     "offer": false
+  },
+  {
+    "id": "aceitunas-mojon-picon",
+    "name": "Aceitunas mojón picón ",
+    "description": "Aceitunas con un toque picante ",
+    "category": "verduras",
+    "price": 6.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
   }
 ]
