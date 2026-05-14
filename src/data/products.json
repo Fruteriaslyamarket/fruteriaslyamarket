@@ -1229,7 +1229,7 @@
     "category": "exoticas",
     "price": 2,
     "unit": "Ud",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771786692-h0dad.png",
     "offer": false
   },
   {
@@ -1239,7 +1239,7 @@
     "category": "verduras",
     "price": 6.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771866240-w1hh3.jpeg",
     "offer": false
   },
   {
@@ -1249,7 +1249,7 @@
     "category": "citricos",
     "price": 6.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771891785-p5p4j.jpeg",
     "offer": false
   },
   {
@@ -1259,7 +1259,7 @@
     "category": "verduras",
     "price": 4.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771916121-7hap2.jpeg",
     "offer": false
   },
   {
@@ -1269,7 +1269,7 @@
     "category": "verduras",
     "price": 9.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771973207-2k19e.jpg",
     "offer": false
   },
   {
@@ -1279,7 +1279,7 @@
     "category": "verduras",
     "price": 5.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771993110-inkev.jpeg",
     "offer": false
   },
   {
@@ -1289,7 +1289,7 @@
     "category": "verduras",
     "price": 6.99,
     "unit": "kg",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778772080966-45kz9.jpg",
     "offer": false
   }
 ]
