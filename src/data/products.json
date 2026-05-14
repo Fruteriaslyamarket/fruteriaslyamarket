@@ -1241,5 +1241,25 @@
     "unit": "kg",
     "image": "",
     "offer": false
+  },
+  {
+    "id": "aceitunas-cocktel",
+    "name": "Aceitunas cocktel",
+    "description": "Variado de chupa dedos ",
+    "category": "citricos",
+    "price": 6.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "aceitunas-campo-real",
+    "name": "Aceitunas Campo Real ",
+    "description": "Clásico ",
+    "category": "verduras",
+    "price": 4.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
   }
 ]
