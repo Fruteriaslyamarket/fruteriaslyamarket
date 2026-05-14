@@ -1123,7 +1123,7 @@
     "name": "Naranja Fontestad",
     "description": "Selecciona las que quieras.",
     "category": "citricos",
-    "price": 3.95,
+    "price": 4.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768569402-inatm.webp",
     "offer": false
@@ -1450,6 +1450,36 @@
     "price": 1.5,
     "unit": "kg",
     "image": "",
+    "offer": false
+  },
+  {
+    "id": "mandarina-lolita",
+    "name": "Mandarina Lolita ",
+    "description": "Nacional",
+    "category": "temporada",
+    "price": 4.99,
+    "unit": "kg",
+    "image": "",
+    "offer": false
+  },
+  {
+    "id": "harina-fina-de-almortas",
+    "name": "Harina fina de almortas ",
+    "description": "Ideal para gachas ",
+    "category": "verduras",
+    "price": 3,
+    "unit": "Ud",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773515804-zdfru.jpg",
+    "offer": false
+  },
+  {
+    "id": "salsa-de-soja",
+    "name": "Salsa de soja ",
+    "description": "",
+    "category": "verduras",
+    "price": 2.95,
+    "unit": "Ud",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773676511-ezczg.jpg",
     "offer": false
   }
 ]
