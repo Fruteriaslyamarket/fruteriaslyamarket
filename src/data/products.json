@@ -264,18 +264,20 @@
     "name": "Lechuga Batavia",
     "description": "Hojas crujientes y suaves.",
     "category": "ensaladas",
-    "price": 1.2,
+    "price": 1.55,
     "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766303210-rzhdb.jpeg",
+    "offer": false
   },
   {
     "id": "lechuga-iceberg",
     "name": "Lechuga Iceberg",
     "description": "Muy crujiente, ideal para ensaladas frescas.",
     "category": "ensaladas",
-    "price": 1.4,
+    "price": 1.25,
     "unit": "ud",
-    "image": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766388875-g6rs0.jpeg",
+    "offer": false
   },
   {
     "id": "lechuga-roble",
