@@ -946,7 +946,8 @@
     "price": 2.95,
     "unit": "ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767988515-l66uo.jpeg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "aguacate",
@@ -1058,18 +1059,20 @@
     "name": "Pomelos",
     "description": "Refrescantes, ligeramente amargos.",
     "category": "exoticas",
-    "price": 1.95,
+    "price": 2.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1779110340548-kxd4a.jpeg",
+    "offer": false
   },
   {
     "id": "kiwi-nacional",
     "name": "Kiwi Nacional",
     "description": "Cultivado en España, muy aromático.",
     "category": "exoticas",
-    "price": 2.6,
+    "price": 3.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70",
+    "offer": false
   },
   {
     "id": "kiwi-zespri",
