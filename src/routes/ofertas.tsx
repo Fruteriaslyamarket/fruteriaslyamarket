@@ -66,7 +66,9 @@ function OfertasPage() {
               <ul className="mt-5 grid grid-cols-2 gap-2 text-sm text-foreground">
                 {basketProducts.map((p) => (
                   <li key={p.id} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary" /> {p.name}
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span>{p.name}</span>
+                    <span className="ml-auto text-muted-foreground">{p.price.toFixed(2).replace(".", ",")} €/{p.unit}</span>
                   </li>
                 ))}
               </ul>
