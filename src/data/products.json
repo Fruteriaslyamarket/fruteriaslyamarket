@@ -1526,5 +1526,16 @@
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1779109929346-46uqg.jpeg",
     "offer": false
+  },
+  {
+    "id": "platano-macho-verde",
+    "name": "Plátano macho verde ",
+    "description": "Plátano Macho Verde – Versátil, nutritivo y esencial en la cocina tradicional",
+    "category": "exoticas",
+    "price": 0.95,
+    "unit": "kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1779110192462-i4vbr.png",
+    "featured": true,
+    "offer": false
   }
 ]
