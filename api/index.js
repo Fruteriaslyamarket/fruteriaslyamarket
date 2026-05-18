@@ -51,46 +51,51 @@ export default async function handler(req, res) {
   }
 
   if (path === '/api/create-checkout-session' && req.method === 'POST') {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-    const bodyBuffer = await new Promise((resolve, reject) => {
-      const chunks = []
-      req.on('data', chunk => chunks.push(chunk))
-      req.on('end', () => resolve(Buffer.concat(chunks)))
-      req.on('error', reject)
-    })
-    const { items, customer } = JSON.parse(bodyBuffer.toString())
-    const protocol = req.headers['x-forwarded-proto'] || 'https'
-    const host = req.headers['x-forwarded-host'] || req.headers.host
-    const origin = `${protocol}://${host}`
-    const session = await stripe.checkout.sessions.create({
-      mode: 'payment',
-      automatic_payment_methods: { enabled: true },
-      line_items: items.map(item => ({
-        price_data: {
-          currency: 'eur',
-          product_data: { name: `${item.name} (${item.unit})` },
-          unit_amount: Math.round(item.price * 100),
-        },
-        quantity: item.qty,
-      })),
-      customer_email: customer.email || undefined,
-      metadata: {
-        name: customer.name,
-        phone: customer.phone,
-        address: customer.address,
-        zone: customer.zone,
-        slot: customer.slot,
-        notes: (customer.notes || '').slice(0, 500),
-      },
-      payment_intent_data: {
-        description: `Pedido Lya Market — ${customer.name} — ${customer.phone}`,
-      },
-      success_url: `${origin}/pago-exitoso?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/checkout`,
-    })
-    res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ url: session.url }))
+    try {
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+      const bodyBuffer = await new Promise((resolve, reject) => {
+        const chunks = []
+        req.on('data', chunk => chunks.push(chunk))
+        req.on('end', () => resolve(Buffer.concat(chunks)))
+        req.on('error', reject)
+      })
+      const { items, customer } = JSON.parse(bodyBuffer.toString())
+      const protocol = req.headers['x-forwarded-proto'] || 'https'
+      const host = req.headers['x-forwarded-host'] || req.headers.host
+      const origin = `${protocol}://${host}`
+      const session = await stripe.checkout.sessions.create({
+        mode: 'payment',
+        automatic_payment_methods: { enabled: true },
+        line_items: items.map(item => ({
+          price_data: {
+            currency: 'eur',
+            product_data: { name: `${item.name} (${item.unit})` },
+            unit_amount: Math.round(item.price * 100),
+          },
+          quantity: item.qty,
+        })),
+        customer_email: customer.email || undefined,
+        metadata: {
+          name: customer.name,
+          phone: customer.phone,
+          address: customer.address,
+          zone: customer.zone,
+          slot: customer.slot,
+          notes: (customer.notes || '').slice(0, 500),
+        },
+        payment_intent_data: {
+          description: `Pedido Lya Market — ${customer.name} — ${customer.phone}`,
+        },
+        success_url: `${origin}/pago-exitoso?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${origin}/checkout`,
+      })
+      res.statusCode = 200
+      res.end(JSON.stringify({ url: session.url }))
+    } catch (err) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: err.message || 'Error interno' }))
+    }
     return
   }
 
