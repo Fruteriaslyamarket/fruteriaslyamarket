@@ -6,8 +6,9 @@ export async function getFileSha(
   path: string,
   branch = "main",
 ): Promise<string> {
-  const res = await fetch(`${API}/repos/${repo}/contents/${path}?ref=${branch}`, {
+  const res = await fetch(`${API}/repos/${repo}/contents/${path}?ref=${branch}&t=${Date.now()}`, {
     headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+    cache: "no-store",
   });
   if (!res.ok) throw new Error(`GitHub ${res.status}: no se pudo leer el archivo`);
   const data = await res.json();
