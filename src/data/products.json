@@ -40,7 +40,8 @@
     "price": 2.65,
     "unit": "Ud",
     "image": "https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "weeklyBasket": true
   },
   {
     "id": "puerros",
@@ -51,7 +52,8 @@
     "unit": "Kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601368649-ebg5x.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "weeklyBasket": true
   },
   {
     "id": "pepino",
@@ -62,7 +64,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601389060-8e6sg.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "weeklyBasket": true
   },
   {
     "id": "pimiento-italiano-verde",
