@@ -25,7 +25,8 @@ export const Route = createFileRoute("/ofertas")({
 });
 
 function OfertasPage() {
-  const { offers } = useProducts();
+  const { offers, products } = useProducts();
+  const basketProducts = products.filter((p) => p.weeklyBasket);
   const wa = whatsappLink(
     buildWhatsAppMessage(
       [],
@@ -61,22 +62,19 @@ function OfertasPage() {
               Una selección variada de temporada por solo{" "}
               <span className="font-bold text-foreground">19,90 €</span>. Ideal para 4 personas.
             </p>
-            <ul className="mt-5 grid grid-cols-2 gap-2 text-sm text-foreground">
-              {[
-                "1 kg Manzana",
-                "1 kg Naranja",
-                "1 kg Plátano",
-                "1 kg Tomate",
-                "1 kg Patata",
-                "1 lechuga",
-                "1 kg Zanahoria",
-                "1 manojo cebolla",
-              ].map((it) => (
-                <li key={it} className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary" /> {it}
-                </li>
-              ))}
-            </ul>
+            {basketProducts.length > 0 ? (
+              <ul className="mt-5 grid grid-cols-2 gap-2 text-sm text-foreground">
+                {basketProducts.map((p) => (
+                  <li key={p.id} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" /> {p.name}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-5 text-sm text-muted-foreground italic">
+                Cesta en preparación — vuelve pronto.
+              </p>
+            )}
             <div className="mt-5 flex flex-wrap gap-3 sm:mt-7">
               <a
                 href={wa}

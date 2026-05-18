@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as React from "react";
 import {
   Pencil, Trash2, Plus, LogOut, Send, Eye, EyeOff,
-  Star, Tag, Loader2, CheckCircle2, AlertCircle, X,
+  Star, Tag, Loader2, CheckCircle2, AlertCircle, X, ShoppingBasket,
 } from "lucide-react";
 import { ALL_PRODUCTS, CATEGORIES, loadProducts, savePublishedProducts } from "@/data/products";
 import type { Product, ProductCategory } from "@/data/products";
@@ -191,7 +191,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
     setDeleteId(null);
   };
 
-  const toggle = (id: string, field: "hidden" | "featured" | "offer") => {
+  const toggle = (id: string, field: "hidden" | "featured" | "offer" | "weeklyBasket") => {
     setProducts((prev) =>
       prev.map((p) => (p.id === id ? { ...p, [field]: !p[field] } : p)),
     );
@@ -334,6 +334,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
         {/* Legend */}
         <div className="mt-3 flex flex-wrap gap-3 text-xs text-gray-500">
           <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 text-yellow-500" /> Destacado en inicio</span>
+          <span className="flex items-center gap-1"><ShoppingBasket className="h-3.5 w-3.5 text-green-600" /> En la cesta semanal</span>
           <span className="flex items-center gap-1"><Tag className="h-3.5 w-3.5 text-orange-500" /> En oferta</span>
           <span className="flex items-center gap-1"><EyeOff className="h-3.5 w-3.5 text-gray-400" /> Oculto en la tienda</span>
         </div>
@@ -403,6 +404,13 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                         className={`rounded p-1 ${p.featured ? "text-yellow-500" : "text-gray-300 hover:text-yellow-400"}`}
                       >
                         <Star className="h-4 w-4" fill={p.featured ? "currentColor" : "none"} />
+                      </button>
+                      <button
+                        onClick={() => toggle(p.id, "weeklyBasket")}
+                        title={p.weeklyBasket ? "Quitar de la cesta semanal" : "Añadir a la cesta semanal"}
+                        className={`rounded p-1 ${p.weeklyBasket ? "text-green-600" : "text-gray-300 hover:text-green-500"}`}
+                      >
+                        <ShoppingBasket className="h-4 w-4" />
                       </button>
                       <button
                         onClick={() => toggle(p.id, "offer")}
@@ -677,6 +685,11 @@ function ProductModal({
               label="Producto destacado en la página de inicio"
               checked={form.featured ?? false}
               onChange={(v) => set("featured", v)}
+            />
+            <Toggle
+              label="Incluir en la cesta semanal"
+              checked={form.weeklyBasket ?? false}
+              onChange={(v) => set("weeklyBasket", v)}
             />
             <Toggle
               label="En oferta (precio rebajado)"

@@ -26,6 +26,7 @@ export type Product = {
   offer?: boolean;
   oldPrice?: number;
   hidden?: boolean;
+  weeklyBasket?: boolean;
   options?: { label: string; values: string[] };
 };
 
