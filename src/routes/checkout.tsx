@@ -33,7 +33,7 @@ const ZONES = [
 ] as const;
 
 const SLOTS = ["10:00 – 13:00", "13:00 – 16:00", "16:00 – 19:00", "19:00 – 21:00"] as const;
-const PAYMENT = ["Efectivo al recibir", "Tarjeta al recibir"] as const;
+const PAYMENT = ["Efectivo al recibir", "Tarjeta al recibir", "Pagar ahora online"] as const;
 
 const schema = z.object({
   name: z.string().trim().min(2, "Indica tu nombre").max(80),
@@ -58,6 +58,8 @@ function CheckoutPage() {
   const navigate = useNavigate();
   const [errors, setErrors] = React.useState<FormErrors>({});
   const [submitted, setSubmitted] = React.useState(false);
+  const [stripeLoading, setStripeLoading] = React.useState(false);
+  const [stripeError, setStripeError] = React.useState<string | null>(null);
 
   if (submitted) {
     return (
@@ -98,7 +100,7 @@ function CheckoutPage() {
     );
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const data = Object.fromEntries(fd.entries());
@@ -114,7 +116,42 @@ function CheckoutPage() {
     }
     setErrors({});
 
-    // Build summary for WhatsApp as a courtesy notification (also opened in new tab)
+    if (parsed.data.payment === "Pagar ahora online") {
+      setStripeLoading(true);
+      setStripeError(null);
+      try {
+        const res = await fetch("/api/create-checkout-session", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            items: items.map((i) => ({
+              name: i.product.name,
+              unit: i.product.unit,
+              price: i.product.price,
+              qty: i.qty,
+            })),
+            customer: {
+              name: parsed.data.name,
+              phone: parsed.data.phone,
+              email: parsed.data.email || "",
+              address: parsed.data.address,
+              zone: parsed.data.zone,
+              slot: parsed.data.slot,
+              notes: parsed.data.notes || "",
+            },
+          }),
+        });
+        if (!res.ok) throw new Error("Error al crear la sesión de pago");
+        const { url } = await res.json();
+        clear();
+        window.location.href = url;
+      } catch {
+        setStripeLoading(false);
+        setStripeError("No se pudo conectar con el sistema de pago. Inténtalo de nuevo.");
+      }
+      return;
+    }
+
     const lines = [
       `Pedido nuevo — ${parsed.data.name}`,
       `Tel: ${parsed.data.phone}`,
@@ -224,11 +261,17 @@ function CheckoutPage() {
             <p className="mt-2 text-xs text-muted-foreground">
               Productos por peso: el precio final puede variar ligeramente.
             </p>
+            {stripeError && (
+              <p className="mt-3 rounded-2xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                {stripeError}
+              </p>
+            )}
             <button
               type="submit"
-              className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground shadow"
+              disabled={stripeLoading}
+              className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground shadow disabled:opacity-60"
             >
-              Confirmar pedido
+              {stripeLoading ? "Redirigiendo al pago…" : "Confirmar pedido"}
             </button>
           </div>
         </aside>

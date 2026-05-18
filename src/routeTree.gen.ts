@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TiendaRouteImport } from './routes/tienda'
+import { Route as PagoExitosoRouteImport } from './routes/pago-exitoso'
 import { Route as OfertasRouteImport } from './routes/ofertas'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CheckoutRouteImport } from './routes/checkout'
@@ -19,6 +20,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TiendaRoute = TiendaRouteImport.update({
   id: '/tienda',
   path: '/tienda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagoExitosoRoute = PagoExitosoRouteImport.update({
+  id: '/pago-exitoso',
+  path: '/pago-exitoso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OfertasRoute = OfertasRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/checkout': typeof CheckoutRoute
   '/contacto': typeof ContactoRoute
   '/ofertas': typeof OfertasRoute
+  '/pago-exitoso': typeof PagoExitosoRoute
   '/tienda': typeof TiendaRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/checkout': typeof CheckoutRoute
   '/contacto': typeof ContactoRoute
   '/ofertas': typeof OfertasRoute
+  '/pago-exitoso': typeof PagoExitosoRoute
   '/tienda': typeof TiendaRoute
 }
 export interface FileRoutesById {
@@ -70,13 +78,14 @@ export interface FileRoutesById {
   '/checkout': typeof CheckoutRoute
   '/contacto': typeof ContactoRoute
   '/ofertas': typeof OfertasRoute
+  '/pago-exitoso': typeof PagoExitosoRoute
   '/tienda': typeof TiendaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/admin' | '/checkout' | '/contacto' | '/ofertas' | '/tienda'
+  fullPaths: '/' | '/admin' | '/checkout' | '/contacto' | '/ofertas' | '/pago-exitoso' | '/tienda'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/admin' | '/checkout' | '/contacto' | '/ofertas' | '/tienda'
+  to: '/' | '/admin' | '/checkout' | '/contacto' | '/ofertas' | '/pago-exitoso' | '/tienda'
   id:
     | '__root__'
     | '/'
@@ -84,6 +93,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/contacto'
     | '/ofertas'
+    | '/pago-exitoso'
     | '/tienda'
   fileRoutesById: FileRoutesById
 }
@@ -93,6 +103,7 @@ export interface RootRouteChildren {
   CheckoutRoute: typeof CheckoutRoute
   ContactoRoute: typeof ContactoRoute
   OfertasRoute: typeof OfertasRoute
+  PagoExitosoRoute: typeof PagoExitosoRoute
   TiendaRoute: typeof TiendaRoute
 }
 
@@ -133,6 +144,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pago-exitoso': {
+      id: '/pago-exitoso'
+      path: '/pago-exitoso'
+      fullPath: '/pago-exitoso'
+      preLoaderRoute: typeof PagoExitosoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -149,6 +167,7 @@ const rootRouteChildren: RootRouteChildren = {
   CheckoutRoute: CheckoutRoute,
   ContactoRoute: ContactoRoute,
   OfertasRoute: OfertasRoute,
+  PagoExitosoRoute: PagoExitosoRoute,
   TiendaRoute: TiendaRoute,
 }
 export const routeTree = rootRouteImport
