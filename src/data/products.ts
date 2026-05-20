@@ -21,6 +21,7 @@ export type Product = {
   category: ProductCategory;
   price: number;
   unit: string;
+  pricePerUnit?: number;
   image: string;
   featured?: boolean;
   offer?: boolean;

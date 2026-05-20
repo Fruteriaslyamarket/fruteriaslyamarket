@@ -60,7 +60,7 @@ export function CartDrawer() {
                           <p className="text-xs font-medium text-primary">{i.note}</p>
                         )}
                         <p className="text-xs text-muted-foreground">
-                          {formatEUR(i.product.price)} / {i.product.unit}
+                          {formatEUR(i.effectivePrice ?? i.product.price)} / {i.effectiveUnit ?? i.product.unit}
                         </p>
                       </div>
                       <button
@@ -90,7 +90,7 @@ export function CartDrawer() {
                         </button>
                       </div>
                       <span className="text-sm font-semibold">
-                        {formatEUR(i.qty * i.product.price)}
+                        {formatEUR(i.qty * (i.effectivePrice ?? i.product.price))}
                       </span>
                     </div>
                   </div>

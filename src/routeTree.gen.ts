@@ -83,9 +83,23 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/admin' | '/checkout' | '/contacto' | '/ofertas' | '/pago-exitoso' | '/tienda'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/checkout'
+    | '/contacto'
+    | '/ofertas'
+    | '/pago-exitoso'
+    | '/tienda'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/admin' | '/checkout' | '/contacto' | '/ofertas' | '/pago-exitoso' | '/tienda'
+  to:
+    | '/'
+    | '/admin'
+    | '/checkout'
+    | '/contacto'
+    | '/ofertas'
+    | '/pago-exitoso'
+    | '/tienda'
   id:
     | '__root__'
     | '/'
@@ -116,6 +130,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TiendaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pago-exitoso': {
+      id: '/pago-exitoso'
+      path: '/pago-exitoso'
+      fullPath: '/pago-exitoso'
+      preLoaderRoute: typeof PagoExitosoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ofertas': {
       id: '/ofertas'
       path: '/ofertas'
@@ -142,13 +163,6 @@ declare module '@tanstack/react-router' {
       path: '/admin'
       fullPath: '/admin'
       preLoaderRoute: typeof AdminRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pago-exitoso': {
-      id: '/pago-exitoso'
-      path: '/pago-exitoso'
-      fullPath: '/pago-exitoso'
-      preLoaderRoute: typeof PagoExitosoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {

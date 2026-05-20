@@ -53,7 +53,8 @@
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601368649-ebg5x.jpeg",
     "featured": true,
     "offer": false,
-    "weeklyBasket": true
+    "weeklyBasket": true,
+    "pricePerUnit": 0.4
   },
   {
     "id": "pepino",
@@ -65,7 +66,8 @@
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601389060-8e6sg.jpeg",
     "featured": true,
     "offer": false,
-    "weeklyBasket": true
+    "weeklyBasket": true,
+    "pricePerUnit": 0.5
   },
   {
     "id": "pimiento-italiano-verde",
@@ -75,7 +77,8 @@
     "price": 2.4,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778588136491-hfixg.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.3
   },
   {
     "id": "pimiento-italiano-rojo",
@@ -98,7 +101,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778601566473-7z3b7.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.7
   },
   {
     "id": "pimiento-lamuyo-rojo",
@@ -110,7 +114,8 @@
     "image": "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=900&q=70",
     "featured": true,
     "offer": true,
-    "oldPrice": 3.5
+    "oldPrice": 3.5,
+    "pricePerUnit": 0.65
   },
   {
     "id": "judias-verdes",
@@ -142,7 +147,8 @@
     "price": 1.6,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.2
   },
   {
     "id": "rabanos",
@@ -163,7 +169,8 @@
     "price": 2.99,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.8
   },
   {
     "id": "remolacha-cocida",
@@ -204,7 +211,8 @@
     "category": "verduras",
     "price": 3.4,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1518735869015-566a18eae4be?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1518735869015-566a18eae4be?auto=format&fit=crop&w=900&q=70",
+    "pricePerUnit": 0.9
   },
   {
     "id": "ajo",
@@ -224,7 +232,8 @@
     "category": "verduras",
     "price": 1.95,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1615484477201-9f4953340fab?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1615484477201-9f4953340fab?auto=format&fit=crop&w=900&q=70",
+    "pricePerUnit": 0.6
   },
   {
     "id": "brocoli",
@@ -235,7 +244,8 @@
     "unit": "Kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778599551542-boq29.webp",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 1.5
   },
   {
     "id": "calabacin",
@@ -245,7 +255,8 @@
     "price": 1.55,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1691480291894-75229c2bfd44?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.35
   },
   {
     "id": "calabaza",
@@ -256,7 +267,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602275897-7xnep.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 2.25
   },
   {
     "id": "coliflor",
@@ -400,7 +412,8 @@
     "price": 2.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778766794775-dyksf.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.4
   },
   {
     "id": "tomate-ensalada",
@@ -411,7 +424,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602915365-ufq8w.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.5
   },
   {
     "id": "tomate-pera",
@@ -422,7 +436,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778602995409-fs1ug.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.3
   },
   {
     "id": "tomate-raf-verde",
@@ -433,7 +448,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603051282-993vj.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 1.2
   },
   {
     "id": "tomate-cherry",
@@ -454,7 +470,8 @@
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1630223697313-a6f764e12109?auto=format&fit=crop&w=900&q=70",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.45
   },
   {
     "id": "tomate-kumato",
@@ -465,7 +482,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603173767-b4jx5.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.45
   },
   {
     "id": "tomate-rosado",
@@ -476,7 +494,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603237884-6tja8.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.75
   },
   {
     "id": "tomate-corazon-buey",
@@ -487,7 +506,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603289785-jje4n.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 1.2
   },
   {
     "id": "cebolla-normal",
@@ -498,7 +518,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603338687-xvfrw.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.25
   },
   {
     "id": "cebolla-roja",
@@ -509,7 +530,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603431238-bk0y6.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.35
   },
   {
     "id": "cebolla-dulce",
@@ -520,7 +542,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603491623-da7pp.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.5
   },
   {
     "id": "cebolletas",
@@ -541,7 +564,8 @@
     "price": 2.45,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.8
   },
   {
     "id": "patata-lavada",
@@ -561,7 +585,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603634542-nkrja.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 1.5
   },
   {
     "id": "alubia-pinta",
@@ -572,7 +597,15 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778770688860-n6juq.jpg",
     "offer": false,
-    "featured": true
+    "featured": true,
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "alubia-blanca",
@@ -583,7 +616,15 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778770833787-z337i.jpg",
     "offer": false,
-    "featured": true
+    "featured": true,
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "alubia-carilla",
@@ -593,7 +634,15 @@
     "price": 3.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778770855065-vshrl.jpeg",
-    "offer": false
+    "offer": false,
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "garbanzo-extra",
@@ -602,7 +651,15 @@
     "category": "legumbres",
     "price": 3.5,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70",
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "garbanzo-pedrosillano",
@@ -611,7 +668,15 @@
     "category": "legumbres",
     "price": 3.6,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1644432757699-bb5a01e8fb0e?auto=format&fit=crop&w=900&q=70",
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "lenteja-castellana",
@@ -621,7 +686,15 @@
     "price": 3.25,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778770881576-2lq72.jpeg",
-    "offer": false
+    "offer": false,
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "lenteja-eston",
@@ -631,7 +704,15 @@
     "price": 2.9,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778770898808-yafj8.jpeg",
-    "offer": false
+    "offer": false,
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    }
   },
   {
     "id": "melocoton",
@@ -642,7 +723,8 @@
     "unit": "Ykg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767054123-fub83.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.65
   },
   {
     "id": "fresquilla",
@@ -653,7 +735,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778697694815-ds1zs.jpg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.55
   },
   {
     "id": "nectarinas",
@@ -664,7 +747,8 @@
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1628364251782-52941ea94dfd?auto=format&fit=crop&w=900&q=70",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.55
   },
   {
     "id": "paraguaya",
@@ -674,7 +758,8 @@
     "price": 4.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778769484741-qvzbr.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.6
   },
   {
     "id": "nispero",
@@ -684,7 +769,8 @@
     "price": 5.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767094549-qtdxw.png",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.25
   },
   {
     "id": "albaricoque-clement",
@@ -694,7 +780,8 @@
     "price": 5.99,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1592681814168-6df0fa93161b?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.3
   },
   {
     "id": "freson",
@@ -716,7 +803,8 @@
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&w=900&q=70",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 1.2
   },
   {
     "id": "cerezas",
@@ -757,7 +845,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778698707301-q63pa.jpg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.35
   },
   {
     "id": "ciruela-pasa",
@@ -818,7 +907,8 @@
     "price": 3.45,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767222309-vpq7p.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.55
   },
   {
     "id": "manzana-golden-altide",
@@ -828,7 +918,8 @@
     "price": 2.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767276994-g6j9t.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.5
   },
   {
     "id": "manzana-granny-smith",
@@ -838,7 +929,8 @@
     "price": 2.95,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1672062518635-e0568b3c6e1b?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.5
   },
   {
     "id": "manzana-reineta",
@@ -848,7 +940,8 @@
     "price": 3.25,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767318792-70pcp.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.55
   },
   {
     "id": "manzana-royal-gala",
@@ -859,7 +952,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767421283-9tu2p.jpeg",
     "featured": true,
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.55
   },
   {
     "id": "manzana-virgen-doncella",
@@ -869,7 +963,8 @@
     "price": 3.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767529669-o8q08.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.65
   },
   {
     "id": "manzana-pink-lady",
@@ -879,7 +974,8 @@
     "price": 3.75,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767476501-g8saz.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.6
   },
   {
     "id": "manzana-fuji",
@@ -889,7 +985,8 @@
     "price": 3.55,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767604633-c0tyd.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.6
   },
   {
     "id": "pera-agua",
@@ -899,7 +996,8 @@
     "price": 1.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767687884-dra50.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.35
   },
   {
     "id": "pera-conferencia-extra",
@@ -909,7 +1007,8 @@
     "price": 4.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767732452-c89vu.webp",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.9
   },
   {
     "id": "pera-conferencia-belga",
@@ -919,7 +1018,8 @@
     "price": 2.6,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767779467-5hqll.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.5
   },
   {
     "id": "pera-ercolina",
@@ -929,7 +1029,8 @@
     "price": 4.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767828890-gp9we.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.4
   },
   {
     "id": "pera-limonera",
@@ -971,7 +1072,8 @@
     "category": "exoticas",
     "price": 2.4,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1697434467948-50f3d674dee1?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1697434467948-50f3d674dee1?auto=format&fit=crop&w=900&q=70",
+    "pricePerUnit": 0.6
   },
   {
     "id": "chirimoyas",
@@ -981,7 +1083,8 @@
     "price": 6.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768053637-do1cm.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 2.5
   },
   {
     "id": "papayon",
@@ -1028,7 +1131,8 @@
     "category": "exoticas",
     "price": 1.8,
     "unit": "kg",
-    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70"
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=70",
+    "pricePerUnit": 0.2
   },
   {
     "id": "banana-monte",
@@ -1056,7 +1160,8 @@
         "Verde"
       ]
     },
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.3
   },
   {
     "id": "pomelos",
@@ -1066,7 +1171,8 @@
     "price": 2.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1779110340548-kxd4a.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.7
   },
   {
     "id": "kiwi-nacional",
@@ -1076,7 +1182,8 @@
     "price": 3.95,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=900&q=70",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.45
   },
   {
     "id": "kiwi-zespri",
@@ -1086,7 +1193,8 @@
     "price": 5.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768328989-p4xg5.jpeg",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.65
   },
   {
     "id": "limon",
@@ -1096,7 +1204,8 @@
     "price": 2.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768390665-eg2qn.webp",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.3
   },
   {
     "id": "lima",
@@ -1118,7 +1227,8 @@
     "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70",
     "featured": true,
     "offer": true,
-    "oldPrice": 1.95
+    "oldPrice": 1.95,
+    "pricePerUnit": 0.3
   },
   {
     "id": "naranja-bolsa-2kg",
@@ -1138,7 +1248,8 @@
     "price": 4.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768569402-inatm.webp",
-    "offer": false
+    "offer": false,
+    "pricePerUnit": 0.9
   },
   {
     "id": "naranja-rama",

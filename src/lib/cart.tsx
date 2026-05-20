@@ -5,6 +5,8 @@ export type CartItem = {
   product: Product;
   qty: number;
   note?: string;
+  effectivePrice?: number;
+  effectiveUnit?: string;
 };
 
 type CartState = {
@@ -13,7 +15,7 @@ type CartState = {
 };
 
 type CartContextValue = CartState & {
-  add: (product: Product, qty?: number, note?: string) => void;
+  add: (product: Product, qty?: number, note?: string, effectivePrice?: number, effectiveUnit?: string) => void;
   remove: (key: string) => void;
   setQty: (key: string, qty: number) => void;
   clear: () => void;
@@ -58,7 +60,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
   }, [items, hydrated]);
 
-  const add = React.useCallback((product: Product, qty = 1, note?: string) => {
+  const add = React.useCallback((product: Product, qty = 1, note?: string, effectivePrice?: number, effectiveUnit?: string) => {
     setItems((prev) => {
       const key = note ? `${product.id}::${note}` : product.id;
       const existing = prev.find((i) => itemKey(i) === key);
@@ -67,7 +69,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           itemKey(i) === key ? { ...i, qty: i.qty + qty } : i,
         );
       }
-      return [...prev, { product, qty, note }];
+      return [...prev, { product, qty, note, effectivePrice, effectiveUnit }];
     });
   }, []);
 
@@ -89,7 +91,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const toggle = React.useCallback(() => setIsOpen((v) => !v), []);
 
   const totalQty = items.reduce((s, i) => s + i.qty, 0);
-  const subtotal = items.reduce((s, i) => s + i.qty * i.product.price, 0);
+  const subtotal = items.reduce((s, i) => s + i.qty * (i.effectivePrice ?? i.product.price), 0);
 
   const value: CartContextValue = {
     items,
@@ -122,7 +124,7 @@ export const WHATSAPP_NUMBER = "34674559853";
 export function buildWhatsAppMessage(items: CartItem[], subtotal: number) {
   const lines = items.map(
     (i) =>
-      `• ${i.qty} × ${i.product.name}${i.note ? ` (${i.note})` : ""} (${i.product.unit}) — ${formatEUR(i.qty * i.product.price)}`,
+      `• ${i.qty} × ${i.product.name}${i.note ? ` (${i.note})` : ""} (${i.effectiveUnit ?? i.product.unit}) — ${formatEUR(i.qty * (i.effectivePrice ?? i.product.price))}`,
   );
   return [
     "¡Hola Lya Market! Quiero hacer este pedido:",

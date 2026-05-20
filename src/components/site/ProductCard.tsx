@@ -8,6 +8,11 @@ export function ProductCard({ product }: { product: Product }) {
   const [option, setOption] = React.useState<string | undefined>(
     product.options?.values[0],
   );
+  const [mode, setMode] = React.useState<"kg" | "ud">("kg");
+
+  const hasUnitPrice = product.pricePerUnit !== undefined;
+  const activePrice = mode === "ud" && hasUnitPrice ? product.pricePerUnit! : product.price;
+  const activeUnit = mode === "ud" ? "ud" : product.unit;
 
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-shadow hover:shadow-lg hover:shadow-primary/5">
@@ -52,6 +57,33 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
+        {hasUnitPrice && (
+          <div className="mt-3 flex gap-1.5">
+            <button
+              type="button"
+              onClick={() => setMode("kg")}
+              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+                mode === "kg"
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-border bg-card hover:border-primary/40"
+              }`}
+            >
+              Por kilo · {formatEUR(product.price)}
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode("ud")}
+              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+                mode === "ud"
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-border bg-card hover:border-primary/40"
+              }`}
+            >
+              Por unidad · {formatEUR(product.pricePerUnit!)}
+            </button>
+          </div>
+        )}
+
         <div className="mt-auto flex items-end justify-between pt-4">
           <div>
             {product.offer && product.oldPrice && (
@@ -60,13 +92,16 @@ export function ProductCard({ product }: { product: Product }) {
               </div>
             )}
             <div className="font-semibold">
-              <span className="text-lg">{formatEUR(product.price)}</span>
-              <span className="text-xs font-normal text-muted-foreground"> / {product.unit}</span>
+              <span className="text-lg">{formatEUR(activePrice)}</span>
+              <span className="text-xs font-normal text-muted-foreground"> / {activeUnit}</span>
             </div>
           </div>
           <button
             onClick={() => {
-              add(product, 1, option);
+              const note = mode === "ud" ? "Por unidad" : option;
+              const ep = mode === "ud" ? product.pricePerUnit : undefined;
+              const eu = mode === "ud" ? "ud" : undefined;
+              add(product, 1, note, ep, eu);
               open();
             }}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition-transform hover:scale-[1.03] sm:h-10 sm:w-auto sm:gap-1 sm:px-4"
