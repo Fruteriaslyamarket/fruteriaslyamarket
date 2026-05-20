@@ -390,6 +390,14 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                       {p.price.toFixed(2).replace(".", ",")} €
                     </span>
                     <span className="text-xs text-gray-400"> / {p.unit}</span>
+                    {p.pricePerUnit !== undefined && (
+                      <p className="text-xs text-blue-500">
+                        + {p.pricePerUnit.toFixed(2).replace(".", ",")} € / ud
+                      </p>
+                    )}
+                    {p.options && (
+                      <p className="text-xs text-gray-400">{p.options.values.join(" · ")}</p>
+                    )}
                     {p.offer && p.oldPrice && (
                       <p className="text-xs text-gray-400 line-through">
                         {p.oldPrice.toFixed(2).replace(".", ",")} €
@@ -625,6 +633,70 @@ function ProductModal({
                 placeholder="kg, ud, manojo…"
               />
             </Field>
+          </div>
+
+          {/* Price per unit */}
+          <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
+            <Toggle
+              label="Permitir compra por unidad (precio distinto)"
+              checked={form.pricePerUnit !== undefined}
+              onChange={(v) => set("pricePerUnit", v ? 0.5 : undefined)}
+            />
+            {form.pricePerUnit !== undefined && (
+              <div className="pl-8">
+                <label className="mb-1 block text-xs font-medium text-gray-500">Precio por unidad (€)</label>
+                <input
+                  type="number"
+                  step="0.01"
+                  min="0"
+                  value={form.pricePerUnit || ""}
+                  onChange={(e) => set("pricePerUnit", parseFloat(e.target.value) || 0)}
+                  className="h-9 w-36 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                  placeholder="0.50"
+                />
+                <p className="mt-1 text-xs text-gray-400">El cliente verá las dos opciones al añadir al carrito.</p>
+              </div>
+            )}
+          </div>
+
+          {/* Weight / quantity options */}
+          <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
+            <Toggle
+              label="Opciones de cantidad (ej: 500g, 1 kg, 2 kg)"
+              checked={form.options !== undefined}
+              onChange={(v) =>
+                set("options", v ? { label: "Cantidad", values: ["500g", "1 kg", "2 kg"] } : undefined)
+              }
+            />
+            {form.options && (
+              <div className="pl-8 space-y-3">
+                <div>
+                  <label className="mb-1 block text-xs font-medium text-gray-500">Etiqueta del selector</label>
+                  <input
+                    type="text"
+                    value={form.options.label}
+                    onChange={(e) => set("options", { ...form.options!, label: e.target.value })}
+                    className="h-9 w-40 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                    placeholder="Cantidad"
+                  />
+                </div>
+                <div>
+                  <label className="mb-1 block text-xs font-medium text-gray-500">Opciones disponibles (una por línea)</label>
+                  <textarea
+                    value={form.options.values.join("\n")}
+                    onChange={(e) =>
+                      set("options", {
+                        ...form.options!,
+                        values: e.target.value.split("\n").map((v) => v.trim()).filter(Boolean),
+                      })
+                    }
+                    rows={4}
+                    className="w-full resize-none rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                    placeholder={"500g\n1 kg\n2 kg"}
+                  />
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Image URL + Upload */}
