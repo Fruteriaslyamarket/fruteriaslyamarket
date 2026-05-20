@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "vercel-build": "npm run build && mkdir -p public && cp -r dist/client/. public",
+    "vercel-build": "mkdir -p public && cp -r dist/client/. public",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
