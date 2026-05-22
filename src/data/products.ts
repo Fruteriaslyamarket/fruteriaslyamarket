@@ -21,6 +21,7 @@ export type Product = {
   category: ProductCategory;
   price: number;
   unit: string;
+  pricePerHalfKg?: number;
   pricePerUnit?: number;
   image: string;
   featured?: boolean;

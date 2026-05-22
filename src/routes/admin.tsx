@@ -390,6 +390,11 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                       {p.price.toFixed(2).replace(".", ",")} €
                     </span>
                     <span className="text-xs text-gray-400"> / {p.unit}</span>
+                    {p.unit === "kg" && (
+                      <p className="text-xs text-gray-400">
+                        {(p.pricePerHalfKg ?? p.price / 2).toFixed(2).replace(".", ",")} € / 500g
+                      </p>
+                    )}
                     {p.pricePerUnit !== undefined && (
                       <p className="text-xs text-blue-500">
                         + {p.pricePerUnit.toFixed(2).replace(".", ",")} € / ud
@@ -635,6 +640,36 @@ function ProductModal({
             </Field>
           </div>
 
+          {/* Price per half kg */}
+          {form.unit === "kg" && (
+            <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
+              <Toggle
+                label="Precio medio kilo personalizado"
+                checked={form.pricePerHalfKg !== undefined}
+                onChange={(v) => set("pricePerHalfKg", v ? parseFloat((form.price / 2).toFixed(2)) : undefined)}
+              />
+              {form.pricePerHalfKg !== undefined ? (
+                <div className="pl-8">
+                  <label className="mb-1 block text-xs font-medium text-gray-500">Precio medio kilo (€)</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    value={form.pricePerHalfKg || ""}
+                    onChange={(e) => set("pricePerHalfKg", parseFloat(e.target.value) || 0)}
+                    className="h-9 w-36 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                    placeholder="0.00"
+                  />
+                  <p className="mt-1 text-xs text-gray-400">Precio que verá el cliente al elegir "Medio kilo".</p>
+                </div>
+              ) : (
+                <p className="pl-8 text-xs text-gray-400">
+                  Se calculará automáticamente: {(form.price / 2).toFixed(2).replace(".", ",")} € (mitad del precio por kilo).
+                </p>
+              )}
+            </div>
+          )}
+
           {/* Price per unit */}
           <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
             <Toggle
@@ -654,7 +689,7 @@ function ProductModal({
                   className="h-9 w-36 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
                   placeholder="0.50"
                 />
-                <p className="mt-1 text-xs text-gray-400">El cliente verá las dos opciones al añadir al carrito.</p>
+                <p className="mt-1 text-xs text-gray-400">El cliente verá las tres opciones al añadir al carrito.</p>
               </div>
             )}
           </div>

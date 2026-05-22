@@ -25,7 +25,7 @@ export function ProductCard({ product }: { product: Product }) {
   const weightOptions = !hasOptions && hasKgPricing
     ? [
         { id: "kg" as const, label: "Por kilo", price: product.price, unit: "kg" },
-        { id: "medio-kg" as const, label: "Medio kilo", price: product.price / 2, unit: "500g" },
+        { id: "medio-kg" as const, label: "Medio kilo", price: product.pricePerHalfKg ?? product.price / 2, unit: "500g" },
         ...(hasUnitPrice
           ? [{ id: "ud" as const, label: "Por unidad", price: product.pricePerUnit!, unit: "ud" }]
           : []),
@@ -53,7 +53,7 @@ export function ProductCard({ product }: { product: Product }) {
       eu = "ud";
     } else if (mode === "medio-kg") {
       note = "Medio kilo";
-      ep = product.price / 2;
+      ep = product.pricePerHalfKg ?? product.price / 2;
       eu = "500g";
     } else {
       note = option;
