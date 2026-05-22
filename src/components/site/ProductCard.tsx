@@ -12,14 +12,25 @@ import {
 export function ProductCard({ product }: { product: Product }) {
   const { add, open: openCart } = useCart();
   const [dialogOpen, setDialogOpen] = React.useState(false);
-  const [mode, setMode] = React.useState<"kg" | "ud">("kg");
+  const [mode, setMode] = React.useState<"kg" | "medio-kg" | "ud">("kg");
   const [option, setOption] = React.useState<string | undefined>(
     product.options?.values[0],
   );
 
+  const hasKgPricing = product.unit === "kg";
   const hasUnitPrice = product.pricePerUnit !== undefined;
   const hasOptions = !!product.options;
-  const needsDialog = hasUnitPrice || hasOptions;
+  const needsDialog = hasKgPricing || hasUnitPrice || hasOptions;
+
+  const weightOptions = !hasOptions && hasKgPricing
+    ? [
+        { id: "kg" as const, label: "Por kilo", price: product.price, unit: "kg" },
+        { id: "medio-kg" as const, label: "Medio kilo", price: product.price / 2, unit: "500g" },
+        ...(hasUnitPrice
+          ? [{ id: "ud" as const, label: "Por unidad", price: product.pricePerUnit!, unit: "ud" }]
+          : []),
+      ]
+    : [];
 
   function handleAdd() {
     if (needsDialog) {
@@ -32,9 +43,22 @@ export function ProductCard({ product }: { product: Product }) {
   }
 
   function handleConfirm() {
-    const note = mode === "ud" ? "Por unidad" : option;
-    const ep = mode === "ud" ? product.pricePerUnit : undefined;
-    const eu = mode === "ud" ? "ud" : undefined;
+    let note: string | undefined;
+    let ep: number | undefined;
+    let eu: string | undefined;
+
+    if (mode === "ud") {
+      note = "Por unidad";
+      ep = product.pricePerUnit;
+      eu = "ud";
+    } else if (mode === "medio-kg") {
+      note = "Medio kilo";
+      ep = product.price / 2;
+      eu = "500g";
+    } else {
+      note = option;
+    }
+
     add(product, 1, note, ep, eu);
     setDialogOpen(false);
     openCart();
@@ -96,28 +120,25 @@ export function ProductCard({ product }: { product: Product }) {
           </DialogHeader>
 
           <div className="mt-2 space-y-4">
-            {hasUnitPrice && (
+            {weightOptions.length > 0 && (
               <div>
                 <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                   ¿Cuánto quieres?
                 </p>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { id: "kg" as const, label: "Por kilo", price: product.price, unit: product.unit },
-                    { id: "ud" as const, label: "Por unidad", price: product.pricePerUnit!, unit: "ud" },
-                  ].map((opt) => (
+                <div className={`grid gap-2 ${weightOptions.length === 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+                  {weightOptions.map((opt) => (
                     <button
                       key={opt.id}
                       type="button"
                       onClick={() => setMode(opt.id)}
-                      className={`flex flex-col items-center gap-0.5 rounded-2xl border-2 px-3 py-4 transition ${
+                      className={`flex flex-col items-center gap-0.5 rounded-2xl border-2 px-2 py-4 transition ${
                         mode === opt.id
                           ? "border-primary bg-primary/5"
                           : "border-border hover:border-primary/40"
                       }`}
                     >
-                      <span className="text-sm font-semibold">{opt.label}</span>
-                      <span className={`text-xl font-bold ${mode === opt.id ? "text-primary" : ""}`}>
+                      <span className="text-xs font-semibold text-center leading-tight">{opt.label}</span>
+                      <span className={`text-lg font-bold ${mode === opt.id ? "text-primary" : ""}`}>
                         {formatEUR(opt.price)}
                       </span>
                       <span className="text-xs text-muted-foreground">/ {opt.unit}</span>
