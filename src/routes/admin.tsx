@@ -616,83 +616,65 @@ function ProductModal({
             </select>
           </Field>
 
-          {/* Price + Unit */}
-          <div className="grid grid-cols-2 gap-3">
-            <Field label="Precio (€)" error={errors.price}>
-              <input
-                type="number"
-                step="0.01"
-                min="0"
-                value={form.price || ""}
-                onChange={(e) => set("price", parseFloat(e.target.value) || 0)}
-                className={input(!!errors.price)}
-                placeholder="0.00"
-              />
-            </Field>
-            <Field label="Unidad" error={errors.unit}>
-              <input
-                type="text"
-                value={form.unit}
-                onChange={(e) => set("unit", e.target.value)}
-                className={input(!!errors.unit)}
-                placeholder="kg, ud, manojo…"
-              />
-            </Field>
-          </div>
-
-          {/* Price per half kg */}
-          {form.unit === "kg" && (
-            <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
-              <Toggle
-                label="Precio medio kilo personalizado"
-                checked={form.pricePerHalfKg !== undefined}
-                onChange={(v) => set("pricePerHalfKg", v ? parseFloat((form.price / 2).toFixed(2)) : undefined)}
-              />
-              {form.pricePerHalfKg !== undefined ? (
-                <div className="pl-8">
-                  <label className="mb-1 block text-xs font-medium text-gray-500">Precio medio kilo (€)</label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    min="0"
-                    value={form.pricePerHalfKg || ""}
-                    onChange={(e) => set("pricePerHalfKg", parseFloat(e.target.value) || 0)}
-                    className="h-9 w-36 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    placeholder="0.00"
-                  />
-                  <p className="mt-1 text-xs text-gray-400">Precio que verá el cliente al elegir "Medio kilo".</p>
-                </div>
-              ) : (
-                <p className="pl-8 text-xs text-gray-400">
-                  Se calculará automáticamente: {(form.price / 2).toFixed(2).replace(".", ",")} € (mitad del precio por kilo).
-                </p>
-              )}
-            </div>
-          )}
-
-          {/* Price per unit */}
+          {/* Prices + Unit */}
           <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
-            <Toggle
-              label="Permitir compra por unidad (precio distinto)"
-              checked={form.pricePerUnit !== undefined}
-              onChange={(v) => set("pricePerUnit", v ? 0.5 : undefined)}
-            />
-            {form.pricePerUnit !== undefined && (
-              <div className="pl-8">
-                <label className="mb-1 block text-xs font-medium text-gray-500">Precio por unidad (€)</label>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Precios</p>
+            <div className="grid grid-cols-3 gap-3">
+              <Field label="Por kilo (€)" error={errors.price}>
                 <input
                   type="number"
                   step="0.01"
                   min="0"
-                  value={form.pricePerUnit || ""}
-                  onChange={(e) => set("pricePerUnit", parseFloat(e.target.value) || 0)}
-                  className="h-9 w-36 rounded-lg border border-gray-200 bg-white px-3 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                  placeholder="0.50"
+                  value={form.price || ""}
+                  onChange={(e) => set("price", parseFloat(e.target.value) || 0)}
+                  className={input(!!errors.price)}
+                  placeholder="0.00"
                 />
-                <p className="mt-1 text-xs text-gray-400">El cliente verá las tres opciones al añadir al carrito.</p>
-              </div>
-            )}
+              </Field>
+              <Field label="Medio kilo (€)">
+                <input
+                  type="number"
+                  step="0.01"
+                  min="0"
+                  value={form.pricePerHalfKg ?? ""}
+                  onChange={(e) => {
+                    const v = parseFloat(e.target.value);
+                    set("pricePerHalfKg", isNaN(v) ? undefined : v);
+                  }}
+                  className={input(false)}
+                  placeholder={form.price ? (form.price / 2).toFixed(2) : "auto"}
+                />
+              </Field>
+              <Field label="Por unidad (€)">
+                <input
+                  type="number"
+                  step="0.01"
+                  min="0"
+                  value={form.pricePerUnit ?? ""}
+                  onChange={(e) => {
+                    const v = parseFloat(e.target.value);
+                    set("pricePerUnit", isNaN(v) ? undefined : v);
+                  }}
+                  className={input(false)}
+                  placeholder="—"
+                />
+              </Field>
+            </div>
+            <p className="text-xs text-gray-400">
+              "Medio kilo" vacío = kilo ÷ 2 automático. "Por unidad" vacío = no se ofrece esa opción.
+            </p>
           </div>
+
+          {/* Unit label */}
+          <Field label="Unidad (etiqueta)" error={errors.unit}>
+            <input
+              type="text"
+              value={form.unit}
+              onChange={(e) => set("unit", e.target.value)}
+              className={input(!!errors.unit)}
+              placeholder="kg, ud, manojo…"
+            />
+          </Field>
 
           {/* Weight / quantity options */}
           <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 space-y-3">
