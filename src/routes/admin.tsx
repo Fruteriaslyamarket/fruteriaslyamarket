@@ -6,13 +6,7 @@ import {
 } from "lucide-react";
 import { ALL_PRODUCTS, CATEGORIES, loadProducts, savePublishedProducts } from "@/data/products";
 import type { Product, ProductCategory } from "@/data/products";
-import { getFileSha, updateFile, uploadImage } from "@/lib/github";
-
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD as string;
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN as string;
-const GITHUB_REPO = import.meta.env.VITE_GITHUB_REPO as string;
-const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH as string) || "main";
-const PRODUCTS_PATH = "src/data/products.json";
+import { adminLogin, saveProducts, triggerRedeploy, uploadImage } from "@/lib/github";
 
 const CATEGORY_OPTIONS = CATEGORIES.filter((c) => c.value !== "todas");
 
@@ -42,52 +36,49 @@ type SaveState = "idle" | "saving" | "deploying" | "saved" | "error";
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 function AdminPage() {
-  const notConfigured = !ADMIN_PASSWORD || !GITHUB_TOKEN || !GITHUB_REPO;
-  const [loggedIn, setLoggedIn] = React.useState(
-    () => sessionStorage.getItem("lya-admin") === "true",
+  const [password, setPassword] = React.useState<string | null>(
+    () => sessionStorage.getItem("lya-admin-pw"),
   );
 
-  if (notConfigured) return <ConfigError />;
-  if (!loggedIn) return <LoginScreen onLogin={() => setLoggedIn(true)} />;
-  return <Dashboard onLogout={() => { sessionStorage.removeItem("lya-admin"); setLoggedIn(false); }} />;
-}
-
-// ─── Config error ─────────────────────────────────────────────────────────────
-
-function ConfigError() {
+  if (!password)
+    return (
+      <LoginScreen
+        onLogin={(pw) => {
+          sessionStorage.setItem("lya-admin-pw", pw);
+          setPassword(pw);
+        }}
+      />
+    );
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 p-6">
-      <div className="max-w-md rounded-2xl border border-red-200 bg-white p-8 text-center shadow-sm">
-        <AlertCircle className="mx-auto h-10 w-10 text-red-500" />
-        <h1 className="mt-4 text-xl font-semibold text-gray-900">Panel no configurado</h1>
-        <p className="mt-2 text-sm text-gray-600">
-          Añade estas variables de entorno en Vercel (Settings → Environment Variables):
-        </p>
-        <ul className="mt-4 space-y-1 text-left font-mono text-xs text-gray-700">
-          <li className="rounded bg-gray-100 px-3 py-1">VITE_ADMIN_PASSWORD</li>
-          <li className="rounded bg-gray-100 px-3 py-1">VITE_GITHUB_TOKEN</li>
-          <li className="rounded bg-gray-100 px-3 py-1">VITE_GITHUB_REPO (ej: usuario/lyamarket)</li>
-          <li className="rounded bg-gray-100 px-3 py-1">VITE_GITHUB_BRANCH (por defecto: main)</li>
-        </ul>
-      </div>
-    </div>
+    <Dashboard
+      password={password}
+      onLogout={() => {
+        sessionStorage.removeItem("lya-admin-pw");
+        setPassword(null);
+      }}
+    />
   );
 }
 
 // ─── Login ────────────────────────────────────────────────────────────────────
 
-function LoginScreen({ onLogin }: { onLogin: () => void }) {
+function LoginScreen({ onLogin }: { onLogin: (pw: string) => void }) {
   const [pw, setPw] = React.useState("");
   const [error, setError] = React.useState("");
+  const [busy, setBusy] = React.useState(false);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (pw === ADMIN_PASSWORD) {
-      sessionStorage.setItem("lya-admin", "true");
-      onLogin();
-    } else {
-      setError("Contraseña incorrecta");
+    setBusy(true);
+    setError("");
+    try {
+      await adminLogin(pw);
+      onLogin(pw);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Error al iniciar sesión");
       setPw("");
+    } finally {
+      setBusy(false);
     }
   };
 
@@ -113,9 +104,10 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
           </div>
           <button
             type="submit"
-            className="h-11 w-full rounded-xl bg-green-600 text-sm font-semibold text-white hover:bg-green-700"
+            disabled={busy || !pw}
+            className="h-11 w-full rounded-xl bg-green-600 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
           >
-            Entrar
+            {busy ? "Entrando…" : "Entrar"}
           </button>
         </form>
       </div>
@@ -125,7 +117,7 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
 
 // ─── Dashboard ────────────────────────────────────────────────────────────────
 
-function Dashboard({ onLogout }: { onLogout: () => void }) {
+function Dashboard({ password, onLogout }: { password: string; onLogout: () => void }) {
   const [products, setProducts] = React.useState<Product[]>(() =>
     JSON.parse(JSON.stringify(ALL_PRODUCTS)),
   );
@@ -164,13 +156,11 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
     setSaveState("saving");
     setSaveError("");
     try {
-      const sha = await getFileSha(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, GITHUB_BRANCH);
-      const content = JSON.stringify(products, null, 2);
-      await updateFile(GITHUB_TOKEN, GITHUB_REPO, PRODUCTS_PATH, content, sha, "admin: actualizar productos", GITHUB_BRANCH);
+      await saveProducts(products, password);
       savePublishedProducts(products);
       setBaseline(JSON.parse(JSON.stringify(products)));
       setSaveState("deploying");
-      await fetch("/api/redeploy", { method: "POST" }).catch(() => {});
+      await triggerRedeploy(password).catch(() => {});
       setSaveState("saved");
       setTimeout(() => setSaveState("idle"), 5000);
     } catch (e) {
@@ -480,6 +470,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
         <ProductModal
           product={editing}
           isNew={isNew}
+          password={password}
           onSave={saveProduct}
           onClose={() => setEditing(null)}
         />
@@ -519,11 +510,13 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
 function ProductModal({
   product,
   isNew,
+  password,
   onSave,
   onClose,
 }: {
   product: Product;
   isNew: boolean;
+  password: string;
   onSave: (p: Product) => void;
   onClose: () => void;
 }) {
@@ -538,7 +531,7 @@ function ProductModal({
     setUploading(true);
     setUploadError("");
     try {
-      const url = await uploadImage(GITHUB_TOKEN, GITHUB_REPO, file, GITHUB_BRANCH);
+      const url = await uploadImage(file, password);
       set("image", url);
     } catch (err) {
       setUploadError(err instanceof Error ? err.message : "Error al subir la foto");

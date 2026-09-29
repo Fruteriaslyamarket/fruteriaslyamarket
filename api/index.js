@@ -17,10 +17,132 @@ const STATIC_FILES = {
   },
 }
 
+const GH_API = 'https://api.github.com'
+
+function ghHeaders(token) {
+  return {
+    Authorization: `Bearer ${token}`,
+    Accept: 'application/vnd.github+json',
+    'Content-Type': 'application/json',
+  }
+}
+
+async function readJsonBody(req) {
+  const chunks = []
+  for await (const chunk of req) chunks.push(chunk)
+  return chunks.length ? JSON.parse(Buffer.concat(chunks).toString()) : {}
+}
+
+// Autoriza escrituras: la contraseña del admin viaja en la cabecera, se compara
+// contra ADMIN_PASSWORD (solo servidor). El token de GitHub nunca sale de aquí.
+function isAuthed(req) {
+  const pw = req.headers['x-admin-password']
+  return Boolean(pw && process.env.ADMIN_PASSWORD && pw === process.env.ADMIN_PASSWORD)
+}
+
+function ghRepo() {
+  return {
+    token: process.env.GITHUB_TOKEN,
+    repo: process.env.VITE_GITHUB_REPO,
+    branch: process.env.VITE_GITHUB_BRANCH || 'main',
+  }
+}
+
 export default async function handler(req, res) {
   const path = req.url?.split('?')[0]
 
+  if (path === '/api/admin-login' && req.method === 'POST') {
+    res.setHeader('Content-Type', 'application/json')
+    if (!process.env.ADMIN_PASSWORD || !process.env.GITHUB_TOKEN || !process.env.VITE_GITHUB_REPO) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: 'Panel no configurado: faltan ADMIN_PASSWORD, GITHUB_TOKEN o VITE_GITHUB_REPO en Vercel' }))
+      return
+    }
+    const { password } = await readJsonBody(req)
+    if (password !== process.env.ADMIN_PASSWORD) {
+      res.statusCode = 401
+      res.end(JSON.stringify({ error: 'Contraseña incorrecta' }))
+      return
+    }
+    res.statusCode = 200
+    res.end(JSON.stringify({ ok: true }))
+    return
+  }
+
+  if (path === '/api/save-products' && req.method === 'POST') {
+    res.setHeader('Content-Type', 'application/json')
+    if (!isAuthed(req)) {
+      res.statusCode = 401
+      res.end(JSON.stringify({ error: 'No autorizado' }))
+      return
+    }
+    const { token, repo, branch } = ghRepo()
+    const filePath = 'src/data/products.json'
+    try {
+      const { products } = await readJsonBody(req)
+      const shaRes = await fetch(`${GH_API}/repos/${repo}/contents/${filePath}?ref=${branch}&t=${Date.now()}`, {
+        headers: ghHeaders(token),
+        cache: 'no-store',
+      })
+      if (!shaRes.ok) throw new Error(`GitHub ${shaRes.status}: no se pudo leer el archivo`)
+      const { sha } = await shaRes.json()
+      const content = Buffer.from(JSON.stringify(products, null, 2), 'utf-8').toString('base64')
+      const putRes = await fetch(`${GH_API}/repos/${repo}/contents/${filePath}`, {
+        method: 'PUT',
+        headers: ghHeaders(token),
+        body: JSON.stringify({ message: 'admin: actualizar productos', content, sha, branch }),
+      })
+      if (!putRes.ok) {
+        const err = await putRes.json().catch(() => ({}))
+        throw new Error(`GitHub ${putRes.status}: ${err.message || 'error al guardar'}`)
+      }
+      res.statusCode = 200
+      res.end(JSON.stringify({ ok: true }))
+    } catch (err) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: err.message || 'Error al guardar' }))
+    }
+    return
+  }
+
+  if (path === '/api/upload-image' && req.method === 'POST') {
+    res.setHeader('Content-Type', 'application/json')
+    if (!isAuthed(req)) {
+      res.statusCode = 401
+      res.end(JSON.stringify({ error: 'No autorizado' }))
+      return
+    }
+    const { token, repo, branch } = ghRepo()
+    try {
+      const { base64, ext } = await readJsonBody(req)
+      const safeExt = (ext || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg'
+      const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${safeExt}`
+      const filePath = `public/images/${filename}`
+      const putRes = await fetch(`${GH_API}/repos/${repo}/contents/${filePath}`, {
+        method: 'PUT',
+        headers: ghHeaders(token),
+        body: JSON.stringify({ message: 'admin: subir imagen', content: base64, branch }),
+      })
+      if (!putRes.ok) {
+        const err = await putRes.json().catch(() => ({}))
+        throw new Error(`GitHub ${putRes.status}: ${err.message || 'error al subir'}`)
+      }
+      res.statusCode = 200
+      res.end(JSON.stringify({ url: `https://raw.githubusercontent.com/${repo}/${branch}/${filePath}` }))
+    } catch (err) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: err.message || 'Error al subir' }))
+    }
+    return
+  }
+
   if (path === '/api/redeploy' && req.method === 'POST') {
+    if (!isAuthed(req)) {
+      res.statusCode = 401
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'No autorizado' }))
+      return
+    }
     const token = process.env.VERCEL_TOKEN
     const projectId = 'prj_Dx5spDJuRE3RPK15U7pQxuaWuJe4'
     const teamId = 'team_JI6HIEdbLnS8IuGNROlhcMhz'
