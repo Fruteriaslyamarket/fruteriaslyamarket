@@ -82,9 +82,17 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border/60">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Fruterías Lya SL · CIF B26988139 · Calle Cataluña 1, Getafe</p>
-          <p>Hecho con cariño para nuestros vecinos 🍃</p>
+        <div className="mx-auto max-w-6xl px-4 py-5">
+          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+            <li><Link to="/aviso-legal" className="hover:text-foreground">Aviso legal</Link></li>
+            <li><Link to="/privacidad" className="hover:text-foreground">Privacidad</Link></li>
+            <li><Link to="/cookies" className="hover:text-foreground">Cookies</Link></li>
+            <li><Link to="/terminos" className="hover:text-foreground">Condiciones de compra</Link></li>
+          </ul>
+          <div className="mt-3 flex flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} Fruterías Lya SL · CIF B26988139 · Calle Cataluña 1, Getafe</p>
+            <p>Hecho con cariño para nuestros vecinos 🍃</p>
+          </div>
         </div>
       </div>
     </footer>

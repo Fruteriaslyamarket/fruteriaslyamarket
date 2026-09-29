@@ -49,6 +49,11 @@ const schema = z.object({
   slot: z.enum(SLOTS),
   payment: z.enum(PAYMENT),
   notes: z.string().trim().max(500).optional().or(z.literal("")),
+  acepto: z.literal("on", {
+    errorMap: () => ({
+      message: "Debes aceptar la Política de Privacidad y las Condiciones de compra.",
+    }),
+  }),
 });
 
 type FormErrors = Partial<Record<keyof z.infer<typeof schema>, string>>;
@@ -266,10 +271,22 @@ function CheckoutPage() {
                 {stripeError}
               </p>
             )}
+            <div className="mt-5">
+              <label className="flex items-start gap-2 text-xs text-muted-foreground">
+                <input type="checkbox" name="acepto" className="mt-0.5 h-4 w-4 shrink-0 accent-primary" />
+                <span>
+                  He leído y acepto la{" "}
+                  <Link to="/privacidad" className="text-primary underline">Política de Privacidad</Link>{" "}
+                  y las{" "}
+                  <Link to="/terminos" className="text-primary underline">Condiciones de compra</Link>.
+                </span>
+              </label>
+              {errors.acepto && <p className="mt-1 text-xs text-destructive">{errors.acepto}</p>}
+            </div>
             <button
               type="submit"
               disabled={stripeLoading}
-              className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground shadow disabled:opacity-60"
+              className="mt-3 inline-flex h-12 w-full items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground shadow disabled:opacity-60"
             >
               {stripeLoading ? "Redirigiendo al pago…" : "Confirmar pedido"}
             </button>

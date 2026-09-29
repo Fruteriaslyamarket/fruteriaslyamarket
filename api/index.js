@@ -80,6 +80,20 @@ export default async function handler(req, res) {
     const filePath = 'src/data/products.json'
     try {
       const { products } = await readJsonBody(req)
+      // Guarda contra pérdida de datos: no permitir vaciar el catálogo ni escribir basura.
+      if (!Array.isArray(products) || products.length === 0) {
+        res.statusCode = 400
+        res.end(JSON.stringify({ error: 'Lista de productos vacía o inválida; no se guardó nada.' }))
+        return
+      }
+      const malformed = products.some(
+        (p) => !p || typeof p.id !== 'string' || typeof p.name !== 'string' || typeof p.price !== 'number',
+      )
+      if (malformed) {
+        res.statusCode = 400
+        res.end(JSON.stringify({ error: 'Algún producto no tiene id/nombre/precio válidos; no se guardó nada.' }))
+        return
+      }
       const shaRes = await fetch(`${GH_API}/repos/${repo}/contents/${filePath}?ref=${branch}&t=${Date.now()}`, {
         headers: ghHeaders(token),
         cache: 'no-store',
