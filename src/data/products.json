@@ -1669,5 +1669,25 @@
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1779110192462-i4vbr.png",
     "featured": true,
     "offer": false
+  },
+  {
+    "id": "ciruela-pera",
+    "name": "Ciruela pera ",
+    "description": "Descubre la ciruela huevo: una explosión de dulzura carnosa y jugosa, perfecta para disfrutar bocado a bocado este verano.",
+    "category": "temporada",
+    "price": 3.5,
+    "unit": "kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1791067743751-7aq90.jpeg",
+    "options": {
+      "label": "Cantidad",
+      "values": [
+        "500g",
+        "1 kg",
+        "2 kg"
+      ]
+    },
+    "featured": true,
+    "weeklyBasket": true,
+    "offer": false
   }
 ]
