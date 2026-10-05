@@ -81,7 +81,7 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778588136491-hfixg.jpeg",
     "offer": false,
-    "pricePerUnit": 0.8,
+    "pricePerUnit": 0.5,
     "weeklyBasket": true
   },
   {
@@ -163,7 +163,7 @@
     "category": "verduras",
     "price": 2.99,
     "unit": "Kg",
-    "image": "https://images.unsplash.com/photo-1585369496178-144fd937f249?auto=format&fit=crop&w=900&q=70",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1791207741828-tr16j.jpg",
     "offer": false,
     "featured": true
   },
@@ -176,7 +176,7 @@
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=900&q=70",
     "offer": false,
-    "pricePerUnit": 0.8
+    "pricePerUnit": 0.5
   },
   {
     "id": "remolacha-cocida",
@@ -487,12 +487,13 @@
     "name": "Tomate Kumato",
     "description": "Color oscuro y sabor único.",
     "category": "tomates",
-    "price": 3.59,
+    "price": 3.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778603173767-b4jx5.jpeg",
     "featured": true,
     "offer": false,
-    "pricePerUnit": 0.45
+    "pricePerUnit": 0.45,
+    "hidden": true
   },
   {
     "id": "tomate-rosado",
@@ -881,7 +882,7 @@
     "description": "Dulce, perfecta para postre.",
     "category": "temporada",
     "price": 3.95,
-    "unit": "500gr",
+    "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778698903056-fwyjn.jpg",
     "featured": true,
     "offer": false
@@ -902,7 +903,7 @@
     "description": "Aromática e intensa.",
     "category": "temporada",
     "price": 3.95,
-    "unit": "500gr",
+    "unit": "kg",
     "image": "https://images.unsplash.com/photo-1637715924886-cbe4485f90b9?auto=format&fit=crop&w=900&q=70",
     "offer": false
   },
@@ -943,7 +944,7 @@
     "name": "Manzana Granny Smith",
     "description": "Verde, ácida y muy crujiente.",
     "category": "manzanas-peras",
-    "price": 2.95,
+    "price": 3.25,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1672062518635-e0568b3c6e1b?auto=format&fit=crop&w=900&q=70",
     "offer": false,
@@ -982,7 +983,8 @@
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767529669-o8q08.jpeg",
     "offer": false,
-    "pricePerUnit": 0.65
+    "pricePerUnit": 0.65,
+    "hidden": true
   },
   {
     "id": "manzana-pink-lady",
@@ -1011,7 +1013,7 @@
     "name": "Pera de Agua",
     "description": "Refrescante y muy jugosa.",
     "category": "manzanas-peras",
-    "price": 1.95,
+    "price": 2.65,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767687884-dra50.jpeg",
     "offer": false,
@@ -1045,7 +1047,7 @@
     "name": "Pera Ercolina",
     "description": "Pequeña, dulce y crujiente.",
     "category": "manzanas-peras",
-    "price": 4.95,
+    "price": 1.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778767828890-gp9we.jpeg",
     "offer": false,
@@ -1078,7 +1080,7 @@
     "name": "Aguacate",
     "description": "Cremoso, listo para disfrutar.",
     "category": "exoticas",
-    "price": 4.95,
+    "price": 3.95,
     "unit": "500gr",
     "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=900&q=70",
     "featured": true,
@@ -1223,7 +1225,7 @@
     "name": "Limón",
     "description": "Frescos y aromáticos.",
     "category": "citricos",
-    "price": 2.95,
+    "price": 1.95,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768390665-eg2qn.webp",
     "offer": false,
@@ -1244,7 +1246,7 @@
     "name": "Naranja de Zumo",
     "description": "Jugosísima, perfecta para exprimir.",
     "category": "citricos",
-    "price": 1.45,
+    "price": 1.95,
     "unit": "kg",
     "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=900&q=70",
     "featured": true,
@@ -1288,11 +1290,11 @@
     "name": "Sandía Negra",
     "description": "Dulce y refrescante.",
     "category": "melones",
-    "price": 2.25,
-    "unit": "kg",
+    "price": 7.4,
+    "unit": "ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768620797-srpp6.jpeg",
     "offer": false,
-    "hidden": true
+    "hidden": false
   },
   {
     "id": "sandia-rayada",
@@ -1349,12 +1351,12 @@
   },
   {
     "id": "melon-villaconejos",
-    "name": "Melón villaconejos ",
+    "name": "Melón bollo",
     "description": "Delicioso, jugoso y refrescante ",
     "category": "temporada",
     "price": 12,
     "unit": "Ud",
-    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778768939744-9sz4u.jpeg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1791208584147-mej1v.jpg",
     "featured": true,
     "offer": false
   },
@@ -1387,7 +1389,8 @@
     "price": 6.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771866240-w1hh3.jpeg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "aceitunas-cocktel",
@@ -1397,7 +1400,8 @@
     "price": 6.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771891785-p5p4j.jpeg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "aceitunas-campo-real",
@@ -1407,7 +1411,8 @@
     "price": 4.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771916121-7hap2.jpeg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "berenjenas-aceitunas",
@@ -1417,7 +1422,8 @@
     "price": 9.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771973207-2k19e.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "aceitunas-extremenas",
@@ -1427,7 +1433,8 @@
     "price": 5.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778771993110-inkev.jpeg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "aceitunas-obregon",
@@ -1437,7 +1444,8 @@
     "price": 6.99,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778772080966-45kz9.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "miel-de-montana",
@@ -1457,7 +1465,8 @@
     "price": 2.99,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774484290-d500z.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "huevos-l-30",
@@ -1487,7 +1496,8 @@
     "price": 2.5,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774609524-wnlax.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "frutos-secos-variados",
@@ -1497,7 +1507,8 @@
     "price": 4.25,
     "unit": "Packs",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774687145-cdceq.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "maicena",
@@ -1507,7 +1518,8 @@
     "price": 3.25,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774749102-rg911.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "natilla-con-panela-america",
@@ -1517,7 +1529,8 @@
     "price": 3.5,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774822482-ayptb.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "yerba-mate-playadito",
@@ -1527,7 +1540,8 @@
     "price": 8,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774912924-x5u3d.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "yerba-mate-taragui",
@@ -1537,7 +1551,8 @@
     "price": 5,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778774939880-vg798.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "leche-de-coco-1-litro",
@@ -1547,7 +1562,8 @@
     "price": 5.5,
     "unit": "Litro",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775026475-a1mwh.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "caballa-en-salsa-de-tomate",
@@ -1557,7 +1573,8 @@
     "price": 3,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775074590-0bswp.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "aceite-de-girasol-koipe-sol",
@@ -1567,7 +1584,8 @@
     "price": 3.5,
     "unit": "Litro",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778775119123-c9rvy.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "latas-conservas-alubias",
@@ -1617,7 +1635,8 @@
     "price": 3,
     "unit": "Ud",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773515804-zdfru.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "salsa-de-soja",
@@ -1637,7 +1656,8 @@
     "price": 3.8,
     "unit": "kg",
     "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1778773893159-jjb1j.jpg",
-    "offer": false
+    "offer": false,
+    "hidden": true
   },
   {
     "id": "arroz-la-rueda",
@@ -1698,6 +1718,37 @@
     },
     "featured": true,
     "weeklyBasket": true,
+    "offer": false
+  },
+  {
+    "id": "manzana-kanzi",
+    "name": "Manzana kanzi",
+    "description": "Firme y bastante crujiente, bastante jugoso, ligeramente picante en lugar de dulce, con un sabor agradable y suave.",
+    "category": "verduras",
+    "price": 3.95,
+    "unit": "kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1791208778570-u4rp7.jpg",
+    "offer": false
+  },
+  {
+    "id": "coco",
+    "name": "Coco",
+    "description": "Caracterizado por su cáscara dura, pulpa blanca comestible y agua interna rica en electrolitos.",
+    "category": "exoticas",
+    "price": 2.95,
+    "unit": "Ud",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1791208888835-l8sfv.webp",
+    "pricePerUnit": 2.95,
+    "offer": false
+  },
+  {
+    "id": "membrillo",
+    "name": "Membrillo",
+    "description": " Una fruta dura y astringente en crudo que se consume principalmente cocida en forma de dulce, compotas o jaleas.",
+    "category": "exoticas",
+    "price": 3.95,
+    "unit": "kg",
+    "image": "https://raw.githubusercontent.com/Fruteriaslyamarket/fruteriaslyamarket/main/public/images/1791209051564-h3bo2.webp",
     "offer": false
   }
 ]
